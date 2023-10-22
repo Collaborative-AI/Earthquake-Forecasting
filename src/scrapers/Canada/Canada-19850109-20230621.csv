@@ -1,4 +1,4 @@
-Year,Month,Day,Hour,Minute,Second,Time,Latitude,Longitude,Depth/km,MagType,Magnitude,EventLocationName
+Year,Month,Day,Hour,Minute,Second,Latitude,Longitude,Depth/km,MagType,Magnitude,EventLocationName
 2023,6,21,17,9,13,56.8663,-121.5686,5.06,ML,4,"80 km NW of Fort St. John, BC/80 km NO de Fort St. John, BC
 "
 2023,6,20,4,12,44,50.3943,-130.2594,10,Mw,4.32,"198 km W of Port Hardy, BC/198 km O de Port Hardy, BC

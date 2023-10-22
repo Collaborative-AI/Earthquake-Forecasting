@@ -85,9 +85,9 @@ def remove_unknown_magnitudes(input_df):
 
         """
         STEP 2:
-        Only keep rows with non-null magnitudes
+        Only keep rows with non-null and non-zero magnitudes
         """
-        if not np.isnan(magnitude):
+        if not np.isnan(magnitude) and magnitude > 0.01:
             output_df.append([row["Timestamp"], row["Magnitude"], row["Latitude"], row["Longitude"], row["Depth"]])
             
     """

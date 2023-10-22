@@ -10,7 +10,7 @@ def find_quakes(input_path: str, output_path: str):
             # label the header of the csv with the appropriate labels
             csv_writer = writer(out_file, lineterminator="\n")
             header = ["Year", "Month", "Day", "Hour", "Minute", "Second",
-                      "Time", "Latitude", "Longitude", "Depth/km",
+                      "Latitude", "Longitude", "Depth/km",
                       "MagType", "Magnitude", "EventLocationName"]
             csv_writer.writerow(header)
             next(input_file, None)
