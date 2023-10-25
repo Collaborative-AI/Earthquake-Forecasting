@@ -154,9 +154,9 @@ def preprocess_texas():
     df.to_csv("src/merge/north_america/input/Texas Earthquakes (2016-2023).csv", index=False)
 
 # run the pre-processing functions
-# preprocess_canada()
-# preprocess_mexico()
-# preprocess_mineral_mountains()
-# preprocess_new_madrid()
-preprocess_socal()
+preprocess_canada()
+preprocess_mexico()
+preprocess_mineral_mountains()
+preprocess_new_madrid()
+# preprocess_socal()
 preprocess_texas()
