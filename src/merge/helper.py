@@ -50,6 +50,9 @@ def replace_with_timestamp(input_df):
         """
         try:
             # for all valid rows, create a pd.Timestamp and add the result to the output_df
+            if second == 60: minute += 1; second = 0
+            if minute == 60: hour += 1; minute = 0
+
             frame_time = pd.Timestamp(year=year, month=month, day=day,
                                       hour=hour, minute=minute, second=second)
             output_df.append([frame_time, row["Magnitude"], row["Latitude"], row["Longitude"], row["Depth"]])

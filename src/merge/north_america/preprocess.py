@@ -114,8 +114,49 @@ def preprocess_new_madrid():
     df.to_csv("src/merge/north_america/input/New Madrid Earthquakes 1974-2023.csv", index=False)
 
 
-# rune the pre-processing functions
-preprocess_canada()
-preprocess_mexico()
-preprocess_mineral_mountains()
-preprocess_new_madrid()
+def preprocess_socal():
+    csv_file = "src/merge/north_america/raw/Southern California Earthquakes (1932-2023).csv"
+
+    # read the csv and only keep the specified columns
+    df = pd.read_csv(csv_file)
+    df = df[["Year", "Month", "Day", "Hour", "Minute", "Second",
+             "Magnitude", "Latitude", "Longitude", "Depth"]]
+    
+    # reformat times, and remove unknown magnitudes + coordinates
+    df = replace_with_timestamp(df)
+    df = remove_unknown_magnitudes(df)
+    df = remove_unknown_coordinates(df)
+
+    # drop duplicates from the dataframe
+    df = df.drop_duplicates()
+
+    # store the result in a CSV
+    df.to_csv("src/merge/north_america/input/Southern California Earthquakes (1932-2023).csv", index=False)
+
+
+def preprocess_texas():
+    csv_file = "src/merge/north_america/raw/Texas Earthquakes (2016-2023).csv"
+
+    # read the csv and only keep the specified columns
+    df = pd.read_csv(csv_file)
+    df = df[["Year", "Month", "Day", "Hour", "Minute", "Second",
+             "Magnitude", "Latitude", "Longitude", "Depth"]]
+    
+    # reformat times, and remove unknown magnitudes + coordinates
+    df = replace_with_timestamp(df)
+    df = remove_unknown_magnitudes(df)
+    df = remove_unknown_coordinates(df)
+
+    # drop duplicates from the dataframe
+    df = df.drop_duplicates()
+
+    # store the result in a CSV
+    df.to_csv("src/merge/north_america/input/Texas Earthquakes (2016-2023).csv", index=False)
+
+# run the pre-processing functions
+# preprocess_canada()
+# preprocess_mexico()
+# preprocess_mineral_mountains()
+# preprocess_new_madrid()
+preprocess_socal()
+preprocess_texas()
