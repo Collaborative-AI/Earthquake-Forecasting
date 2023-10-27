@@ -6,9 +6,9 @@ from helper import round_row
 import pandas as pd
 
 # 1. Load all files to merge
-csv_files = ["src/merge/asia/input/EMCA Central Asia.csv",
-             "src/merge/asia/input/South Asia Earthquake Database (1900-2014).csv",
-             "src/merge/asia/input/Turkey Earthquakes (1915-2021).csv"]
+csv_files = ["src/merge/misc/input/Argentina Andean Earthquakes (2016-2017).csv",
+             "src/merge/misc/input/Corinth Gulf 2020-21 Seismic Crisis.csv",
+             "src/merge/misc/input/East Africa Rift System (1994-2022).csv"]
 
 # 2. Load the data frames
 # The header will be ["Datetime", "Magnitude", "Longitude", "Latitude", "Depth"]
@@ -49,4 +49,4 @@ result.sort(key=lambda x: x[0])
 # O(nlogn) time due to sorting
 # O(n) extra space for newly-created lists
 result_df = pd.DataFrame(result, columns=['Timestamp', 'Magnitude', 'Latitude', 'Longitude', 'Depth'])
-result_df.to_csv("src/merge/asia/Asia-Combined.csv", index=False)
+result_df.to_csv("src/merge/misc/Misc-Combined.csv", index=False)
