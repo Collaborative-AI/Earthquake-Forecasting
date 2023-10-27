@@ -8,7 +8,9 @@ import pandas as pd
 # 1. Load all files to merge
 csv_files = ["src/merge/misc/input/Argentina Andean Earthquakes (2016-2017).csv",
              "src/merge/misc/input/Corinth Gulf 2020-21 Seismic Crisis.csv",
-             "src/merge/misc/input/East Africa Rift System (1994-2022).csv"]
+             "src/merge/misc/input/East Africa Rift System (1994-2022).csv",
+             "src/merge/misc/input/Kyushu-20040401-20130331.csv",
+             "src/merge/misc/input/Nankai-20040401-20130329.csv"]
 
 # 2. Load the data frames
 # The header will be ["Datetime", "Magnitude", "Longitude", "Latitude", "Depth"]
