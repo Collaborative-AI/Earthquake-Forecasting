@@ -6,10 +6,11 @@ from helper import round_row
 import pandas as pd
 
 # 1. Load all files to merge
-csv_files = ["src/merge/final/input/Asia-Combined.csv",
-             "src/merge/final/input/Misc-Combined.csv",
-             "src/merge/final/input/NOAA-Combined.csv",
-             "src/merge/final/input/North-America-Combined.csv"]
+csv_files = ["src/merge/asia/Asia-Combined.csv",
+             "src/merge/misc/Misc-Combined.csv",
+             "src/merge/noaa/NOAA-Combined.csv",
+             "src/merge/north_america/North-America-Combined.csv",
+             "src/merge/world_tremor/World-Tremor-Combined.csv"]
 
 # 2. Load the data frames
 # The header will be ["Datetime", "Magnitude", "Longitude", "Latitude", "Depth"]
