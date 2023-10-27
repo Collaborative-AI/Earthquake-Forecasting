@@ -10,8 +10,9 @@ def preprocess_kyushu():
     csv_file = "src/merge/world_tremor/raw/Kyushu-20040401-20130331.csv"
 
     # read the csv and only keep the specified columns
-    df = pd.read_csv(csv_file, names =["Year", "Month", "Day", "Hour", "Minute", "Second",
-                                         "Magnitude", "Latitude", "Longitude", "Depth"])
+    df = pd.read_csv(csv_file)
+    df = df[["Year", "Month", "Day", "Hour", "Minute", "Second",
+             "Magnitude", "Latitude", "Longitude", "Depth"]]
     
     # reformat times, and remove unknown magnitudes + coordinates
     df = replace_with_timestamp(df, tz="Asia/Tokyo")
@@ -29,8 +30,9 @@ def preprocess_nankai():
     csv_file = "src/merge/world_tremor/raw/Nankai-20040401-20130329.csv"
 
     # read the csv and only keep the specified columns
-    df = pd.read_csv(csv_file, names =["Year", "Month", "Day", "Hour", "Minute", "Second",
-                                         "Magnitude", "Latitude", "Longitude", "Depth"])
+    df = pd.read_csv(csv_file)
+    df = df[["Year", "Month", "Day", "Hour", "Minute", "Second",
+             "Magnitude", "Latitude", "Longitude", "Depth"]]
     
     # reformat times, and remove unknown magnitudes + coordinates
     df = replace_with_timestamp(df, tz="Asia/Tokyo")

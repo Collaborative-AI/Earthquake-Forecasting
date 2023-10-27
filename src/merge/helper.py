@@ -32,10 +32,6 @@ def replace_with_timestamp(input_df, tz="UTC"):
         Check for nan values, and if an year is unknown, ignore the data point.
         In this implementation, any unknown value is replaced with a 1.
         """
-
-        print(year)
-        print(type(year))
-        
         if np.isnan(year): continue
         year = int(year)
         month = int(month) if not np.isnan(month) else 1
@@ -59,6 +55,8 @@ def replace_with_timestamp(input_df, tz="UTC"):
 
             frame_time = pd.Timestamp(year=year, month=month, day=day,
                                       hour=hour, minute=minute, second=second, tz=tz)
+            frame_time = frame_time.tz_convert(tz="UTC")
+            frame_time = frame_time.tz_localize(None)
             output_df.append([frame_time, row["Magnitude"], row["Latitude"], row["Longitude"], row["Depth"]])
         
         except Exception as e:
