@@ -5,7 +5,7 @@ import numpy as np
 INPUT:  Pandas DataFrame object (without Timestamp variables)
 OUTPUT: Pandas DataFrame object with pd.Timestamp object
 """
-def replace_with_timestamp(input_df):
+def replace_with_timestamp(input_df, tz="UTC"):
 
     # replace all separate time columns with one pd.Timestamp column
     output_df = []
@@ -32,6 +32,10 @@ def replace_with_timestamp(input_df):
         Check for nan values, and if an year is unknown, ignore the data point.
         In this implementation, any unknown value is replaced with a 1.
         """
+
+        print(year)
+        print(type(year))
+        
         if np.isnan(year): continue
         year = int(year)
         month = int(month) if not np.isnan(month) else 1
@@ -54,7 +58,7 @@ def replace_with_timestamp(input_df):
             if minute == 60: hour += 1; minute = 0
 
             frame_time = pd.Timestamp(year=year, month=month, day=day,
-                                      hour=hour, minute=minute, second=second)
+                                      hour=hour, minute=minute, second=second, tz=tz)
             output_df.append([frame_time, row["Magnitude"], row["Latitude"], row["Longitude"], row["Depth"]])
         
         except Exception as e:
