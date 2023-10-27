@@ -4,16 +4,16 @@ import pandas as pd
 
 # 1. Load the non-Japan files from the World Tremor Database
 # Japan datasets are in JST=UTC+9, instead of UTC; needs to be converted later
-csv_files = ["src/merge/global/input/Southern-Chile.20050101-20070228.csv",
-            #  "src/merge/global/input/Kyushu-20040401-20130331.csv",
-            #  "src/merge/global/input/Nankai-20040401-20130329.csv",
-             "src/merge/global/input/Guerrero-GGAP-20091126-20130817.csv",
-             "src/merge/global/input/Guerrero-MASE-20050101-20070606.csv",
-             "src/merge/global/input/Jalisco-Colima-20060126-20070609.csv",
-             "src/merge/global/input/Manawatu-20040501-20120430.csv",
-             "src/merge/global/input/Taiwan.20060101-20091231.csv",
-             "src/merge/global/input/Cascadia-20050101-20141231.csv",
-             "src/merge/global/input/Parkfield-20100101-20121231.csv"]
+csv_files = ["src/merge/world_tremor/input/Southern-Chile.20050101-20070228.csv",
+            #  "src/merge/world_tremor/input/Kyushu-20040401-20130331.csv",
+            #  "src/merge/world_tremor/input/Nankai-20040401-20130329.csv",
+             "src/merge/world_tremor/input/Guerrero-GGAP-20091126-20130817.csv",
+             "src/merge/world_tremor/input/Guerrero-MASE-20050101-20070606.csv",
+             "src/merge/world_tremor/input/Jalisco-Colima-20060126-20070609.csv",
+             "src/merge/world_tremor/input/Manawatu-20040501-20120430.csv",
+             "src/merge/world_tremor/input/Taiwan.20060101-20091231.csv",
+             "src/merge/world_tremor/input/Cascadia-20050101-20141231.csv",
+             "src/merge/world_tremor/input/Parkfield-20100101-20121231.csv"]
 
 # 2. Load the data frames
 # World Tremor Datasets don't have headers, so let's add some
@@ -53,5 +53,5 @@ result.sort(key=lambda x: x[0])
 # 5. Convert the result list to DataFrame and export it
 # O(nlogn) time due to sorting
 # O(n) extra space for newly-created lists
-result_df = pd.DataFrame(result, columns=['DateTime', 'Mw', 'Longitude', 'Latitude', 'Depth'])
-result_df.to_csv("src/merge/global/World_Tremor.csv", index=False)
+result_df = pd.DataFrame(result, columns=['Timestamp', 'Magnitude', 'Longitude', 'Latitude', 'Depth'])
+result_df.to_csv("src/merge/world_tremor/World Tremor Database (2004-2013).csv", index=False)
