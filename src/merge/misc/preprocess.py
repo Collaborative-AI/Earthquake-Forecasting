@@ -66,7 +66,49 @@ def preprocess_east_africa():
     df.to_csv("src/merge/misc/input/East Africa Rift System (1994-2022).csv", index=False)
 
 
+def preprocess_kyushu():
+    csv_file = "src/merge/misc/raw/Kyushu-20040401-20130331.csv"
+
+    # read the csv and only keep the specified columns
+    df = pd.read_csv(csv_file)
+    df = df[["Year", "Month", "Day", "Hour", "Minute", "Second",
+             "Magnitude", "Latitude", "Longitude", "Depth"]]
+    
+    # reformat times, and remove unknown magnitudes + coordinates
+    df = replace_with_timestamp(df, tz="Asia/Tokyo")
+    df = remove_unknown_magnitudes(df)
+    df = remove_unknown_coordinates(df)
+
+    # drop duplicates from the dataframe
+    df = df.drop_duplicates()
+
+    # store the result in a CSV
+    df.to_csv("src/merge/misc/input/Kyushu-20040401-20130331.csv", index=False)
+
+
+def preprocess_nankai():
+    csv_file = "src/merge/misc/raw/Nankai-20040401-20130329.csv"
+
+    # read the csv and only keep the specified columns
+    df = pd.read_csv(csv_file)
+    df = df[["Year", "Month", "Day", "Hour", "Minute", "Second",
+             "Magnitude", "Latitude", "Longitude", "Depth"]]
+    
+    # reformat times, and remove unknown magnitudes + coordinates
+    df = replace_with_timestamp(df, tz="Asia/Tokyo")
+    df = remove_unknown_magnitudes(df)
+    df = remove_unknown_coordinates(df)
+
+    # drop duplicates from the dataframe
+    df = df.drop_duplicates()
+
+    # store the result in a CSV
+    df.to_csv("src/merge/misc/input/Nankai-20040401-20130329.csv", index=False)
+
+
 # run the pre-processing functions
 preprocess_argentina()
 preprocess_corinth()
 preprocess_east_africa()
+preprocess_kyushu()
+preprocess_nankai()
