@@ -11,7 +11,7 @@ csv_files = ["src/merge/north_america/input/Canada-19850109-20230621.csv",
              "src/merge/north_america/input/Mineral Mountains, Utah 2016-19.csv",
              "src/merge/north_america/input/New Madrid Earthquakes 1974-2023.csv",
              "src/merge/north_america/input/PNW Tremors (2009-2023).csv",
-            #  "src/merge/north_america/input/Southern California Earthquakes (1932-2023).csv",
+             "src/merge/north_america/input/Southern California Earthquakes (1932-2023).csv",
              "src/merge/north_america/input/Texas Earthquakes (2016-2023).csv"]
 
 # 2. Load the data frames
