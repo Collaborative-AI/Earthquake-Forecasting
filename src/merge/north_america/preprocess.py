@@ -90,6 +90,26 @@ def preprocess_mineral_mountains():
     df.to_csv("src/merge/north_america/input/Mineral Mountains, Utah 2016-19.csv", index=False)
 
 
+def preprocess_NCEDC():
+    csv_file = "src/merge/north_america/raw/NCEDC (1984-2023).csv"
+
+    # read the csv and only keep the specified columns
+    df = pd.read_csv(csv_file)
+    df = df[["Year", "Month", "Day", "Hour", "Minute", "Second",
+             "Magnitude", "Latitude", "Longitude", "Depth"]]
+    
+    # reformat times, and remove unknown magnitudes + coordinates
+    df = replace_with_timestamp(df)
+    df = remove_unknown_magnitudes(df)
+    df = remove_unknown_coordinates(df)
+
+    # drop duplicates from the dataframe
+    df = df.drop_duplicates()
+
+    # store the result in a CSV
+    df.to_csv("src/merge/north_america/input/NCEDC (1984-2023).csv", index=False)
+
+
 def preprocess_new_madrid():
     csv_file = "src/merge/north_america/raw/New Madrid Earthquakes 1974-2023.csv"
 
@@ -174,10 +194,11 @@ def preprocess_texas():
     df.to_csv("src/merge/north_america/input/Texas Earthquakes (2016-2023).csv", index=False)
 
 # run the pre-processing functions
-preprocess_canada()
-preprocess_mexico()
-preprocess_mineral_mountains()
-preprocess_new_madrid()
-preprocess_pnw()
-preprocess_socal()
-preprocess_texas()
+# preprocess_canada()
+# preprocess_mexico()
+# preprocess_mineral_mountains()
+preprocess_NCEDC()
+# preprocess_new_madrid()
+# preprocess_pnw()
+# preprocess_socal()
+# preprocess_texas()
