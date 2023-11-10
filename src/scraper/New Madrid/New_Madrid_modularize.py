@@ -15,7 +15,7 @@ sys.path.append(parent_dir)
 # Now you can import your module
 from Superclass import Scraper
 
-class Madrid_Scraper(Scraper):
+class New_Madrid_Scraper(Scraper):
     def __init__(self, input_path, output_path, header):
         self.input_path=input_path
         self.output_path=output_path
@@ -26,5 +26,5 @@ if __name__ == "__main__":
     header=['NET', 'DATE', 'O.T. (UTC)', 'LAT', 'LONG', 'DEP', \
                       'MAG', 'NPH', 'GAP', 'DMIN', 'RMS', 'SEO', 'SEH', 'SEZ',
                       'Q', 'COMMENTS']
-    obj=Madrid_Scraper(input_path, output_path, header)
+    obj=New_Madrid_Scraper(input_path, output_path, header)
     obj.find_quakes_txt()

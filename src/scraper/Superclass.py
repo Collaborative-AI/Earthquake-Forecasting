@@ -34,16 +34,25 @@ class Scraper:
                     else:
                         csv_writer.writerow(words)
 
-#    def download_data_web():
+    def find_quakes_web(self):
+    
+        # access the website using BeatifulSoup and requests
+        r = requests.get(self.url)
+        soup = BeautifulSoup(r.text, "html.parser")
 
-#if __name__ == "__main__":
-    #input_path = "scraper/New Madrid/Earthquakes.txt"
-    #output_path = "New Madrid Earthquakes 1974-2023.csv"
-    #header=['NET', 'DATE', 'O.T. (UTC)', 'LAT', 'LONG', 'DEP', \
-    #                  'MAG', 'NPH', 'GAP', 'DMIN', 'RMS', 'SEO', 'SEH', 'SEZ',
-    #                  'Q', 'COMMENTS']
-    #obj=Scraper()
-    #obj.input_path=input_path
-    #obj.output_path=output_path
-    #obj.header=header
-    #obj.find_quakes_txt()
+        # open a new csv file in the output path to write data into
+        with open(self.output_path, "w", newline="", encoding="utf8") as f:
+
+            # the header labels each column for readability
+            csv_writer = writer(f, lineterminator="\n")
+            # csv_writer.writerow(header)
+
+            # find the earthquakes stored in the website's table (accessed via html <body> tag)
+            quakes = soup.find("body").text
+            rows = quakes.split("\n")
+
+            # only add rows with earthquake data by checking its length with the header
+            for row in rows:
+                data = row.split()
+                if len(data) == len(self.header):
+                    csv_writer.writerow(data)
