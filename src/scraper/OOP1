@@ -1,0 +1,150 @@
+from bs4 import BeautifulSoup
+import requests
+import csv
+import xmltodict
+from csv import writer
+import csv
+import requests
+from bs4 import BeautifulSoup
+from xml.etree import ElementTree as ET
+from csv import writer
+
+from csv import writer
+from bs4 import BeautifulSoup
+import requests
+import pandas as pd
+import io
+from datetime import datetime, timedelta
+import tabula
+
+class Earthquake_search:
+    def __init__(self, input_path, output_path):
+        self.input_path = input_path
+        self.output_path = output_path
+        self.header=[]
+        self.seperator=''
+    def find_quake(self):
+        with open(self.input_path, "r") as input_file:
+            with open(self.output_path, "w") as out_file:
+                csv_writer = writer(out_file, lineterminator="\n")
+                csv_writer.writerow(self.header)
+                 # write each row from the txt file to the csv
+                for line in input_file:
+                    words = line.split(self.seperator)
+                    csv_writer.writerow(words)
+
+
+class wikipedia(Earthquake_search):
+
+        def find_earthquake(self):
+            html_text = requests.get('https://en.wikipedia.org/wiki/List_of_historical_earthquakes').text
+            soup = BeautifulSoup(html_text, 'lxml')
+
+            date = []
+            place = []
+            lat = []
+            lon = []
+            fatalities = []
+            magnitude = []
+            comments = []
+
+            tables = soup.find_all('table') #each table is an element in the set tables
+            for table in tables:
+                details = table.find_all('td') #finding all cell info in the table using the td tag
+                for i in range(len(details)):
+                    string = details[i].text.replace('\n', '').replace('Mw','').replace('MS','').replace('Ms','').replace('MI','').replace(
+                        '\u202f','').replace('\xa0','') #we only need the text inside the tag; removed unnecessary characters
+                    if string == '' or string == '?' or string == '\u2013':
+                        string = None
+                    
+                    if (i%9 == 0): date.append(string)
+                    if (i%9 == 2): place.append(string)
+                    if (i%9 == 3): lat.append(string)
+                    if (i%9 == 4): lon.append(string)
+                    if (i%9 == 5): fatalities.append(string)
+                    if (i%9 == 6): magnitude.append(string)
+                    if (i%9 == 7): comments.append(string)
+
+            file_name = 'WikiHistoricalEarthquakes.csv' #title of the .csv file
+        
+            with open(file_name, "w", encoding="utf-8") as f:
+                csv_writer = csv.writer(f)
+                csv_writer.writerow(['No.', 'Date', 'Place', 'Latitude', 'Longitude', 'Fatalities', 'Magnitude', 'Comments']) #headers of the .csv file
+
+                for i in range(len(lon)):
+                    csv_writer.writerow([i+1, date[i], place[i], lat[i], lon[i], fatalities[i], magnitude[i], comments[i]])
+if __name__ == '__main__':
+        wiki = wikipedia(Earthquake_search)
+        wiki.find_earthquake()
+
+class Argentina(Earthquake_search):
+    def __init__(self, input_path, output_path):
+        self.input_path = input_path
+        self.output_path = output_path
+        
+    def find_quakes(self):
+        # open the xml file
+        with open(self.input_path, "r") as file:
+            file_data = file.read()
+
+        # find all events in the XML file
+        data_dict = xmltodict.parse(file_data)
+        data_list = data_dict["quakeml"]["eventParameters"]["event"]
+
+        # find key data points for all earthquakes
+        header = ["Time ID", "Magnitude", "Station Count", "Author", "Publication Time"]
+
+        # collect each event's data in rows
+        rows = []
+        for row in data_list:
+            time = row["origin"][0]["time"]["value"]
+            magnitude = row["stationMagnitude"][0]["mag"]["value"]
+            stationCount = row["magnitude"]["stationCount"]
+            author = row["magnitude"]["creationInfo"]["author"]
+            creationTime = row["magnitude"]["creationInfo"]["creationTime"]
+
+            rows.append([time, magnitude, stationCount, author, creationTime])
+
+        # write the data into the csv file
+        with open(self.output_path, "w") as f:
+            csv_writer = csv.writer(f)
+            csv_writer.writerow(header)
+            csv_writer.writerows(rows)
+
+# main method that calls the web scraper function
+if __name__ == '__main__':
+    argentina = Argentina("Argentina/clean-catalog.xml", "Argentina/Argentina Andean Earthquakes (2016-2017).csv")
+    argentina.find_quakes()
+                
+        
+#GHEA
+# converts a txt file (separated by whitespace) to a csv file
+class GHEA(Earthquake_search):
+    def __init__(self, input_path, output_path, header,seperator):
+        self.input_path = input_path
+        self.output_path = output_path
+        self.header = header    
+        self.seperator = seperator
+                    
+ghea=GHEA("GHEA/GHEA-data.txt", "GHEA/GHEA Data 1000-1903.csv", ["En", "Source", "Year", "Mo", "Da", "Ho", "Mi", "Se",
+                          "Area", "Lat", "Lon", "LatUnc", "LonUnc", "EpDet", "Dep",
+                          "Io", "Msource", "M", "MUnc", "MType", "MDet", "MDPSource",
+                          "MDPn", "MDPIx", "MDPsc", "Remarks", "GEHid"],"\t")
+if __name__ == "__main__":
+    ghea.find_quake
+
+#Corinth
+class corinth(Earthquake_search):
+    def __init__(self, input_path, output_path, header,seperator):
+        self.input_path = input_path
+        self.output_path = output_path
+        self.header = header    
+        self.seperator = seperator
+corinth=corinth("Corinth/Marathias_seq.txt", "Corinth/Corinth Gulf 2020-21 Seismic Crisis.csv", ["Year", "Origin Time", "Latitude", "Longitude", "Depth",
+                      "Magnitude", "Decimal Years", "Time Relative to First Earthquake",
+                      "Event ID", "Cluster ID (sorted by #events)",
+                      "Cluster ID (by time)", "Multiplet ID", "#events in Multiplet",
+                      "E-W horizontal error", "N-S horizontal error",
+                      "Vertical error"],'')
+if __name__ == "__main__":
+    corinth.find_quake()
