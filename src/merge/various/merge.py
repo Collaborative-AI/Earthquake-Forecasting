@@ -10,7 +10,8 @@ csv_files = ["src/merge/asia/Asia-Combined.csv",
              "src/merge/misc/Misc-Combined.csv",
              "src/merge/noaa/NOAA-Combined.csv",
              "src/merge/north_america/North-America-Combined.csv",
-             "src/merge/world_tremor/World-Tremor-Combined.csv"]
+             "src/merge/world_tremor/World-Tremor-Combined.csv",
+             "src/merge/usgs_pre_1950/USGS1800-1949.csv"]
 
 # 2. Load the data frames
 # The header will be ["Datetime", "Magnitude", "Longitude", "Latitude", "Depth"]

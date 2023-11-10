@@ -1,6 +1,9 @@
 import pandas as pd
 import random
 
+# set a random seed for reproducibility
+random.seed(2023)
+
 #This code is for when you are checking for duplicate earthquakes
 
 # 1. Load the USGS files and concatenate them
