@@ -1,29 +1,26 @@
-from bs4 import BeautifulSoup
+
 import requests
 import csv
 import xmltodict
 from csv import writer
-import csv
-import requests
 from bs4 import BeautifulSoup
 from xml.etree import ElementTree as ET
-from csv import writer
-
-from csv import writer
-from bs4 import BeautifulSoup
-import requests
 import pandas as pd
 import io
 from datetime import datetime, timedelta
 import tabula
 
-class Earthquake_search:
-    def __init__(self, input_path, output_path):
-        self.input_path = input_path
-        self.output_path = output_path
+
+class Scraper:
+    def __init__(self):
+        self.input_path = ''
+        self.output_path = ''
         self.header=[]
         self.seperator=''
-    def find_quake(self):
+        self.url=''
+        self.start_time=datetime.MINYEAR
+        self.end_time=datetime.MAXYEAR
+    def find_quake_txt(self):
         with open(self.input_path, "r") as input_file:
             with open(self.output_path, "w") as out_file:
                 csv_writer = writer(out_file, lineterminator="\n")
@@ -32,67 +29,149 @@ class Earthquake_search:
                 for line in input_file:
                     words = line.split(self.seperator)
                     csv_writer.writerow(words)
+    def find_quakes_web(self):
+    
+        # access the website using BeatifulSoup and requests
+        r = requests.get(self.url)
+        soup = BeautifulSoup(r.text, "html.parser")
+
+        # open a new csv file in the output path to write data into
+        with open(self.output_path, "w", newline="", encoding="utf8") as f:
+
+            # the header labels each column for readability
+            csv_writer = writer(f, lineterminator="\n")
+            # csv_writer.writerow(header)
+
+            # find the earthquakes stored in the website's table (accessed via html <body> tag)
+            quakes = soup.find("body").text
+            rows = quakes.split("\n")
+
+            # only add rows with earthquake data by checking its length with the header
+            for row in rows:
+                data = row.split()
+                if len(data) == len(self.header):
+                    csv_writer.writerow(data)        
 
 
-class wikipedia(Earthquake_search):
+class Syria_Scraper(Scraper):
+    def __init__(self, input_path):
+        self.input_path=input_path
+    def merge_cells(self, df):
+        # Merge multiple lines caused by the column o "Major affected localities"
+        for i in range(len(df)):
+            if pd.isnull(df.iloc[i,2]):
+                #  print("reached")
+                df.iloc[i-1,4] += (" " + df.iloc[i,4]) 
+                #  print(table_df1.iloc[i-1,4])
 
-        def find_earthquake(self):
-            html_text = requests.get('https://en.wikipedia.org/wiki/List_of_historical_earthquakes').text
-            soup = BeautifulSoup(html_text, 'lxml')
+        # Drop rows with empty cells in the 'Date' column
+        df.dropna(subset=df.columns[1], inplace=True)
 
-            date = []
-            place = []
-            lat = []
-            lon = []
-            fatalities = []
-            magnitude = []
-            comments = []
+        return df
+    def read_pdf(self):
 
-            tables = soup.find_all('table') #each table is an element in the set tables
-            for table in tables:
-                details = table.find_all('td') #finding all cell info in the table using the td tag
-                for i in range(len(details)):
-                    string = details[i].text.replace('\n', '').replace('Mw','').replace('MS','').replace('Ms','').replace('MI','').replace(
-                        '\u202f','').replace('\xa0','') #we only need the text inside the tag; removed unnecessary characters
-                    if string == '' or string == '?' or string == '\u2013':
-                        string = None
-                    
-                    if (i%9 == 0): date.append(string)
-                    if (i%9 == 2): place.append(string)
-                    if (i%9 == 3): lat.append(string)
-                    if (i%9 == 4): lon.append(string)
-                    if (i%9 == 5): fatalities.append(string)
-                    if (i%9 == 6): magnitude.append(string)
-                    if (i%9 == 7): comments.append(string)
+        # Specify the page number containing the table (e.g., page 1 is 1, page 2 is 2, etc.)
+        page_number1 = 34
+        page_number2 = 35
+        page_number3 = 36
 
-            file_name = 'WikiHistoricalEarthquakes.csv' #title of the .csv file
-        
-            with open(file_name, "w", encoding="utf-8") as f:
-                csv_writer = csv.writer(f)
-                csv_writer.writerow(['No.', 'Date', 'Place', 'Latitude', 'Longitude', 'Fatalities', 'Magnitude', 'Comments']) #headers of the .csv file
+        # Use read_pdf() to extract the table from the PDF
+        tables_part1 = tabula.read_pdf(self.input_path, pages=page_number1)
+        tables_part2 = tabula.read_pdf(self.input_path, pages=page_number2)
+        tables_part3 = tabula.read_pdf(self.input_path, pages=page_number3)
 
-                for i in range(len(lon)):
-                    csv_writer.writerow([i+1, date[i], place[i], lat[i], lon[i], fatalities[i], magnitude[i], comments[i]])
+        # Assuming the table you want is the first one in the list (tables[0])
+        # You can access the table data as a DataFrame
+        table_df1 = tables_part1[0][1:]
+        table_df2 = tables_part2[0][2:]
+        table_df3 = tables_part3[0][2:]
+
+        table_df1_merged = self.merge_cells(table_df1)
+        table_df2_merged = self.merge_cells(table_df2)
+        table_df3_merged = self.merge_cells(table_df3)
+
+        table_df2_merged.columns = table_df1_merged.columns
+        table_df3_merged.columns = table_df1_merged.columns
+
+        # print(table_df1_merged)
+        # print(table_df2_merged)
+        # print(table_df3_merged)
+
+        # Concatenate vertically (along rows)
+        table_df = pd.concat([table_df1_merged, table_df2_merged])
+        table_df = pd.concat([table_df, table_df3_merged])
+        # print(table_df.iloc[35])
+
+        # Convert the DataFrame to a CSV file named 'data.csv' in the current working directory
+        table_df.to_csv('SyriaHistoricalEarthquakes.csv', index=False)
+
 if __name__ == '__main__':
-        wiki = wikipedia(Earthquake_search)
-        wiki.find_earthquake()
+    input_path='The historical earthquakes of Syria.pdf'
+    obj=Syria_Scraper(input_path)
+    obj.read_pdf()
 
-class Argentina(Earthquake_search):
-    def __init__(self, input_path, output_path):
-        self.input_path = input_path
-        self.output_path = output_path
-        
+class wiki_Scraper(Scraper):
+    def __init__(self, url, output_path):
+        self.url=url
+        self.output_path=output_path
+    def find_earthquake(self):
+        html_text = requests.get(self.url).text
+        #print(html_text)
+        soup = BeautifulSoup(html_text, 'lxml')
+
+        date = []
+        place = []
+        lat = []
+        lon = []
+        fatalities = []
+        magnitude = []
+        comments = []
+
+        tables = soup.find_all('table') #each table is an element in the set tables
+        for table in tables:
+            details = table.find_all('td') #finding all cell info in the table using the td tag
+            for i in range(len(details)):
+                string = details[i].text.replace('\n', '').replace('Mw','').replace('MS','').replace('Ms','').replace('MI','').replace(
+                    '\u202f','').replace('\xa0','') #we only need the text inside the tag; removed unnecessary characters
+                if string == '' or string == '?' or string == '\u2013':
+                    string = None
+                
+                if (i%9 == 0): date.append(string)
+                if (i%9 == 2): place.append(string)
+                if (i%9 == 3): lat.append(string)
+                if (i%9 == 4): lon.append(string)
+                if (i%9 == 5): fatalities.append(string)
+                if (i%9 == 6): magnitude.append(string)
+                if (i%9 == 7): comments.append(string)
+
+        file_name = self.output_path #title of the .csv file
+
+        with open(file_name, "w", encoding="utf-8") as f:
+            f.write = csv.writer(f)
+            f.write.writerow(['No.', 'Date', 'Place', 'Latitude', 'Longitude', 'Fatalities', 'Magnitude', 'Comments']) #headers of the .csv file
+
+            for i in range(len(lon)):
+                f.write.writerow([i+1, date[i], place[i], lat[i], lon[i], fatalities[i], magnitude[i], comments[i]])
+
+if __name__ == '__main__':
+    obj=wiki_Scraper('https://en.wikipedia.org/wiki/List_of_historical_earthquakes','WikiHistoricalEarthquakes.csv')
+    obj.find_earthquake() 
+
+class argintina(Scraper):
+    def __init__(self, input_path, output_path,header):
+        self.input_path=input_path
+        self.output_path=output_path
+        self.header=header
     def find_quakes(self):
-        # open the xml file
         with open(self.input_path, "r") as file:
             file_data = file.read()
-
-        # find all events in the XML file
+        # find all 1436 events in the XML file
         data_dict = xmltodict.parse(file_data)
         data_list = data_dict["quakeml"]["eventParameters"]["event"]
 
         # find key data points for all earthquakes
-        header = ["Time ID", "Magnitude", "Station Count", "Author", "Publication Time"]
+        n = len(data_list)
+        
 
         # collect each event's data in rows
         rows = []
@@ -108,18 +187,23 @@ class Argentina(Earthquake_search):
         # write the data into the csv file
         with open(self.output_path, "w") as f:
             csv_writer = csv.writer(f)
-            csv_writer.writerow(header)
+            csv_writer.writerow(self.header)
             csv_writer.writerows(rows)
 
 # main method that calls the web scraper function
-if __name__ == '__main__':
-    argentina = Argentina("Argentina/clean-catalog.xml", "Argentina/Argentina Andean Earthquakes (2016-2017).csv")
-    argentina.find_quakes()
-                
-        
+if __name__ == "__main__":
+    input_path = "Argentina/clean-catalog.xml"
+    output_path = "Argentina/Argentina Andean Earthquakes (2016-2017).csv"
+    header = ["Time ID", "Magnitude", "Station Count", "Author", "Publication Time"]
+    argintina=argintina(input_path, output_path,header)
+    argintina.find_quakes()
+
+    
+    
+
 #GHEA
 # converts a txt file (separated by whitespace) to a csv file
-class GHEA(Earthquake_search):
+class GHEA(Scraper):
     def __init__(self, input_path, output_path, header,seperator):
         self.input_path = input_path
         self.output_path = output_path
@@ -131,10 +215,10 @@ ghea=GHEA("GHEA/GHEA-data.txt", "GHEA/GHEA Data 1000-1903.csv", ["En", "Source",
                           "Io", "Msource", "M", "MUnc", "MType", "MDet", "MDPSource",
                           "MDPn", "MDPIx", "MDPsc", "Remarks", "GEHid"],"\t")
 if __name__ == "__main__":
-    ghea.find_quake
+    ghea.find_quake_txt()
 
 #Corinth
-class corinth(Earthquake_search):
+class corinth(Scraper):
     def __init__(self, input_path, output_path, header,seperator):
         self.input_path = input_path
         self.output_path = output_path
@@ -147,4 +231,180 @@ corinth=corinth("Corinth/Marathias_seq.txt", "Corinth/Corinth Gulf 2020-21 Seism
                       "E-W horizontal error", "N-S horizontal error",
                       "Vertical error"],'')
 if __name__ == "__main__":
-    corinth.find_quake()
+    corinth.find_quake_txt()
+
+#canada
+class canada(Scraper):
+    def __init__(self, input_path, output_path, header,seperator):
+        self.input_path = input_path
+        self.output_path = output_path
+        self.header = header    
+        self.seperator = seperator
+canada=canada("Canada/Canada.txt", "Canada/Canada.csv", '','|')
+if __name__ == "__main__":
+    canada.find_quake_txt()
+
+
+
+#New madrid
+class New_Madrid_Scraper(Scraper):
+    def __init__(self, input_path, output_path, header):
+        self.input_path=input_path
+        self.output_path=output_path
+        self.header=header
+    def find_quakes(self):
+        with open(self.input_path, "r") as input_file:
+            with open(self.output_path, "w") as out_file:
+
+                # label the header of the csv with the appropriate labels
+                # label abbreviations: http://folkworm.ceri.memphis.edu/catalogs/html/cat_nm_help.html
+                csv_writer = writer(out_file, lineterminator="\n")
+                numCols = len(self.header)
+                csv_writer.writerow(self.header)
+
+                # write each row from the txt file to the csv
+                for line in input_file:
+                    words = line.split()
+
+                    # the last column -- COMMENTS -- can consist of multiple words
+                    # if so, join the comments together with spaces and put them into one cell
+                    if len(words) > numCols:
+                        words = words[:numCols-1] + [" ".join(words[numCols-1:])]
+                    
+                    # afterwards, write these words into the next row
+                    csv_writer.writerow(words)
+if __name__ == "__main__":
+    input_path = "New Madrid/New Madrid Earthquakes 1974-2023.txt"
+    output_path = "New Madrid/New Madrid Earthquakes 1974-2023.csv"
+    header=['NET', 'DATE', 'O.T. (UTC)', 'LAT', 'LONG', 'DEP', \
+                      'MAG', 'NPH', 'GAP', 'DMIN', 'RMS', 'SEO', 'SEH', 'SEZ',
+                      'Q', 'COMMENTS']
+    obj=New_Madrid_Scraper(input_path, output_path, header)
+    obj.find_quakes()
+
+#SRCMOD
+class SRCMOD_Scraper(Scraper):
+    def __init__(self, output_path, url, header):
+        self.input_path=''
+        self.output_path=output_path
+        self.url=url
+        self.header=header
+        
+    def find_quakes_web(self):
+    
+        # access the website using BeatifulSoup and requests
+        r = requests.get(self.url)
+        soup = BeautifulSoup(r.text, "html.parser")
+
+        # open a new csv file in a new folder (SRCMOD/srcmod.csv) to write data into
+        with open(self.output_path, "w", newline="", encoding="utf8") as f:
+
+            # the header labels each column for readability
+            csv_writer = writer(f)
+            csv_writer.writerow(self.header)
+
+            # find the earthquakes stored in the website's table (accessed via html <table> tag)
+            # for each row's (<tr>) cell (<td>), add the data into a list then append it into the CSV
+            quakes = soup.find("table")
+            rows = quakes.find_all("tr")
+            for row in rows:
+                quake_data = []
+                for cell in row.find_all("td"):
+                    quake_data.append(cell.text.strip())
+                csv_writer.writerow(quake_data)
+if __name__ == "__main__":
+    output_path="SRCMOD/srcmod.csv"
+    url="http://equake-rc.info/SRCMOD/searchmodels/allevents/"
+    header=["Earthquake ID", "Region", "Date (dd/mm/yyyy)", "Filnn-Engdahl Region", \
+                " ", "Magnitude", "Latitude (°N)", "Longitude (°E)", "Depth (km)", \
+                "Author", "Upload Date (mm/yyyy)"]
+    obj=SRCMOD_Scraper(output_path, url, header)
+    obj.find_quakes_web()
+
+#SoCal
+class Socal_File_Scraper(Scraper):
+    def __init__(self, input_path, output_path, header):
+        self.input_path=input_path
+        self.output_path=output_path
+        self.header=header
+    
+if __name__ == "__main__":
+    input_path = "SoCal/SearchResults.txt"
+    output_path = "SoCal/Southern California Earthquakes (1932-2023).csv"
+    header=["Year/Month/Day", "Hour:Minute:Second", "ET", "GT",
+                      "Magnitude", "M", "Latitude", "Longitude", "Depth",
+                      "Q", "EVID", "NPH", "NGRM"]
+    seperator=' '
+    obj=Socal_File_Scraper(input_path, output_path, header,seperator)
+    obj.find_quakes_txt()
+
+class Socal_Web_Scraper(Scraper):
+    def __init__(self, url, output_path, header):
+        self.url=url
+        self.output_path=output_path
+        self.header=header
+if __name__ == "__main__":
+    url = "https://service.scedc.caltech.edu/cgi-bin/catalog/catalog_search.pl?outputfmt=scec&start_year=1932&start_month=01&start_day=01&start_hr=00&start_min=00&start_sec=00&end_year=2023&end_month=07&end_day=25&end_hr=00&end_min=00&end_sec=00&min_mag=1&max_mag=9.9&min_depth=0&max_depth=1000.0&south_latd=30.0&north_latd=39.0&west_long=-124.0&east_long=-111.0&etype=eq&gtype=l&file_out=N"
+    output_path = "SoCal/Southern California Earthquakes From Web (1932-2023).csv"
+    header=["Year/Month/Day", "Hour:Minute:Second", "ET", "GT",
+                  "Magnitude", "M", "Latitude", "Longitude", "Depth",
+                  "Q", "EVID", "NPH", "NGRM"]
+    obj=Socal_Web_Scraper(url, output_path, header)
+    obj.find_quakes_web()
+
+#usgs
+class usgs_scraper(Scraper):
+    def __init__(self, url, start_date, end_date):
+        self.url=url
+        self.start_date=start_date
+        self.end_date=end_date
+
+    def download_data(self):
+        print("Hello World 1")
+
+        data = pd.DataFrame()  
+        while self.start_date < self.end_date:
+            next_date = self.start_date + timedelta(days=30)
+            if next_date > self.end_date:
+                next_date = self.end_date
+            
+            parameters = {
+                "format": "csv",
+                "starttime": self.start_date.strftime("%Y-%m-%d"),
+                "endtime": next_date.strftime("%Y-%m-%d")
+            }
+
+            response = requests.get(self.url, params=parameters)
+            response.raise_for_status() 
+
+            csv_data = pd.read_csv(io.StringIO(response.text))
+            data = pd.concat([data, csv_data])
+            
+            self.start_date = next_date
+
+        return data
+
+if __name__ == "__main__":
+    url="https://earthquake.usgs.gov/fdsnws/event/1/query"
+    start_date=datetime(1800, 1, 1)
+    end_date=datetime(2023, 6, 12)
+    obj=usgs_scraper(url, start_date, end_date)
+    earthquake_data =obj.download_data()
+    earthquake_data.to_csv("earthquake_data.csv", index=False)
+
+class Utah_Scraper(Scraper):
+    def __init__(self, input_path, output_path, header):
+        self.input_path=input_path
+        self.output_path=output_path
+        self.header=header
+
+# main method that calls the web scraper function
+if __name__ == "__main__":
+    input_path = "Utah/detections.txt"
+    output_path = "Utah/Mineral Mountains, Utah 2016-19.csv"
+    header = ["Year", "Origin Time (UTC)", "Latitude", "Longitude",
+                      "Depth", "Template Event Magnitude", "Detection Magnitude",
+                      "Event Template ID", "Detection ID", "Correlation Coefficient"]
+    seperator=' '
+    obj=Utah_Scraper(input_path, output_path, header,seperator)
+    obj.find_quakes_txt()
