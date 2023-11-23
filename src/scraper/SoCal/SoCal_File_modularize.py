@@ -20,6 +20,7 @@ class Socal_File_Scraper(Scraper):
         self.input_path=input_path
         self.output_path=output_path
         self.header=header
+        self.separator=' '
 if __name__ == "__main__":
     input_path = "SoCal/SearchResults.txt"
     output_path = "SoCal/Southern California Earthquakes (1932-2023).csv"
