@@ -1,0 +1,6 @@
+from New_Madrid.New_Madrid_modularize import New_Madrid_Scraper
+from SoCal.SoCal_File_modularize import Socal_File_Scraper
+from SoCal.SoCal_Web_modularize import Socal_Web_Scraper
+from SRCMOD.SRCMOD_Modularize import SRCMOD_Scraper
+from USGS.usgs_modularize import usgs_scraper
+from Utah.Utah_modularize import Utah_Scraper
