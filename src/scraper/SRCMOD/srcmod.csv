@@ -1,227 +1,228 @@
-Earthquake ID,Region,Date (dd/mm/yyyy),Filnn-Engdahl Region,Magnitude,Latitude (°N),Longitude (°E),Depth (km),Author,Upload Date (mm/yyyy)
-2021210501,"Madoi, Qinghai, China",21/05/2021,"Qinghai, China",7.4,34.586,98.255,10,Jin and Fialko (2021),Jan-23
-2019060701,"Ridgecrest, Southern California",6/7/2019,Central California,7.1,35.77,-117.599,7,Jin and Fialko (2020),Jan-23
-2019040701,"Ridgecrest, Southern California",4/7/2019,Central California,6.4,35.705,-117.504,10.5,Jin and Fialko (2020),Jan-23
-2019030101,"Changning earthquake, Sichuan",3/1/2019,"Sichuan, China",5.01,28.215,104.848,1.6,Wang et al. (2022),Dec-22
-2018161201,"Changning earthquake, Sichuan",16/12/2018,"Sichuan, China",5.06,28.252,104.909,1,Wang et al. (2022),Dec-22
-2018060901,"Iburi, Hokkaido, Japan",5/9/2018,"Hokkaido, Japan Region",6.8,42.6908,142.0067,37,Asano and Iwata (2019),Sep-21
-2017080901,"Chiapas, Mexico",8/9/2017,"Off Coast Of Chiapas, Mexico",8.1,14.85,-94.11,18,Okuwaki and Yagi (2017),Nov-17
-2017270101,"Changning earthquake, Sichuan",27/01/2017,"Sichuan, China",4.86,28.114,104.737,1.7,Wang et al. (2022),Dec-22
-2017220101,Solomon Islands,22/01/2017,Solomon Islands,7.88,-6.2669,155.1189,136,Hayes (2017),Oct-19
-2017180101,"Campotosto, Italy",18/01/2017,Central Italy,5.95,42.55,13.29,8.5,Cheloni et al. (2019),Jul-19
-2016251201,Chile (Southern),25/12/2016,Southern Chile,7.61,-43.4167,-73.8972,30,Hayes (2017),Oct-19
-2016171201,"New Ireland Region, P.N.G.",17/12/2016,"New Ireland Region, P.N.G.",7.88,-4.5091,153.4495,95,Hayes (2017),Oct-19
-2016081201,Solomon Islands,8/12/2016,Solomon Islands,7.79,-10.6741,161.3351,41,Hayes (2017),Oct-19
-2016131101,"South Island, New Zealand",13/11/2016,"South Island, New Zealand",7.89,-42.757,173.077,16,Hayes (2017),Oct-19
-2016301001,Norcia,30/10/2016,Central Italy,6.5,42.84,13.08,9.5,Pizzi et al. (2017),Nov-17
-2016261001,Ussita,26/10/2016,Central Italy,6.09,42.88,13.1,7.5,Pizzi et al. (2017),Nov-17
-2016010901,"Off E. Coast Of N. Island, N.Z.",1/9/2016,"Off E. Coast Of N. Island, N.Z.",7.02,-37.401,179.055,19,Hayes (2017),Oct-19
-2016290801,Ascension Island,29/08/2016,North Of Ascension Island,7.1,-0.0718,-17.8139,12,Hayes (2017),Oct-19
-2016240801,Amatrice,24/08/2016,Central Italy,6.21,42.7063,13.2532,5,Pizzi et al. (2017),Nov-17
-2016190801,South Georgia Island Region,19/08/2016,South Georgia Island Region,7.38,-55.3394,-31.9394,12,Hayes (2017),Oct-19
-2016120801,Loyalty Islands (Southeast),12/8/2016,Southeast Of Loyalty Islands,7.24,-22.489,173.0954,16.1,Hayes (2017),Oct-19
-2016290701,Mariana Islands,29/07/2016,Mariana Islands,7.7,18.5153,145.5293,212.4,Hayes (2017),Oct-19
-2016280501,South Sandwich Islands Region,28/05/2016,South Sandwich Islands Region,7.15,-56.2571,-27.0364,78,Hayes (2017),Oct-19
-2016280401,Vanuatu Islands,28/04/2016,Vanuatu Islands,6.98,-16.0941,167.3368,35,Hayes (2017),Oct-19
-2016160401,Near Coast Of Ecuador,16/04/2016,Near Coast Of Ecuador,7.82,0.3482,-79.972,20,Hayes (2017),Oct-19
-2016150401,"Kumamoto, Japan",15/04/2016,"Kyushu, Japan",7.04,32.7545,130.763,12.5,Asano and Iwata (2016),Sep-21
-2016140401,"Kumamoto, Japan",14/04/2016,"Kyushu, Japan",6.14,32.7417,130.8087,11.4,Asano and Iwata (2016),Nov-17
-2016140402,"Kumamoto,Japan",14/04/2016,"Kyushu, Japan",6.09,32.7004,130.7767,5.9,Kobayashi et al. (2017),Mar-20
-2016020301,"Southwest Of Sumatra, Indonesia",2/3/2016,"Southwest Of Sumatra, Indonesia",7.77,-4.905,94.236,24,Hayes (2017),Oct-19
-2016300101,"Kamchatka Peninsula, Russia",30/01/2016,"Kamchatka Peninsula, Russia",7.2,54.0377,158.5142,160,Hayes (2017),Oct-19
-2016240101,Alaska (Southern),24/01/2016,Southern Alaska,7.12,59.6585,-153.4521,127.8,"Hayes (NEIC, Alaska South 2014)",May-16
-2015071201,"Murghab, Tajikistan",7/12/2015,Tajikistan,7.17,38.26,72.77,10,Hayes (2017),Oct-19
-2015041201,Southeast Indian Ridge,4/12/2015,Southeast Indian Ridge,7.1,-47.74,85.183,20,Hayes (2017),Oct-19
-2015261001,"Hindu Kush Region, Afghanistan",26/10/2015,"Hindu Kush Region, Afghanistan",7.54,36.4687,70.6106,213.5,Hayes (2017),Oct-19
-2015160901,"Illapel, Chile",16/09/2015,Near Coast Of Central Chile,8.23,-31.5952,-71.6728,29,Hayes (2017),Oct-19
-2015270701,"Irian Jaya, Indonesia",27/07/2015,"Irian Jaya, Indonesia",6.96,-2.69,138.4789,48,Hayes (2017),Oct-19
-2015120501,Nepal,12/5/2015,Nepal,7.26,27.8428,86.1535,15,Hayes (2017),Oct-19
-2015070501,Solomon Islands,7/5/2015,Solomon Islands,7.05,-7.2771,154.5344,12,Hayes (2017),Oct-19
-2015050501,"New Britain Region, P.N.G.",5/5/2015,"New Britain Region, P.N.G.",7.47,-5.5034,151.9151,42,Hayes (2017),Oct-19
-2015250401,"Gorkha, Nepal",25/04/2015,Nepal,7.82,28.13,84.65,15,Hayes (2017),Oct-19
-2015290301,"New Britain Region, P.N.G.",29/03/2015,"New Britain Region, P.N.G.",7.44,-4.79,152.58,50.7,Hayes (2017),Oct-19
-2015130201,Northern Mid-Atlantic Ridge,13/02/2015,Northern Mid-Atlantic Ridge,7.13,52.6693,-31.9244,13.8,Hayes (2017),Oct-19
-2014141001,Off Coast Of Central America,14/10/2014,Off Coast Of Central America,7.29,12.6127,-88.0734,40.5,Hayes (2017),Oct-19
-2014240801,2014 South Napa,24/08/2014,Northern California,6.07,38.22,-122.313,10,Gallovic (2016),Apr-16
-2014010401,"Iquique, Chile",1/4/2014,Near Coast Of Northern Chile,8.18,-19.6298,-70.8634,25,Hayes (2017),Oct-19
-2013171101,Scotia Sea,17/11/2013,Scotia Sea,7.89,-60.2961,-46.362,12,Hayes (2017),Nov-19
-2013240901,"Balochistan, Pakistan",24/09/2013,Pakistan,7.7,26.87,65.325,-12.2,Avouac et al. (2014),May-14
-2013240501,Okhotsk Sea,24/05/2013,Sea Of Okhotsk,8.39,54.874,153.281,620,Wei et al. (2013b),Mar-15
-2013230501,Fiji Islands,23/05/2013,South Of Fiji Islands,7.39,-23.01,-177.23,174,Hayes (2017),Oct-19
-2013160401,"Khash, Iran",16/04/2013,Southwestern Pakistan,7.73,27.86,62.15,60,Hayes (2017),Oct-19
-2013060201,Santa Cruz Islands,6/2/2013,Santa Cruz Islands,8.03,-10.7377,165.1378,28.7,Hayes (2017),Oct-19
-2013050101,Alaska,5/1/2013,Southeastern Alaska,7.55,55.2918,-134.7277,12,Hayes (2017),Nov-19
-2012281001,"Masset,Canada",28/10/2012,Queen Charlotte Islands Region,7.83,52.742,-132.131,15,Hayes (2017),Nov-19
-2012050901,Costa Rica,5/9/2012,Costa Rica,7.57,9.8193,-85.5271,15,Hayes (2017),Nov-19
-2012310801,"East of Sulangan, Philippines",31/08/2012,Philippine Islands Region,7.59,10.816,126.6725,34,"Hayes (USGS, Philippines 2012)",Aug-13
-2012270801,Offshore El Salvador,27/08/2012,Off Coast Of Central America,7.32,12.14,-88.59,11.8,Hayes (2017),Nov-19
-2012260801,Brawley Swarm,26/08/2012,Southern California,5.45,33.019,-115.537,6.4,Wei et al. (2013),Dec-13
-2012260802,Brawley Swarm,26/08/2012,Southern California,5.38,33.0152,-115.548,4.9,Wei et al. (2013),Dec-13
-2012110401,Sumatra,11/4/2012,Off W Coast Of Northern Sumatra,8.65,2.3484,93.0725,23,Hayes (2017),Nov-19
-2012200301,"Oaxaca, Mexico",20/03/2012,"Near Coast Of Guerrero, Mexico",7.42,16.5,-98.22,20,Hayes (2017),Nov-19
-2012100101,sumatra,10/1/2012,Off W Coast Of Northern Sumatra,7.17,2.43,93.21,19,Hayes (2017),Nov-19
-2011231001,"Van, Turkey",23/10/2011,Turkey,7.2,38.7511,43.4698,15.2,Altiner et al. (2013),Sep-15
-2011211001,Kermadec Islands,21/10/2011,Kermadec Islands Region,7.37,-28.99,-176.24,45,Hayes (2017),Nov-19
-2011180901,Sikkim,18/09/2011,"Sikkim, India",6.9,27.8,88.15,45,Sunilkumar et al. (2019),Jan-20
-2011200801,Vanuatu,20/08/2011,Vanuatu Islands,7.12,-18.36,168.14,32,Hayes (2017),Nov-19
-2011060701,Kermadec Islands,6/7/2011,Kermadec Islands Region,7.55,-29.312,-176.204,20,Hayes (2017),Nov-19
-2011110502,Lorca-Mainshock,11/5/2011,Spain,5.2,37.727,-1.686,4.6,Lopez-Comino et al. (2016),Jan-19
-2011110501,Lorca-Foreshock,11/5/2011,Spain,4.6,37.722,-1.699,5.1,Lopez-Comino et al. (2016),Jan-19
-2011110401,"Fukushima Hamadori, Japan",11/4/2011,"Near East Coast Of Honshu, Japan",6.68,36.952,140.686,7,Tanaka et al. (2014),Sep-21
-2011110301,"Tohoku-Oki, Japan",11/3/2011,"Near East Coast Of Honshu, Japan",9,38.3,142.34,28,Ammon et al. (2011),Oct-15
-2011110302,Ibaraki-Oki (Japan),11/3/2011,"Near East Coast Of Honshu, Japan",7.86,36.1208,141.2525,25,Kubo et al. (2013),Oct-20
-2011110303,Iwate-Oki (Japan),11/3/2011,"Near East Coast Of Honshu, Japan",7.35,39.8207,142.7668,28.6,Kubo and Nishikawa (2020),Feb-21
-2011090301,"Offshore Honshu, Japan",9/3/2011,"Near East Coast Of Honshu, Japan",7.3,38.4487,142.8574,20.7,"Hayes (NEIC, Offshore Honshu 2011)",Sep-13
-2011180101,Pakistan,18/01/2011,Southwestern Pakistan,7.2,28.8453,63.9338,67.3,"Hayes (NEIC, Pakistan 2011)a",Feb-14
-2010251201,Vanuatu,25/12/2010,Vanuatu Islands Region,7.29,-19.7,167.94,16,Hayes (2017),Nov-19
-2010211201,Bonin Islands,21/12/2010,"Bonin Islands, Japan Region",7.37,26.8656,143.7392,14,Hayes (2017),Nov-19
-2010251001,Sumatra,25/10/2010,"Southern Sumatra, Indonesia",7.76,-3.464,100.084,15,Hayes (2017),Nov-19
-2010030901,"Darfield, South Island New Zealand",3/9/2010,"South Island, New Zealand",7.1,-43.55,172.2,10,Atzori et al. (2012),Oct-13
-2010100801,Vanuatu Islands,10/8/2010,Vanuatu Islands,7.26,-17.54,168.07,25,Hayes (2017),Nov-19
-2010090501,Northern Sumatra,9/5/2010,"Northern Sumatra, Indonesia",7.24,3.75,96.02,38,Hayes (2017),Nov-19
-2010060401,Northern Sumatra,6/4/2010,"Northern Sumatra, Indonesia",7.81,2.36,97.132,31,Hayes (2017),Nov-19
-2010040401,"El Mayor-Cucapah, Mexico",4/4/2010,Calif.-Baja Calif. Border Region,7.35,32.3,-115.3,10,Mendoza and Hartzell (2013),Feb-16
-2010270201,"Maule, Chile",27/02/2010,Near Coast Of Central Chile,8.8,-36.208,-72.963,31.6,Delouis at al. (2010),Sep-13
-2010120101,Haiti,12/1/2010,Haiti Region,7.1,18.5076,-72.6375,12.9,Calais et al. (2010),Nov-12
-2009071001,Vanuatu,7/10/2009,Vanuatu Islands,7.8,-13.0675,166.1794,39.2,"Hayes (NEIC, Vanuatu 2009)",Aug-13
-2008071001,Vanuatu Islands,7/10/2009,Vanuatu Islands,7.6,-13.01,166.51,45,Hayes (2017),Nov-19
-2009300901,"Padang, Indonesia",30/09/2009,"Southern Sumatra, Indonesia",7.46,-0.8,99.9,78,Hayes (2017),Nov-19
-2009290901,Samoa,29/09/2009,Samoa Islands Region,8,-15.6163,-172.3019,16.9,"Hayes (NEIC, Samoa 2009)",Aug-13
-2009030801,Gulf of California,3/8/2009,Gulf Of California,6.9,29.4094,-112.8066,9.2,"Hayes (NEIC, Gulf of California 2009)",Aug-13
-2009150701,"Fiordland, New Zealand",15/07/2009,"Off W. Coast Of S. Island, N.Z.",7.82,-45.76,166.56,12,Hayes (2017),Nov-19
-2009280501,Offshore Honduras,28/05/2009,North Of Honduras,7.3,16.7786,-86.1808,13.5,Hayes and Ji (Offshore Honduras 2009),Aug-13
-2009060401,"L Aquila, Italy",6/4/2009,Central Italy,6.3,42.35,13.38,9.5,Cirella et al. (2009)a,Apr-14
-2009030101,Papua,3/1/2009,"Irian Jaya Region, Indonesia",7.65,-0.51,132.78,17,Hayes (2017),Nov-19
-2008161101,"Sulawesi, Indonesia",16/11/2008,"Minahassa Peninsula, Sulawesi",7.3,1.3001,122.103,25.5,"Sladen (Caltech, Sulawesi 2008)",Aug-13
-2008290901,"Kermedac Islands, New Zealand",29/09/2008,"Kermadec Islands, New Zealand",7,-29.8937,-177.7883,39.5,"Hayes (NEIC, New Zealand 2008)",Aug-13
-2008250801,"Zhongba, Tibet",25/08/2008,Xizang,6.7,30.7747,83.4825,7.6,Elliott et al. (2010),Dec-15
-2008130601,"Iwate-Miyagi Nairiku, Japan",13/06/2008,"Eastern Honshu, Japan",6.89,39.0298,140.8807,7.8,Asano and Iwata (2011b),Nov-17
-2008120501,Wenchuan (China),12/5/2008,"Sichuan, China",7.92,30.858,103.24,10.8,Fielding et al. (2013),Mar-13
-2008200301,"Yutian, Tibet",20/03/2008,"Southern Xinjiang, China",7.1,35.4824,81.5146,4.1,Elliott et al. (2010),Dec-15
-2008200201,"Simeulue, Indonesia",20/02/2008,Off W Coast Of Northern Sumatra,7.39,2.77,95.96,26,Hayes (2017),Nov-19
-2008160101,"Gerze, Tibet",16/01/2008,Xizang,5.9,32.45,85.3,4,Elliott et al. (2010),Dec-15
-2008090101,"Gerze, Tibet",9/1/2008,Xizang,6.4,32.41,81.35,7.5,Elliott et al. (2010),Dec-15
-2007091201,South Of Fiji Islands,9/12/2007,South Of Fiji Islands,7.83,-26,-177.51,152.5,Hayes (2017),Nov-19
-2007141101,"Tocopilla, Chile",14/11/2007,Northern Chile,7.7,-22.34,-70.06,51.8,Bejar-Pizzaro et al. (2010),Oct-13
-2007280901,"Volcano Islands, Japan Region",28/09/2007,"Volcano Islands, Japan Region",7.46,22,142.65,276.1,Hayes (2017),Nov-19
-2007120901,"Benkulu,Indonesia",12/9/2007,"Southern Sumatra, Indonesia",8.5,-4.52,101.374,21.2,Gusman et al. (2010),Feb-14
-2007120902,"Pagai,Indonesia",12/9/2007,"Southern Sumatra, Indonesia",7.86,-2.62,100.84,35,Hayes (2017),Nov-19
-2007170701,Niigata-ken Chuetsu-oki,17/08/2007,"Near West Coast Of Honshu, Japan",6.6,37.54,138.61,8.9,Cirella et al. (2008),Apr-14
-2007150801,"Pisco, Peru",15/08/2007,Near Coast Of Peru,8.17,-13.39,-76.6,39,Hayes (2017),Nov-19
-2007010401,Solomon Islands,1/4/2007,Solomon Islands,8.2,-8.46,157.04,10,Hayes (2017),Nov-19
-2007250301,"Noto Hanto, Japan",25/03/2007,"Near West Coast Of Honshu, Japan",6.73,37.217,136.7019,9.6,Asano and Iwata (2011),Feb-16
-2007210101,Molucca Sea,21/01/2007,Northern Molucca Sea,7.45,1.07,126.28,22,Hayes (2017),Nov-19
-2007130101,Kuril Islands,13/01/2007,East Of Kuril Islands,8.18,46.24,154.52,7.5,Hayes (2017),Nov-19
-2006261202,Pingtung evnt2 (Taiwan),26/12/2006,Taiwan Region,6.8,21.97,120.42,50.2,Yen et al. (2008),Jun-15
-2006261201,Pingtung evnt1 (Taiwan),26/12/2006,Taiwan Region,6.9,21.69,120.56,44.1,Yen et al. (2008),Jun-15
-2006151101,Kuril Islands,15/11/2006,Kuril Islands,8.29,46.51,153.39,15.3,Hayes (2017),Nov-19
-2006170701,"Java, Indonesia",17/07/2006,"South Of Java, Indonesia",7.7,-9.25,107.41,12,Hayes (2017),Nov-19
-2005081001,"Kashmir, Pakistan",8/10/2005,Pakistan,7.6,34.4905,73.6253,10.9,"Konca (Caltech, Kashmir 2005)",Aug-13
-2005160801,"Honshu , Japan",16/08/2005,"Near East Coast Of Honshu, Japan",7.5,38.2398,142.0458,34.5,"Shao and Ji (UCSB, Honshu 2005)",Aug-13
-2005150601,Northern Californi,15/06/2005,Off Coast Of Northern California,7.2,41.2932,-125.9812,9,"Shao and Ji (UCSB, Northern California 2005)",Sep-13
-2005200401,Fukuoka (Japan),20/04/2005,"Kyushu, Japan",5.57,33.67,130.29,13,Asano and Iwata (2006),May-16
-2005070401,"Zhongba, Tibet",7/4/2005,Xizang,6.2,29.76,90.43,6,Elliott et al. (2010),Dec-15
-2005280301,Sumatra,28/03/2005,"Northern Sumatra, Indonesia",8.59,1.95,96.91,28.5,Hayes (2017),Nov-19
-2005200301,Fukuoka (Japan),20/03/2005,"Kyushu, Japan",6.64,33.75,130.16,14,Asano and Iwata (2006),May-16
-2004261201,Sumatra (Indonesia),26/12/2004,"Off west coast of northern Sumatera, Indonesia",9.1,3.3,95.78,35,Ammon et al. (2005),Jan-13
-2004231001,"Niigata-Ken Chuetsu, Japan",23/10/2004,"Near West Coast Of Honshu, Japan",6.62,37.307,138.839,10.6,Asano and Iwata (2009),May-16
-2004280901,Parkfield (Calif.),28/09/2004,"Central California, United States",6.06,35.8185,-120.3706,8.3,Custodio et al. (2005),Oct-12
-2004110701,"Zhongba, Tibet",11/7/2004,Xizang,6.2,30.73,83.83,10,Elliott et al. (2010),Dec-15
-2004070201,"Irian-Jaya,Indonesia",7/2/2004,"Irian Jaya Region, Indonesia",7.2,-3.9906,135.051,11.2,"Wei (Caltech, Irian-Jaya 2004)",Aug-13
-2003261201,"Bam, Iran",26/12/2003,Southern Iran,6.5,29.052,58.365,8,Poiata et al. (2012a),Oct-13
-2003250901,Tokachi-oki (Japan),25/09/2003,"Hokkaido, Japan, region",8.24,41.81,143.91,27,Hayes (2017),Nov-19
-2003250701,Miyagi-hokubu (Japan),25/07/2003,"Near east coast of eastern Honshu, Japan",6.1,38.403,141.174,6.5,Hikima and Koketsu (2004),Oct-12
-2003150701,Carlsberg Ridge,15/07/2003,Carlsberg Ridge,7.6,-2.6116,68.3704,11.3,"Wei (Caltech, Carlsberg 2003)",Aug-13
-2003210501,Boumerdes (Algeria),21/05/2003,Northern Algeria,7.25,36.83,3.65,16,Semmane et al. (2005),Oct-12
-2003220101,Colima (Mexico),22/01/2003,"Near coast of Jalisco, Mexico",7.46,18.77,-104.1,24,Hayes (2017),Nov-19
-2002031101,Denali (Alaska),3/11/2002,"Central Alaska, United States",7.85,63.5141,-147.4529,5.6,Asano et al. (2005),Sep-21
-2001141101,"Qinghai, China",14/11/2001,"Qinghai, China",7.84,35.95,90.54,10,"Hayes (NEIC, Qinghai 2015)",May-16
-2001240301,Geiyo (Japan),24/03/2001,"Western Honshu, Japan",6.68,34.1292,132.6962,46.5,Kakehi (2004),Oct-12
-2001260101,Bhuj (India),26/01/2001,Southern India,7.38,23.4,70.32,20,Antolik and Dreger (2003),Oct-12
-2000061001,Tottori (Japan),6/10/2000,"Western Honshu, Japan",6.86,35.269,133.357,14,Iwata et al. (2000),Oct-12
-2000170601,Kleifarvatn (Iceland),17/06/2000,Iceland region,5.87,63.9038,-21.9664,4,Sudhaus and Jonsson (2008),Aug-13
-1999121101,Duzce (Turkey),12/11/1999,Turkey,6.71,40.76,31.16,10,Birgoren et al. (2004),Oct-12
-1999161001,Hector Mine (Calif.),16/10/1999,"Southern California, United States",7.17,34.597,-116.27,15,Ji et al. (2002),Oct-12
-1999300901,Oaxaca (Mexico),30/09/1999,Southeastcentral Pacific Ocean,7.47,16,-97.02,39.7,Hernandez et al. (2001),Dec-13
-1999200901,ChiChi (Taiwan),20/09/1999,Taiwan,7.68,23.869,120.84,8,Chi et al. (2001),Oct-12
-1999170801,Izmit (Turkey),17/08/1999,Turkey,7.59,40.725,29.987,17,Bouchon et al. (2002),Mar-13
-1998291101,Ceram Sea,29/11/1998,Ceram Sea,7.69,-2.07,124.89,16,Hayes (2017),Oct-19
-1998180901,Hida Swarm EV16 (Japan),18/09/1998,"Eastern Honshu, Japan",4.41,36.3337,137.6577,1.9,Ide (2001),Oct-12
-1998030901,Iwate (Japan),3/9/1998,"Eastern Honshu, Japan",6.27,39.8132,140.8966,7.5,Miyakoshi et al. (2000),Oct-12
-1998250801,"Pumqu-Xainza, Tibet",25/08/1998,Xizang,6.16,30.1345,88.31,8.3,Wang et al. (2014),Mar-20
-1998220801,Hida Swarm EV11 (Japan),22/08/1998,"Eastern Honshu, Japan",4.33,36.2396,137.6529,2.6,Ide (2001),Oct-12
-1998170801,Hida Swarm EV10 (Japan),17/08/1998,"Eastern Honshu, Japan",4.45,36.3512,137.6228,3,Ide (2001),Oct-12
-1998160802,Hida Swarm EV09 (Japan),16/08/1998,"Eastern Honshu, Japan",5.13,36.3222,137.6327,3.4,Ide (2001),Oct-12
-1998160801,Hida Swarm EV08 (Japan),16/08/1998,"Eastern Honshu, Japan",4.11,36.318,137.641,2.6,Ide (2001),Oct-12
-1998140801,Hida Swarm EV07 (Japan),14/08/1998,"Eastern Honshu, Japan",4.41,36.3017,137.6307,3.7,Ide (2001),Oct-12
-1998120801,Hida Swarm EV05 (Japan),12/8/1998,"Eastern Honshu, Japan",4.54,36.2351,137.6256,3.3,Ide (2001),Oct-12
-1998170701,Rueyli (Taiwan),17/07/1998,Taiwan,5.84,23.5,120.66,6,Ma and Wu (2001),May-20
-1998250302,Antarctica Normal-Faulting Segment,25/03/1998,Balleny Islands region,7.76,-62.86,149.74,12,Antolik et al. (2000),Oct-12
-1998250301,Antarctica Strike-Slip Segment,25/03/1998,Balleny Islands region,7.98,-62.86,149.74,12,Antolik et al. (2000),Oct-12
-1997141001,Colfiorito Sequence # 3 (Italy),14/10/1997,Central Italy,5.86,42.919,12.926,5.6,Hernandez et al. (2004),Oct-12
-1997260901,Colfiorito Sequence # 1 (Italy),26/09/1997,Central Italy,5.72,43.0225,12.8917,4,Hernandez et al. (2004),Oct-12
-1997260902,Colfiorito Sequence # 2 (Italy),26/09/1997,Central Italy,5.97,43.0305,12.8622,5.1,Hernandez et al. (2004),Oct-12
-1997250601,Yamaguchi (Japan),25/06/1997,"Western Honshu, Japan",5.81,34.441,131.676,7.5,Ide (1999),Oct-12
-1997130501,Kagoshimaen-hoku-seibu (Japan),13/05/1997,"Kyushu, Japan",6.01,31.952,130.34,7.7,Horikawa (2001),Oct-12
-1997100501,Zirkuh (East Iran),10/5/1997,Northern And Central Iran,7.2,33.82,59.8,10,Sudhaus and Jonsson (2011),Nov-13
-1997260301,Kagoshimaen-hoku-seibu (Japan),26/03/1997,"Kyushu, Japan",6.1,31.9681,130.3875,7.6,Horikawa (2001),Oct-12
-1996021201,Hyuga-nada2 (Japan),2/12/1996,"Kyushu, Japan",6.68,31.803,131.588,20.4,Yagi et al. (1999),Oct-12
-1996121101,Nazca Ridge (Peru),12/11/1996,Near coast of Peru,7.7,-14.973,-75.57,21,Hayes (2017),Oct-19
-1996191001,Hyuga-nada1 (Japan),19/10/1996,"Southeast of Shikoku, Japan",6.81,31.835,131.958,11.6,Yagi et al. (1999),Oct-12
-1996030701,"Pumqu-Xainza, Tibet",3/7/1996,Xizang,6.08,30.1456,88.2894,8.3,Wang et al. (2014),Dec-15
-1995311001,Taiwan (9510312227P000),31/10/1995,Taiwan,4.93,23.291,120.359,10.7,Ma and Wu (2001),May-20
-1995091001,Colima (Mexico),9/10/1995,Southeastcentral Pacific Ocean,7.89,18.864,-104.579,16,Hayes (2017),Oct-19
-1995140901,"Copala, Mexico",14/09/1995,"Near Coast Of Guerrero, Mexico",7.3,16.48,-98.76,15.9,Courboulex et al. (1997),Jun-15
-1995140701,Taiwan (9507141652),14/07/1995,Taiwan,5.07,24.368,121.743,9.8,Ma and Wu (2001),May-20
-1995170101,Kobe (Japan),17/01/1995,"Near south coast of western Honshu, Japan",6.8,34.6,135.04,14,Cho and Nakanishi (2000),Oct-12
-1994281201,Sanrikuki (Japan),28/12/1994,"Off east coast of Honshu, Japan",7.72,40.45,143.49,26,Hayes (2017),Oct-19
-1994050601,Nanao (Taiwan),5/6/1994,Taiwan,6.28,24.468,121.787,5.1,Ma and Wu (2001),May-20
-1994060401,Taiwan (9404060112P160),6/4/1994,Taiwan,4.54,23.533,120.421,13.4,Ma and Wu (2001),May-20
-1994170101,Northridge (Calif.),17/01/1994,"Southern California, United States",6.66,34.213,-118.537,17.5,Dreger (1994),Nov-12
-1993151201,Tapu (Taiwan),15/12/1993,Taiwan,5.65,23.194,120.507,15.2,Ma and Wu (2001),May-20
-1993120701,Hokkaido-nansei-oki (Japan),12/7/1993,"Hokkaido, Japan, region",7.7,42.812,139.133,17,Hayes (2017),Nov-19
-1993200301,"Pumqu-Xainza, Tibet",20/03/1993,Xizang,6.29,29.0464,87.4905,8.3,Wang et al. (2014),Dec-15
-1992290601,Little Skull Mnts (Nevada),29/06/1992,California-Nevada border region,5.63,36.4316,-116.1776,11.8,Silva et al. (2003),Nov-12
-1992280601,Landers (Calif.),28/06/1992,"Southern California, United States",7.08,34.2,-116.43,5,Cohee and Beroza (1994),Nov-12
-1992230401,Joshua Tree (Calif.),23/04/1992,"Southern California, United States",6.25,33.966,-116.317,12.5,Bennet et al. (1995),Nov-12
-1991280601,Sierra Madre (Calif.),28/06/1991,"Southern California, United States",5.59,34.264,-117.99,20.9,Wald (1992),Nov-12
-1990050401,Mariana Islands Region,5/4/1990,Mariana Islands Region,7.37,15.23,147.53,11,Hayes (2017),Oct-19
-1989251201,Ungava (Canada),25/12/1989,"Northern Quebec, Canada",6.02,60.12,-73.6,2.5,Hartzell et al. (1994),Nov-12
-1989181001,Loma Prieta (Calif.),18/10/1989,"Central California, United States",6.95,37.041,-121.883,17.6,Beroza (1991),Nov-12
-1988251101,Saguenay (Canada),25/11/1988,"Southern Quebec, Canada",5.81,48.117,-71.184,26,Hartzell et al. (1994),Nov-12
-1987241101,Superstition Hills (Calif.),24/11/1987,"Southern California, United States",6.6,33.0166,-115.85,10,Larsen et al. (1992),Nov-12
-1987241102,Elmore Ranch (Calif.),24/11/1987,"Southern California, United States",6.52,33.0833,-115.796,10,Larsen et al. (1992),Nov-12
-1987011001,Whittier Narrows (Calif.),1/10/1987,"Southern California, United States",5.89,34.05,-118.08,14.6,Hartzell and Iida (1990),Nov-12
-1986080701,North Palm Springs (Calif.),8/7/1986,"Southern California, United States",6.21,34,-116.57,11,Hartzell (1989),Nov-12
-1985231201,Nahanni2 (Canada),23/12/1985,"Northwest Territories, Canada",6.66,62.187,-124.24,8,Hartzell et al. (1994),Nov-12
-1985051001,Nahanni1 (Canada),5/10/1985,"Northwest Territories, Canada",6.66,62.208,-124.217,8,Hartzell et al. (1994),Nov-12
-1985210901,Zihuatanejo (Mexico),21/09/1985,"Near coast of Guerrero, Mexico",7.42,17.598,-101.819,20,Mendoza (1993),Nov-12
-1985190901,Michoacan (Mexico),19/09/1985,"Michoacan, Mexico",8.01,18.18,-102.57,17,Mendoza and Hartzell (1989),Nov-12
-1985030301,Central Chile (Chile),3/3/1985,Near coast of central Chile,8.16,-33.125,-71.61,40,Mendoza et al. (1994),Nov-12
-1984140901,Nagano-ken seibu (Japan),14/09/1984,"Eastern Honshu, Japan",6.29,35.82,137.49,3,Takeo and Mikami (1987),Nov-12
-1984240401,Morgan Hill (Calif.),24/04/1984,"Central California, United States",6.28,37.317,-121.682,8.5,Beroza and Spudich (1988),Nov-12
-1983281001,Borah Peak (Idaho),28/10/1983,"Eastern Idaho, United States",6.82,44.06,-113.86,16,Mendoza and Hartzell (1988),Nov-12
-1983260501,Japanea-chubu (Japan),26/05/1983,"Near West Coast Of Honshu, Japan",7.58,40.357,139.077,8.1,Fukuyama and Irikura (1986),Nov-14
-1982090101,New Brunswick (Canada),9/1/1982,"New Brunswick, Canada",5.47,46.984,-66.656,8,Hartzell et al. (1994),Nov-12
-1981251001,Playa Azul (Mexico),25/10/1981,"Near coast of Michoacan, Mexico",7.25,17.742,-102.238,15,Mendoza (1993),Nov-12
-1980290601,Izu-hanto-toho-oki (Japan),29/06/1980,"Near south coast of eastern Honshu, Japan",6.61,34.9231,139.1855,8,Takeo (1988),Nov-12
-1979151001,Imperial Valley (Calif.),15/10/1979,California-Baja California border region,6.53,32.644,-115.309,8,Archuleta (1984),Mar-13
-1979060801,Coyote Lake (Calif.),6/8/1979,"Central California, United States",5.92,36.97,-121.51,8,Liu and Helmberger (1983),Nov-12
-1979140301,Petatlan (Mexico),14/03/1979,"Near coast of Guerrero, Mexico",7.39,17.46,-101.46,15,Mendoza (1995),Nov-12
-1978160901,Tabas (Iran),16/09/1978,Northern and central Iran,7.09,33.22,57.36,5.5,Hartzell and Mendoza (1991),Nov-12
-1978120601,Miyagiki (Japan),12/6/1978,"Near east coast of eastern Honshu, Japan",7.61,38.15,142.167,37,Yamanaka and Kikuchi (2004),Nov-12
-1975210401,Oita-ken-chubu (Japan),21/04/1975,"Kyushu, Japan",6.36,33.15,131.3,8.5,Takeo (1990),Nov-12
-1974031001,Peru (Central Coast),3/10/1974,Near coast of Peru,8.01,-12.39,-77.76,12,Hartzell and Langer (1993),Nov-12
-1974090501,Izu-hanto-oki (Japan),9/5/1974,"Near south coast of eastern Honshu, Japan",6.56,34.4,138.8,8,Takeo (1990),Nov-12
-1971090201,San Fernando (Calif.),9/2/1971,"Southern California, United States",6.82,34.43,-118.37,13,Heaton (1982),Nov-12
-1969090901,Gifu-ken-chubu (Japan),9/9/1969,"Eastern Honshu, Japan",6.43,35.47,137.05,2,Takeo (1990),Nov-12
-1968160501,Tokachi-oki (Japan),16/05/1968,"Off east coast of Honshu, Japan",8.35,40.73,143.58,9,Nagai et al. (2001),Nov-12
-1968010401,Hyuga-nada (Japan),1/4/1968,"Shikoku, Japan",7.53,32.28,132.53,15,Yagi et al. (1998),Nov-12
-1961190801,Kitamino (Japan),19/08/1961,"Near west coast of eastern Honshu, Japan",6.47,36.2,136.8,10,Takeo (1990),Nov-12
-1952040301,"Tokachi-Oki,Japan",4/3/1952,"Hokkaido, Japan Region",8.4,41.7057,144.1512,17.6,Kobayashi et al. (2021),Feb-21
-1948280601,Fukui (Japan),28/06/1948,"Near west coast of eastern Honshu, Japan",6.65,36.247,136.188,10.1,Ichinose et al. (2005),Nov-12
-1946201201,Nankaido (Japan),20/12/1946,"Near south coast of western Honshu, Japan",8.4,33.03,135.62,30,Baba et al. (2002),Nov-12
-1945120101,Mikawa (Japan),12/1/1945,"Near south coast of eastern Honshu, Japan",6.67,34.7,137.1,10,Kikuchi et al. (2003),Nov-12
-1944071201,Tonankai (Japan),7/12/1944,"Near south coast of western Honshu, Japan",8.04,33.77,135.96,30,Ichinose et al. (2003),Nov-12
-1923010901,Kanto (Japan),1/9/1923,"Near south coast of eastern Honshu, Japan",8.08,35.4,139.2,14.6,Kobayashi and Koketsu (2005),Nov-12
-1906180401,San Francisco (Calif.),18/04/1906,"Central California, United States",7.91,37.78,-122.51,10,Song et al. (2008),Nov-12
+Earthquake ID,Region,Date (dd/mm/yyyy),Filnn-Engdahl Region, ,Magnitude,Latitude (Â°N),Longitude (Â°E),Depth (km),Author,Upload Date (mm/yyyy)
+
+2021210501,"Madoi, Qinghai, China",21/05/2021,"Qinghai, China",,7.40,34.5860,98.2550,10.0,Jin and Fialko (2021),01/2023
+2019060701,"Ridgecrest, Southern California",06/07/2019,Central California,,7.10,35.7700,-117.5990,7.0,Jin and Fialko (2020),01/2023
+2019040701,"Ridgecrest, Southern California",04/07/2019,Central California,,6.40,35.7050,-117.5040,10.5,Jin and Fialko (2020),01/2023
+2019030101,"Changning earthquake, Sichuan",03/01/2019,"Sichuan, China",,5.01,28.2150,104.8480,1.6,Wang et al. (2022),12/2022
+2018161201,"Changning earthquake, Sichuan",16/12/2018,"Sichuan, China",,5.06,28.2520,104.9090,1.0,Wang et al. (2022),12/2022
+2018060901,"Iburi, Hokkaido, Japan",05/09/2018,"Hokkaido, Japan Region",,6.80,42.6908,142.0067,37.0,Asano and Iwata (2019),09/2021
+2017080901,"Chiapas, Mexico",08/09/2017,"Off Coast Of Chiapas, Mexico",,8.10,14.8500,-94.1100,18.0,Okuwaki and Yagi (2017),11/2017
+2017270101,"Changning earthquake, Sichuan",27/01/2017,"Sichuan, China",,4.86,28.1140,104.7370,1.7,Wang et al. (2022),12/2022
+2017220101,Solomon Islands,22/01/2017,Solomon Islands,,7.88,-6.2669,155.1189,136.0,Hayes (2017),10/2019
+2017180101,"Campotosto, Italy",18/01/2017,Central Italy,,5.95,42.5500,13.2900,8.5,Cheloni et al. (2019),07/2019
+2016251201,Chile (Southern),25/12/2016,Southern Chile,,7.61,-43.4167,-73.8972,30.0,Hayes (2017),10/2019
+2016171201,"New Ireland Region, P.N.G.",17/12/2016,"New Ireland Region, P.N.G.",,7.88,-4.5091,153.4495,95.0,Hayes (2017),10/2019
+2016081201,Solomon Islands,08/12/2016,Solomon Islands,,7.79,-10.6741,161.3351,41.0,Hayes (2017),10/2019
+2016131101,"South Island, New Zealand",13/11/2016,"South Island, New Zealand",,7.89,-42.7570,173.0770,16.0,Hayes (2017),10/2019
+2016301001,Norcia,30/10/2016,Central Italy,,6.50,42.8400,13.0800,9.5,Pizzi et al. (2017),11/2017
+2016261001,Ussita,26/10/2016,Central Italy,,6.09,42.8800,13.1000,7.5,Pizzi et al. (2017),11/2017
+2016010901,"Off E. Coast Of N. Island, N.Z.",01/09/2016,"Off E. Coast Of N. Island, N.Z.",,7.02,-37.4010,179.0550,19.0,Hayes (2017),10/2019
+2016290801,Ascension Island,29/08/2016,North Of Ascension Island,,7.10,-0.0718,-17.8139,12.0,Hayes (2017),10/2019
+2016240801,Amatrice,24/08/2016,Central Italy,,6.21,42.7063,13.2532,5.0,Pizzi et al. (2017),11/2017
+2016190801,South Georgia Island Region,19/08/2016,South Georgia Island Region,,7.38,-55.3394,-31.9394,12.0,Hayes (2017),10/2019
+2016120801,Loyalty Islands (Southeast),12/08/2016,Southeast Of Loyalty Islands,,7.24,-22.4890,173.0954,16.1,Hayes (2017),10/2019
+2016290701,Mariana Islands,29/07/2016,Mariana Islands,,7.70,18.5153,145.5293,212.4,Hayes (2017),10/2019
+2016280501,South Sandwich Islands Region,28/05/2016,South Sandwich Islands Region,,7.15,-56.2571,-27.0364,78.0,Hayes (2017),10/2019
+2016280401,Vanuatu Islands,28/04/2016,Vanuatu Islands,,6.98,-16.0941,167.3368,35.0,Hayes (2017),10/2019
+2016160401,Near Coast Of Ecuador,16/04/2016,Near Coast Of Ecuador,,7.82,0.3482,-79.9720,20.0,Hayes (2017),10/2019
+2016150401,"Kumamoto, Japan",15/04/2016,"Kyushu, Japan",,7.04,32.7545,130.7630,12.5,Asano and Iwata (2016),09/2021
+2016140401,"Kumamoto, Japan",14/04/2016,"Kyushu, Japan",,6.14,32.7417,130.8087,11.4,Asano and Iwata (2016),11/2017
+2016140402,"Kumamoto,Japan",14/04/2016,"Kyushu, Japan",,6.09,32.7004,130.7767,5.9,Kobayashi et al. (2017),03/2020
+2016020301,"Southwest Of Sumatra, Indonesia",02/03/2016,"Southwest Of Sumatra, Indonesia",,7.77,-4.9050,94.2360,24.0,Hayes (2017),10/2019
+2016300101,"Kamchatka Peninsula, Russia",30/01/2016,"Kamchatka Peninsula, Russia",,7.20,54.0377,158.5142,160.0,Hayes (2017),10/2019
+2016240101,Alaska (Southern),24/01/2016,Southern Alaska,,7.12,59.6585,-153.4521,127.8,"Hayes (NEIC, Alaska South 2014)",05/2016
+2015071201,"Murghab, Tajikistan",07/12/2015,Tajikistan,,7.17,38.2600,72.7700,10.0,Hayes (2017),10/2019
+2015041201,Southeast Indian Ridge,04/12/2015,Southeast Indian Ridge,,7.10,-47.7400,85.1830,20.0,Hayes (2017),10/2019
+2015261001,"Hindu Kush Region, Afghanistan",26/10/2015,"Hindu Kush Region, Afghanistan",,7.54,36.4687,70.6106,213.5,Hayes (2017),10/2019
+2015160901,"Illapel, Chile",16/09/2015,Near Coast Of Central Chile,,8.23,-31.5952,-71.6728,29.0,Hayes (2017),10/2019
+2015270701,"Irian Jaya, Indonesia",27/07/2015,"Irian Jaya, Indonesia",,6.96,-2.6900,138.4789,48.0,Hayes (2017),10/2019
+2015120501,Nepal,12/05/2015,Nepal,,7.26,27.8428,86.1535,15.0,Hayes (2017),10/2019
+2015070501,Solomon Islands,07/05/2015,Solomon Islands,,7.05,-7.2771,154.5344,12.0,Hayes (2017),10/2019
+2015050501,"New Britain Region, P.N.G.",05/05/2015,"New Britain Region, P.N.G.",,7.47,-5.5034,151.9151,42.0,Hayes (2017),10/2019
+2015250401,"Gorkha, Nepal",25/04/2015,Nepal,,7.82,28.1300,84.6500,15.0,Hayes (2017),10/2019
+2015290301,"New Britain Region, P.N.G.",29/03/2015,"New Britain Region, P.N.G.",,7.44,-4.7900,152.5800,50.7,Hayes (2017),10/2019
+2015130201,Northern Mid-Atlantic Ridge,13/02/2015,Northern Mid-Atlantic Ridge,,7.13,52.6693,-31.9244,13.8,Hayes (2017),10/2019
+2014141001,Off Coast Of Central America,14/10/2014,Off Coast Of Central America,,7.29,12.6127,-88.0734,40.5,Hayes (2017),10/2019
+2014240801,2014 South Napa,24/08/2014,Northern California,,6.07,38.2200,-122.3130,10.0,Gallovic (2016),04/2016
+2014010401,"Iquique, Chile",01/04/2014,Near Coast Of Northern Chile,,8.18,-19.6298,-70.8634,25.0,Hayes (2017),10/2019
+2013171101,Scotia Sea,17/11/2013,Scotia Sea,,7.89,-60.2961,-46.3620,12.0,Hayes (2017),11/2019
+2013240901,"Balochistan, Pakistan",24/09/2013,Pakistan,,7.70,26.8700,65.3250,-12.2,Avouac et al. (2014),05/2014
+2013240501,Okhotsk Sea,24/05/2013,Sea Of Okhotsk,,8.39,54.8740,153.2810,620.0,Wei et al. (2013b),03/2015
+2013230501,Fiji Islands,23/05/2013,South Of Fiji Islands,,7.39,-23.0100,-177.2300,174.0,Hayes (2017),10/2019
+2013160401,"Khash, Iran",16/04/2013,Southwestern Pakistan,,7.73,27.8600,62.1500,60.0,Hayes (2017),10/2019
+2013060201,Santa Cruz Islands,06/02/2013,Santa Cruz Islands,,8.03,-10.7377,165.1378,28.7,Hayes (2017),10/2019
+2013050101,Alaska,05/01/2013,Southeastern Alaska,,7.55,55.2918,-134.7277,12.0,Hayes (2017),11/2019
+2012281001,"Masset,Canada",28/10/2012,Queen Charlotte Islands Region,,7.83,52.7420,-132.1310,15.0,Hayes (2017),11/2019
+2012050901,Costa Rica,05/09/2012,Costa Rica,,7.57,9.8193,-85.5271,15.0,Hayes (2017),11/2019
+2012310801,"East of Sulangan, Philippines",31/08/2012,Philippine Islands Region,,7.59,10.8160,126.6725,34.0,"Hayes (USGS, Philippines 2012)",08/2013
+2012270801,Offshore El Salvador,27/08/2012,Off Coast Of Central America,,7.32,12.1400,-88.5900,11.8,Hayes (2017),11/2019
+2012260801,Brawley Swarm,26/08/2012,Southern California,,5.45,33.0190,-115.5370,6.4,Wei et al. (2013),12/2013
+2012260802,Brawley Swarm,26/08/2012,Southern California,,5.38,33.0152,-115.5480,4.9,Wei et al. (2013),12/2013
+2012110401,Sumatra,11/04/2012,Off W Coast Of Northern Sumatra,,8.65,2.3484,93.0725,23.0,Hayes (2017),11/2019
+2012200301,"Oaxaca, Mexico",20/03/2012,"Near Coast Of Guerrero, Mexico",,7.42,16.5000,-98.2200,20.0,Hayes (2017),11/2019
+2012100101,sumatra,10/01/2012,Off W Coast Of Northern Sumatra,,7.17,2.4300,93.2100,19.0,Hayes (2017),11/2019
+2011231001,"Van, Turkey",23/10/2011,Turkey,,7.20,38.7511,43.4698,15.2,Altiner et al. (2013),09/2015
+2011211001,Kermadec Islands,21/10/2011,Kermadec Islands Region,,7.37,-28.9900,-176.2400,45.0,Hayes (2017),11/2019
+2011180901,Sikkim,18/09/2011,"Sikkim, India",,6.90,27.8000,88.1500,45.0,Sunilkumar et al. (2019),01/2020
+2011200801,Vanuatu,20/08/2011,Vanuatu Islands,,7.12,-18.3600,168.1400,32.0,Hayes (2017),11/2019
+2011060701,Kermadec Islands,06/07/2011,Kermadec Islands Region,,7.55,-29.3120,-176.2040,20.0,Hayes (2017),11/2019
+2011110502,Lorca-Mainshock,11/05/2011,Spain,,5.20,37.7270,-1.6860,4.6,Lopez-Comino et al. (2016),01/2019
+2011110501,Lorca-Foreshock,11/05/2011,Spain,,4.60,37.7220,-1.6990,5.1,Lopez-Comino et al. (2016),01/2019
+2011110401,"Fukushima Hamadori, Japan",11/04/2011,"Near East Coast Of Honshu, Japan",,6.68,36.9520,140.6860,7.0,Tanaka et al. (2014),09/2021
+2011110301,"Tohoku-Oki, Japan",11/03/2011,"Near East Coast Of Honshu, Japan",,9.00,38.3000,142.3400,28.0,Ammon et al. (2011),10/2015
+2011110302,Ibaraki-Oki (Japan),11/03/2011,"Near East Coast Of Honshu, Japan",,7.86,36.1208,141.2525,25.0,Kubo et al. (2013),10/2020
+2011110303,Iwate-Oki (Japan),11/03/2011,"Near East Coast Of Honshu, Japan",,7.35,39.8207,142.7668,28.6,Kubo and Nishikawa (2020),02/2021
+2011090301,"Offshore Honshu, Japan",09/03/2011,"Near East Coast Of Honshu, Japan",,7.30,38.4487,142.8574,20.7,"Hayes (NEIC, Offshore Honshu 2011)",09/2013
+2011180101,Pakistan,18/01/2011,Southwestern Pakistan,,7.20,28.8453,63.9338,67.3,"Hayes (NEIC, Pakistan 2011)a",02/2014
+2010251201,Vanuatu,25/12/2010,Vanuatu Islands Region,,7.29,-19.7000,167.9400,16.0,Hayes (2017),11/2019
+2010211201,Bonin Islands,21/12/2010,"Bonin Islands, Japan Region",,7.37,26.8656,143.7392,14.0,Hayes (2017),11/2019
+2010251001,Sumatra,25/10/2010,"Southern Sumatra, Indonesia",,7.76,-3.4640,100.0840,15.0,Hayes (2017),11/2019
+2010030901,"Darfield, South Island New Zealand",03/09/2010,"South Island, New Zealand",,7.10,-43.5500,172.2000,10.0,Atzori et al. (2012),10/2013
+2010100801,Vanuatu Islands,10/08/2010,Vanuatu Islands,,7.26,-17.5400,168.0700,25.0,Hayes (2017),11/2019
+2010090501,Northern Sumatra,09/05/2010,"Northern Sumatra, Indonesia",,7.24,3.7500,96.0200,38.0,Hayes (2017),11/2019
+2010060401,Northern Sumatra,06/04/2010,"Northern Sumatra, Indonesia",,7.81,2.3600,97.1320,31.0,Hayes (2017),11/2019
+2010040401,"El Mayor-Cucapah, Mexico",04/04/2010,Calif.-Baja Calif. Border Region,,7.35,32.3000,-115.3000,10.0,Mendoza and Hartzell (2013),02/2016
+2010270201,"Maule, Chile",27/02/2010,Near Coast Of Central Chile,,8.80,-36.2080,-72.9630,31.6,Delouis at al. (2010),09/2013
+2010120101,Haiti,12/01/2010,Haiti Region,,7.10,18.5076,-72.6375,12.9,Calais et al. (2010),11/2012
+2009071001,Vanuatu,07/10/2009,Vanuatu Islands,,7.80,-13.0675,166.1794,39.2,"Hayes (NEIC, Vanuatu 2009)",08/2013
+2008071001,Vanuatu Islands,07/10/2009,Vanuatu Islands,,7.60,-13.0100,166.5100,45.0,Hayes (2017),11/2019
+2009300901,"Padang, Indonesia",30/09/2009,"Southern Sumatra, Indonesia",,7.46,-0.8000,99.9000,78.0,Hayes (2017),11/2019
+2009290901,Samoa,29/09/2009,Samoa Islands Region,,8.00,-15.6163,-172.3019,16.9,"Hayes (NEIC, Samoa 2009)",08/2013
+2009030801,Gulf of California,03/08/2009,Gulf Of California,,6.90,29.4094,-112.8066,9.2,"Hayes (NEIC, Gulf of California 2009)",08/2013
+2009150701,"Fiordland, New Zealand",15/07/2009,"Off W. Coast Of S. Island, N.Z.",,7.82,-45.7600,166.5600,12.0,Hayes (2017),11/2019
+2009280501,Offshore Honduras,28/05/2009,North Of Honduras,,7.30,16.7786,-86.1808,13.5,Hayes and Ji (Offshore Honduras 2009),08/2013
+2009060401,"L Aquila, Italy",06/04/2009,Central Italy,,6.30,42.3500,13.3800,9.5,Cirella et al. (2009)a,04/2014
+2009030101,Papua,03/01/2009,"Irian Jaya Region, Indonesia",,7.65,-0.5100,132.7800,17.0,Hayes (2017),11/2019
+2008161101,"Sulawesi, Indonesia",16/11/2008,"Minahassa Peninsula, Sulawesi",,7.30,1.3001,122.1030,25.5,"Sladen (Caltech, Sulawesi 2008)",08/2013
+2008290901,"Kermedac Islands, New Zealand",29/09/2008,"Kermadec Islands, New Zealand",,7.00,-29.8937,-177.7883,39.5,"Hayes (NEIC, New Zealand 2008)",08/2013
+2008250801,"Zhongba, Tibet",25/08/2008,Xizang,,6.70,30.7747,83.4825,7.6,Elliott et al. (2010),12/2015
+2008130601,"Iwate-Miyagi Nairiku, Japan",13/06/2008,"Eastern Honshu, Japan",,6.89,39.0298,140.8807,7.8,Asano and Iwata (2011b),11/2017
+2008120501,Wenchuan (China),12/05/2008,"Sichuan, China",,7.92,30.8580,103.2400,10.8,Fielding et al. (2013),03/2013
+2008200301,"Yutian, Tibet",20/03/2008,"Southern Xinjiang, China",,7.10,35.4824,81.5146,4.1,Elliott et al. (2010),12/2015
+2008200201,"Simeulue, Indonesia",20/02/2008,Off W Coast Of Northern Sumatra,,7.39,2.7700,95.9600,26.0,Hayes (2017),11/2019
+2008160101,"Gerze, Tibet",16/01/2008,Xizang,,5.90,32.4500,85.3000,4.0,Elliott et al. (2010),12/2015
+2008090101,"Gerze, Tibet",09/01/2008,Xizang,,6.40,32.4100,81.3500,7.5,Elliott et al. (2010),12/2015
+2007091201,South Of Fiji Islands,09/12/2007,South Of Fiji Islands,,7.83,-26.0000,-177.5100,152.5,Hayes (2017),11/2019
+2007141101,"Tocopilla, Chile",14/11/2007,Northern Chile,,7.70,-22.3400,-70.0600,51.8,Bejar-Pizzaro et al. (2010),10/2013
+2007280901,"Volcano Islands, Japan Region",28/09/2007,"Volcano Islands, Japan Region",,7.46,22.0000,142.6500,276.1,Hayes (2017),11/2019
+2007120901,"Benkulu,Indonesia",12/09/2007,"Southern Sumatra, Indonesia",,8.50,-4.5200,101.3740,21.2,Gusman et al. (2010),02/2014
+2007120902,"Pagai,Indonesia",12/09/2007,"Southern Sumatra, Indonesia",,7.86,-2.6200,100.8400,35.0,Hayes (2017),11/2019
+2007170701,Niigata-ken Chuetsu-oki,17/08/2007,"Near West Coast Of Honshu, Japan",,6.60,37.5400,138.6100,8.9,Cirella et al. (2008),04/2014
+2007150801,"Pisco, Peru",15/08/2007,Near Coast Of Peru,,8.17,-13.3900,-76.6000,39.0,Hayes (2017),11/2019
+2007010401,Solomon Islands,01/04/2007,Solomon Islands,,8.20,-8.4600,157.0400,10.0,Hayes (2017),11/2019
+2007250301,"Noto Hanto, Japan",25/03/2007,"Near West Coast Of Honshu, Japan",,6.73,37.2170,136.7019,9.6,Asano and Iwata (2011),02/2016
+2007210101,Molucca Sea,21/01/2007,Northern Molucca Sea,,7.45,1.0700,126.2800,22.0,Hayes (2017),11/2019
+2007130101,Kuril Islands,13/01/2007,East Of Kuril Islands,,8.18,46.2400,154.5200,7.5,Hayes (2017),11/2019
+2006261202,Pingtung evnt2 (Taiwan),26/12/2006,Taiwan Region,,6.80,21.9700,120.4200,50.2,Yen et al. (2008),06/2015
+2006261201,Pingtung evnt1 (Taiwan),26/12/2006,Taiwan Region,,6.90,21.6900,120.5600,44.1,Yen et al. (2008),06/2015
+2006151101,Kuril Islands,15/11/2006,Kuril Islands,,8.29,46.5100,153.3900,15.3,Hayes (2017),11/2019
+2006170701,"Java, Indonesia",17/07/2006,"South Of Java, Indonesia",,7.70,-9.2500,107.4100,12.0,Hayes (2017),11/2019
+2005081001,"Kashmir, Pakistan",08/10/2005,Pakistan,,7.60,34.4905,73.6253,10.9,"Konca (Caltech, Kashmir 2005)",08/2013
+2005160801,"Honshu , Japan",16/08/2005,"Near East Coast Of Honshu, Japan",,7.50,38.2398,142.0458,34.5,"Shao and Ji (UCSB, Honshu 2005)",08/2013
+2005150601,Northern Californi,15/06/2005,Off Coast Of Northern California,,7.20,41.2932,-125.9812,9.0,"Shao and Ji (UCSB, Northern California 2005)",09/2013
+2005200401,Fukuoka (Japan),20/04/2005,"Kyushu, Japan",,5.57,33.6700,130.2900,13.0,Asano and Iwata (2006),05/2016
+2005070401,"Zhongba, Tibet",07/04/2005,Xizang,,6.20,29.7600,90.4300,6.0,Elliott et al. (2010),12/2015
+2005280301,Sumatra,28/03/2005,"Northern Sumatra, Indonesia",,8.59,1.9500,96.9100,28.5,Hayes (2017),11/2019
+2005200301,Fukuoka (Japan),20/03/2005,"Kyushu, Japan",,6.64,33.7500,130.1600,14.0,Asano and Iwata (2006),05/2016
+2004261201,Sumatra (Indonesia),26/12/2004,"Off west coast of northern Sumatera, Indonesia",,9.10,3.3000,95.7800,35.0,Ammon et al. (2005),01/2013
+2004231001,"Niigata-Ken Chuetsu, Japan",23/10/2004,"Near West Coast Of Honshu, Japan",,6.62,37.3070,138.8390,10.6,Asano and Iwata (2009),05/2016
+2004280901,Parkfield (Calif.),28/09/2004,"Central California, United States",,6.06,35.8185,-120.3706,8.3,Custodio et al. (2005),10/2012
+2004110701,"Zhongba, Tibet",11/07/2004,Xizang,,6.20,30.7300,83.8300,10.0,Elliott et al. (2010),12/2015
+2004070201,"Irian-Jaya,Indonesia",07/02/2004,"Irian Jaya Region, Indonesia",,7.20,-3.9906,135.0510,11.2,"Wei (Caltech, Irian-Jaya 2004)",08/2013
+2003261201,"Bam, Iran",26/12/2003,Southern Iran,,6.50,29.0520,58.3650,8.0,Poiata et al. (2012a),10/2013
+2003250901,Tokachi-oki (Japan),25/09/2003,"Hokkaido, Japan, region",,8.24,41.8100,143.9100,27.0,Hayes (2017),11/2019
+2003250701,Miyagi-hokubu (Japan),25/07/2003,"Near east coast of eastern Honshu, Japan",,6.10,38.4030,141.1740,6.5,Hikima and Koketsu (2004),10/2012
+2003150701,Carlsberg Ridge,15/07/2003,Carlsberg Ridge,,7.60,-2.6116,68.3704,11.3,"Wei (Caltech, Carlsberg 2003)",08/2013
+2003210501,Boumerdes (Algeria),21/05/2003,Northern Algeria,,7.25,36.8300,3.6500,16.0,Semmane et al. (2005),10/2012
+2003220101,Colima (Mexico),22/01/2003,"Near coast of Jalisco, Mexico",,7.46,18.7700,-104.1000,24.0,Hayes (2017),11/2019
+2002031101,Denali (Alaska),03/11/2002,"Central Alaska, United States",,7.85,63.5141,-147.4529,5.6,Asano et al. (2005),09/2021
+2001141101,"Qinghai, China",14/11/2001,"Qinghai, China",,7.84,35.9500,90.5400,10.0,"Hayes (NEIC, Qinghai 2015)",05/2016
+2001240301,Geiyo (Japan),24/03/2001,"Western Honshu, Japan",,6.68,34.1292,132.6962,46.5,Kakehi (2004),10/2012
+2001260101,Bhuj (India),26/01/2001,Southern India,,7.38,23.4000,70.3200,20.0,Antolik and Dreger (2003),10/2012
+2000061001,Tottori (Japan),06/10/2000,"Western Honshu, Japan",,6.86,35.2690,133.3570,14.0,Iwata et al. (2000),10/2012
+2000170601,Kleifarvatn (Iceland),17/06/2000,Iceland region,,5.87,63.9038,-21.9664,4.0,Sudhaus and Jonsson (2008),08/2013
+1999121101,Duzce (Turkey),12/11/1999,Turkey,,6.71,40.7600,31.1600,10.0,Birgoren et al. (2004),10/2012
+1999161001,Hector Mine (Calif.),16/10/1999,"Southern California, United States",,7.17,34.5970,-116.2700,15.0,Ji et al. (2002),10/2012
+1999300901,Oaxaca (Mexico),30/09/1999,Southeastcentral Pacific Ocean,,7.47,16.0000,-97.0200,39.7,Hernandez et al. (2001),12/2013
+1999200901,ChiChi (Taiwan),20/09/1999,Taiwan,,7.68,23.8690,120.8400,8.0,Chi et al. (2001),10/2012
+1999170801,Izmit (Turkey),17/08/1999,Turkey,,7.59,40.7250,29.9870,17.0,Bouchon et al. (2002),03/2013
+1998291101,Ceram Sea,29/11/1998,Ceram Sea,,7.69,-2.0700,124.8900,16.0,Hayes (2017),10/2019
+1998180901,Hida Swarm EV16 (Japan),18/09/1998,"Eastern Honshu, Japan",,4.41,36.3337,137.6577,1.9,Ide (2001),10/2012
+1998030901,Iwate (Japan),03/09/1998,"Eastern Honshu, Japan",,6.27,39.8132,140.8966,7.5,Miyakoshi et al. (2000),10/2012
+1998250801,"Pumqu-Xainza, Tibet",25/08/1998,Xizang,,6.16,30.1345,88.3100,8.3,Wang et al. (2014),03/2020
+1998220801,Hida Swarm EV11 (Japan),22/08/1998,"Eastern Honshu, Japan",,4.33,36.2396,137.6529,2.6,Ide (2001),10/2012
+1998170801,Hida Swarm EV10 (Japan),17/08/1998,"Eastern Honshu, Japan",,4.45,36.3512,137.6228,3.0,Ide (2001),10/2012
+1998160802,Hida Swarm EV09 (Japan),16/08/1998,"Eastern Honshu, Japan",,5.13,36.3222,137.6327,3.4,Ide (2001),10/2012
+1998160801,Hida Swarm EV08 (Japan),16/08/1998,"Eastern Honshu, Japan",,4.11,36.3180,137.6410,2.6,Ide (2001),10/2012
+1998140801,Hida Swarm EV07 (Japan),14/08/1998,"Eastern Honshu, Japan",,4.41,36.3017,137.6307,3.7,Ide (2001),10/2012
+1998120801,Hida Swarm EV05 (Japan),12/08/1998,"Eastern Honshu, Japan",,4.54,36.2351,137.6256,3.3,Ide (2001),10/2012
+1998170701,Rueyli (Taiwan),17/07/1998,Taiwan,,5.84,23.5000,120.6600,6.0,Ma and Wu (2001),05/2020
+1998250302,Antarctica Normal-Faulting Segment,25/03/1998,Balleny Islands region,,7.76,-62.8600,149.7400,12.0,Antolik et al. (2000),10/2012
+1998250301,Antarctica Strike-Slip Segment,25/03/1998,Balleny Islands region,,7.98,-62.8600,149.7400,12.0,Antolik et al. (2000),10/2012
+1997141001,Colfiorito Sequence # 3 (Italy),14/10/1997,Central Italy,,5.86,42.9190,12.9260,5.6,Hernandez et al. (2004),10/2012
+1997260901,Colfiorito Sequence # 1 (Italy),26/09/1997,Central Italy,,5.72,43.0225,12.8917,4.0,Hernandez et al. (2004),10/2012
+1997260902,Colfiorito Sequence # 2 (Italy),26/09/1997,Central Italy,,5.97,43.0305,12.8622,5.1,Hernandez et al. (2004),10/2012
+1997250601,Yamaguchi (Japan),25/06/1997,"Western Honshu, Japan",,5.81,34.4410,131.6760,7.5,Ide (1999),10/2012
+1997130501,Kagoshimaen-hoku-seibu (Japan),13/05/1997,"Kyushu, Japan",,6.01,31.9520,130.3400,7.7,Horikawa (2001),10/2012
+1997100501,Zirkuh (East Iran),10/05/1997,Northern And Central Iran,,7.20,33.8200,59.8000,10.0,Sudhaus and Jonsson (2011),11/2013
+1997260301,Kagoshimaen-hoku-seibu (Japan),26/03/1997,"Kyushu, Japan",,6.10,31.9681,130.3875,7.6,Horikawa (2001),10/2012
+1996021201,Hyuga-nada2 (Japan),02/12/1996,"Kyushu, Japan",,6.68,31.8030,131.5880,20.4,Yagi et al. (1999),10/2012
+1996121101,Nazca Ridge (Peru),12/11/1996,Near coast of Peru,,7.70,-14.9730,-75.5700,21.0,Hayes (2017),10/2019
+1996191001,Hyuga-nada1 (Japan),19/10/1996,"Southeast of Shikoku, Japan",,6.81,31.8350,131.9580,11.6,Yagi et al. (1999),10/2012
+1996030701,"Pumqu-Xainza, Tibet",03/07/1996,Xizang,,6.08,30.1456,88.2894,8.3,Wang et al. (2014),12/2015
+1995311001,Taiwan (9510312227P000),31/10/1995,Taiwan,,4.93,23.2910,120.3590,10.7,Ma and Wu (2001),05/2020
+1995091001,Colima (Mexico),09/10/1995,Southeastcentral Pacific Ocean,,7.89,18.8640,-104.5790,16.0,Hayes (2017),10/2019
+1995140901,"Copala, Mexico",14/09/1995,"Near Coast Of Guerrero, Mexico",,7.30,16.4800,-98.7600,15.9,Courboulex et al. (1997),06/2015
+1995140701,Taiwan (9507141652),14/07/1995,Taiwan,,5.07,24.3680,121.7430,9.8,Ma and Wu (2001),05/2020
+1995170101,Kobe (Japan),17/01/1995,"Near south coast of western Honshu, Japan",,6.80,34.6000,135.0400,14.0,Cho and Nakanishi (2000),10/2012
+1994281201,Sanrikuki (Japan),28/12/1994,"Off east coast of Honshu, Japan",,7.72,40.4500,143.4900,26.0,Hayes (2017),10/2019
+1994050601,Nanao (Taiwan),05/06/1994,Taiwan,,6.28,24.4680,121.7870,5.1,Ma and Wu (2001),05/2020
+1994060401,Taiwan (9404060112P160),06/04/1994,Taiwan,,4.54,23.5330,120.4210,13.4,Ma and Wu (2001),05/2020
+1994170101,Northridge (Calif.),17/01/1994,"Southern California, United States",,6.66,34.2130,-118.5370,17.5,Dreger (1994),11/2012
+1993151201,Tapu (Taiwan),15/12/1993,Taiwan,,5.65,23.1940,120.5070,15.2,Ma and Wu (2001),05/2020
+1993120701,Hokkaido-nansei-oki (Japan),12/07/1993,"Hokkaido, Japan, region",,7.70,42.8120,139.1330,17.0,Hayes (2017),11/2019
+1993200301,"Pumqu-Xainza, Tibet",20/03/1993,Xizang,,6.29,29.0464,87.4905,8.3,Wang et al. (2014),12/2015
+1992290601,Little Skull Mnts (Nevada),29/06/1992,California-Nevada border region,,5.63,36.4316,-116.1776,11.8,Silva et al. (2003),11/2012
+1992280601,Landers (Calif.),28/06/1992,"Southern California, United States",,7.08,34.2000,-116.4300,5.0,Cohee and Beroza (1994),11/2012
+1992230401,Joshua Tree (Calif.),23/04/1992,"Southern California, United States",,6.25,33.9660,-116.3170,12.5,Bennet et al. (1995),11/2012
+1991280601,Sierra Madre (Calif.),28/06/1991,"Southern California, United States",,5.59,34.2640,-117.9900,20.9,Wald (1992),11/2012
+1990050401,Mariana Islands Region,05/04/1990,Mariana Islands Region,,7.37,15.2300,147.5300,11.0,Hayes (2017),10/2019
+1989251201,Ungava (Canada),25/12/1989,"Northern Quebec, Canada",,6.02,60.1200,-73.6000,2.5,Hartzell et al. (1994),11/2012
+1989181001,Loma Prieta (Calif.),18/10/1989,"Central California, United States",,6.95,37.0410,-121.8830,17.6,Beroza (1991),11/2012
+1988251101,Saguenay (Canada),25/11/1988,"Southern Quebec, Canada",,5.81,48.1170,-71.1840,26.0,Hartzell et al. (1994),11/2012
+1987241101,Superstition Hills (Calif.),24/11/1987,"Southern California, United States",,6.60,33.0166,-115.8500,10.0,Larsen et al. (1992),11/2012
+1987241102,Elmore Ranch (Calif.),24/11/1987,"Southern California, United States",,6.52,33.0833,-115.7960,10.0,Larsen et al. (1992),11/2012
+1987011001,Whittier Narrows (Calif.),01/10/1987,"Southern California, United States",,5.89,34.0500,-118.0800,14.6,Hartzell and Iida (1990),11/2012
+1986080701,North Palm Springs (Calif.),08/07/1986,"Southern California, United States",,6.21,34.0000,-116.5700,11.0,Hartzell (1989),11/2012
+1985231201,Nahanni2 (Canada),23/12/1985,"Northwest Territories, Canada",,6.66,62.1870,-124.2400,8.0,Hartzell et al. (1994),11/2012
+1985051001,Nahanni1 (Canada),05/10/1985,"Northwest Territories, Canada",,6.66,62.2080,-124.2170,8.0,Hartzell et al. (1994),11/2012
+1985210901,Zihuatanejo (Mexico),21/09/1985,"Near coast of Guerrero, Mexico",,7.42,17.5980,-101.8190,20.0,Mendoza (1993),11/2012
+1985190901,Michoacan (Mexico),19/09/1985,"Michoacan, Mexico",,8.01,18.1800,-102.5700,17.0,Mendoza and Hartzell (1989),11/2012
+1985030301,Central Chile (Chile),03/03/1985,Near coast of central Chile,,8.16,-33.1250,-71.6100,40.0,Mendoza et al. (1994),11/2012
+1984140901,Nagano-ken seibu (Japan),14/09/1984,"Eastern Honshu, Japan",,6.29,35.8200,137.4900,3.0,Takeo and Mikami (1987),11/2012
+1984240401,Morgan Hill (Calif.),24/04/1984,"Central California, United States",,6.28,37.3170,-121.6820,8.5,Beroza and Spudich (1988),11/2012
+1983281001,Borah Peak (Idaho),28/10/1983,"Eastern Idaho, United States",,6.82,44.0600,-113.8600,16.0,Mendoza and Hartzell (1988),11/2012
+1983260501,Japanea-chubu (Japan),26/05/1983,"Near West Coast Of Honshu, Japan",,7.58,40.3570,139.0770,8.1,Fukuyama and Irikura (1986),11/2014
+1982090101,New Brunswick (Canada),09/01/1982,"New Brunswick, Canada",,5.47,46.9840,-66.6560,8.0,Hartzell et al. (1994),11/2012
+1981251001,Playa Azul (Mexico),25/10/1981,"Near coast of Michoacan, Mexico",,7.25,17.7420,-102.2380,15.0,Mendoza (1993),11/2012
+1980290601,Izu-hanto-toho-oki (Japan),29/06/1980,"Near south coast of eastern Honshu, Japan",,6.61,34.9231,139.1855,8.0,Takeo (1988),11/2012
+1979151001,Imperial Valley (Calif.),15/10/1979,California-Baja California border region,,6.53,32.6440,-115.3090,8.0,Archuleta (1984),03/2013
+1979060801,Coyote Lake (Calif.),06/08/1979,"Central California, United States",,5.92,36.9700,-121.5100,8.0,Liu and Helmberger (1983),11/2012
+1979140301,Petatlan (Mexico),14/03/1979,"Near coast of Guerrero, Mexico",,7.39,17.4600,-101.4600,15.0,Mendoza (1995),11/2012
+1978160901,Tabas (Iran),16/09/1978,Northern and central Iran,,7.09,33.2200,57.3600,5.5,Hartzell and Mendoza (1991),11/2012
+1978120601,Miyagiki (Japan),12/06/1978,"Near east coast of eastern Honshu, Japan",,7.61,38.1500,142.1670,37.0,Yamanaka and Kikuchi (2004),11/2012
+1975210401,Oita-ken-chubu (Japan),21/04/1975,"Kyushu, Japan",,6.36,33.1500,131.3000,8.5,Takeo (1990),11/2012
+1974031001,Peru (Central Coast),03/10/1974,Near coast of Peru,,8.01,-12.3900,-77.7600,12.0,Hartzell and Langer (1993),11/2012
+1974090501,Izu-hanto-oki (Japan),09/05/1974,"Near south coast of eastern Honshu, Japan",,6.56,34.4000,138.8000,8.0,Takeo (1990),11/2012
+1971090201,San Fernando (Calif.),09/02/1971,"Southern California, United States",,6.82,34.4300,-118.3700,13.0,Heaton (1982),11/2012
+1969090901,Gifu-ken-chubu (Japan),09/09/1969,"Eastern Honshu, Japan",,6.43,35.4700,137.0500,2.0,Takeo (1990),11/2012
+1968160501,Tokachi-oki (Japan),16/05/1968,"Off east coast of Honshu, Japan",,8.35,40.7300,143.5800,9.0,Nagai et al. (2001),11/2012
+1968010401,Hyuga-nada (Japan),01/04/1968,"Shikoku, Japan",,7.53,32.2800,132.5300,15.0,Yagi et al. (1998),11/2012
+1961190801,Kitamino (Japan),19/08/1961,"Near west coast of eastern Honshu, Japan",,6.47,36.2000,136.8000,10.0,Takeo (1990),11/2012
+1952040301,"Tokachi-Oki,Japan",04/03/1952,"Hokkaido, Japan Region",,8.40,41.7057,144.1512,17.6,Kobayashi et al. (2021),02/2021
+1948280601,Fukui (Japan),28/06/1948,"Near west coast of eastern Honshu, Japan",,6.65,36.2470,136.1880,10.1,Ichinose et al. (2005),11/2012
+1946201201,Nankaido (Japan),20/12/1946,"Near south coast of western Honshu, Japan",,8.40,33.0300,135.6200,30.0,Baba et al. (2002),11/2012
+1945120101,Mikawa (Japan),12/01/1945,"Near south coast of eastern Honshu, Japan",,6.67,34.7000,137.1000,10.0,Kikuchi et al. (2003),11/2012
+1944071201,Tonankai (Japan),07/12/1944,"Near south coast of western Honshu, Japan",,8.04,33.7700,135.9600,30.0,Ichinose et al. (2003),11/2012
+1923010901,Kanto (Japan),01/09/1923,"Near south coast of eastern Honshu, Japan",,8.08,35.4000,139.2000,14.6,Kobayashi and Koketsu (2005),11/2012
+1906180401,San Francisco (Calif.),18/04/1906,"Central California, United States",,7.91,37.7800,-122.5100,10.0,Song et al. (2008),11/2012
