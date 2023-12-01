@@ -5,35 +5,37 @@ import sys
 
 if __name__ == "__main__":
     input_path='scraper/Ancient/Syria/The historical earthquakes of Syria.pdf'
-    obj=Syria_Scraper(input_path)
+    output_path='scraper/Ancient/Syria/SyriaHistoricalEarthquakes.csv'
+    obj=Syria_Scraper(input_path, output_path)
     obj.read_pdf()
 
-    obj=wiki_Scraper('https://en.wikipedia.org/wiki/List_of_historical_earthquakes','scraper/Ancient/Syria/Wikipedia/WikiHistoricalEarthquakes.csv')
+    obj=wiki_Scraper('https://en.wikipedia.org/wiki/List_of_historical_earthquakes','scraper/Ancient/Wikipedia/WikiHistoricalEarthquakes.csv')
     obj.find_earthquake()
 
-    input_path = "Argentina/clean-catalog.xml"
-    output_path = "Argentina/Argentina Andean Earthquakes (2016-2017).csv"
+    input_path = "scraper/Argentina/clean-catalog.xml"
+    output_path = "scraper/Argentina/Argentina Andean Earthquakes (2016-2017).csv"
     header = ["Time ID", "Magnitude", "Station Count", "Author", "Publication Time"]
     argintina=argintina(input_path, output_path,header)
     argintina.find_quakes()
 
-    canada=canada("scraper/Canada/Canada-19850109-20230621.txt", "scraper/Canada/Canada-19850109-20230621.csv", '','|')
-    canada.find_quakes_txt()
+    canada_1=canada("scraper/Canada/Canada-19850109-20230621.txt", "scraper/Canada/Canada-19850109-20230621.csv", '','|')
+    canada_1.find_quakes_txt()
 
-    corinth = corinth("Corinth/Marathias_seq.txt", "Corinth/Corinth Gulf 2020-21 Seismic Crisis.csv", ["Year", "Origin Time", "Latitude", "Longitude", "Depth",
+    corinth_1 = corinth("scraper/Corinth/Marathias_seq.txt", "scraper/Corinth/Corinth Gulf 2020-21 Seismic Crisis.csv", ["Year", "Origin Time", "Latitude", "Longitude", "Depth",
                       "Magnitude", "Decimal Years", "Time Relative to First Earthquake",
                       "Event ID", "Cluster ID (sorted by #events)",
                       "Cluster ID (by time)", "Multiplet ID", "#events in Multiplet",
                       "E-W horizontal error", "N-S horizontal error",
                       "Vertical error"], None)
-    corinth.find_quakes_txt()
-
-    ghea=GHEA("GHEA/GHEA-data.txt", "GHEA/GHEA Data 1000-1903.csv", ["En", "Source", "Year", "Mo", "Da", "Ho", "Mi", "Se",
+    corinth_1.find_quakes_txt()
+    # GHEA not working
+    '''
+    ghea=GHEA("scraper/GHEA/GHEA-data.txt", "scraper/GHEA/GHEA Data 1000-1903.csv", ["En", "Source", "Year", "Mo", "Da", "Ho", "Mi", "Se",
                           "Area", "Lat", "Lon", "LatUnc", "LonUnc", "EpDet", "Dep",
                           "Io", "Msource", "M", "MUnc", "MType", "MDet", "MDPSource",
                           "MDPn", "MDPIx", "MDPsc", "Remarks", "GEHid"],"\t")
     ghea.find_quakes_txt()
-
+    '''
     input_path = "scraper/New_Madrid/New Madrid Earthquakes 1974-2023.txt"
     output_path = "scraper/New_Madrid/New Madrid Earthquakes 1974-2023.csv"
     header=['NET', 'DATE', 'O.T. (UTC)', 'LAT', 'LONG', 'DEP', \

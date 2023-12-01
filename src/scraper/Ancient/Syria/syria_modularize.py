@@ -16,8 +16,9 @@ sys.path.append(parent_dir)
 from Superclass import Scraper
 
 class Syria_Scraper(Scraper):
-    def __init__(self, input_path):
+    def __init__(self, input_path, output_path):
         self.input_path=input_path
+        self.output_path=output_path
     def merge_cells(self, df):
         # Merge multiple lines caused by the column o "Major affected localities"
         for i in range(len(df)):
@@ -65,9 +66,10 @@ class Syria_Scraper(Scraper):
         # print(table_df.iloc[35])
 
         # Convert the DataFrame to a CSV file named 'data.csv' in the current working directory
-        table_df.to_csv('SyriaHistoricalEarthquakes.csv', index=False)
+        table_df.to_csv(self.output_path, index=False)
 
 if __name__ == '__main__':
     input_path='The historical earthquakes of Syria.pdf'
-    obj=Syria_Scraper(input_path)
+    output_path='SyriaHistoricalEarthquakes.csv'
+    obj=Syria_Scraper(input_path, output_path)
     obj.read_pdf()

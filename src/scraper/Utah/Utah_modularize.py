@@ -22,6 +22,7 @@ class Utah_Scraper(Scraper):
         self.input_path=input_path
         self.output_path=output_path
         self.header=header
+        self.separator=' '
 
 # main method that calls the web scraper function
 if __name__ == "__main__":

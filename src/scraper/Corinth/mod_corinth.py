@@ -17,7 +17,7 @@ class corinth(Scraper):
         self.header = header    
         self.separator = separator
 
-corinth = corinth("Corinth/Marathias_seq.txt", "Corinth/Corinth Gulf 2020-21 Seismic Crisis.csv", ["Year", "Origin Time", "Latitude", "Longitude", "Depth",
+corinth_obj = corinth("Corinth/Marathias_seq.txt", "Corinth/Corinth Gulf 2020-21 Seismic Crisis.csv", ["Year", "Origin Time", "Latitude", "Longitude", "Depth",
                       "Magnitude", "Decimal Years", "Time Relative to First Earthquake",
                       "Event ID", "Cluster ID (sorted by #events)",
                       "Cluster ID (by time)", "Multiplet ID", "#events in Multiplet",
@@ -25,4 +25,4 @@ corinth = corinth("Corinth/Marathias_seq.txt", "Corinth/Corinth Gulf 2020-21 Sei
                       "Vertical error"], None)
 
 if __name__ == "__main__":
-    corinth.find_quakes_txt()
+    corinth_obj.find_quakes_txt()

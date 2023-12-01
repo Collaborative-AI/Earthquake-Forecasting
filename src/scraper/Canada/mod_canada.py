@@ -16,6 +16,6 @@ class canada(Scraper):
         self.output_path = output_path
         self.header = header    
         self.separator = separator
-canada=canada("Canada/Canada-19850109-20230621.txt", "Canada/Canada-19850109-20230621.csv", '','|')
+canada_obj=canada("Canada/Canada-19850109-20230621.txt", "Canada/Canada-19850109-20230621.csv", '','|')
 if __name__ == "__main__":
-    canada.find_quakes_txt()
+    canada_obj.find_quakes_txt()
