@@ -42,8 +42,8 @@ class New_Madrid_Scraper(Scraper):
                     # afterwards, write these words into the next row
                     csv_writer.writerow(words)
 if __name__ == "__main__":
-    input_path = "New Madrid/New Madrid Earthquakes 1974-2023.txt"
-    output_path = "New Madrid/New Madrid Earthquakes 1974-2023.csv"
+    input_path = "New_Madrid/New Madrid Earthquakes 1974-2023.txt"
+    output_path = "New_Madrid/New Madrid Earthquakes 1974-2023.csv"
     header=['NET', 'DATE', 'O.T. (UTC)', 'LAT', 'LONG', 'DEP', \
                       'MAG', 'NPH', 'GAP', 'DMIN', 'RMS', 'SEO', 'SEH', 'SEZ',
                       'Q', 'COMMENTS']

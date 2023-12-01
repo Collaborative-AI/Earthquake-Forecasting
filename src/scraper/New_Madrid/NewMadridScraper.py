@@ -29,6 +29,6 @@ def find_quakes(input_path: str, output_path: str):
 
 # main method that calls the web scraper function
 if __name__ == "__main__":
-    input_path = "New Madrid/New Madrid Earthquakes 1974-2023.txt"
-    output_path = "New Madrid/New Madrid Earthquakes 1974-2023.csv"
+    input_path = "New_Madrid/New Madrid Earthquakes 1974-2023.txt"
+    output_path = "New_Madrid/New Madrid Earthquakes 1974-2023.csv"
     find_quakes(input_path, output_path)
