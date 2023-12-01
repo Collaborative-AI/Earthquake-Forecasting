@@ -4,8 +4,36 @@ from csv import writer
 import sys
 
 if __name__ == "__main__":
-    #print(sys.path)
-    #sys.path.append('/path/to/module/directory')
+    input_path='scraper/Ancient/Syria/The historical earthquakes of Syria.pdf'
+    obj=Syria_Scraper(input_path)
+    obj.read_pdf()
+
+    obj=wiki_Scraper('https://en.wikipedia.org/wiki/List_of_historical_earthquakes','scraper/Ancient/Syria/Wikipedia/WikiHistoricalEarthquakes.csv')
+    obj.find_earthquake()
+
+    input_path = "Argentina/clean-catalog.xml"
+    output_path = "Argentina/Argentina Andean Earthquakes (2016-2017).csv"
+    header = ["Time ID", "Magnitude", "Station Count", "Author", "Publication Time"]
+    argintina=argintina(input_path, output_path,header)
+    argintina.find_quakes()
+
+    canada=canada("scraper/Canada/Canada-19850109-20230621.txt", "scraper/Canada/Canada-19850109-20230621.csv", '','|')
+    canada.find_quakes_txt()
+
+    corinth = corinth("Corinth/Marathias_seq.txt", "Corinth/Corinth Gulf 2020-21 Seismic Crisis.csv", ["Year", "Origin Time", "Latitude", "Longitude", "Depth",
+                      "Magnitude", "Decimal Years", "Time Relative to First Earthquake",
+                      "Event ID", "Cluster ID (sorted by #events)",
+                      "Cluster ID (by time)", "Multiplet ID", "#events in Multiplet",
+                      "E-W horizontal error", "N-S horizontal error",
+                      "Vertical error"], None)
+    corinth.find_quakes_txt()
+
+    ghea=GHEA("GHEA/GHEA-data.txt", "GHEA/GHEA Data 1000-1903.csv", ["En", "Source", "Year", "Mo", "Da", "Ho", "Mi", "Se",
+                          "Area", "Lat", "Lon", "LatUnc", "LonUnc", "EpDet", "Dep",
+                          "Io", "Msource", "M", "MUnc", "MType", "MDet", "MDPSource",
+                          "MDPn", "MDPIx", "MDPsc", "Remarks", "GEHid"],"\t")
+    ghea.find_quakes_txt()
+
     input_path = "scraper/New_Madrid/New Madrid Earthquakes 1974-2023.txt"
     output_path = "scraper/New_Madrid/New Madrid Earthquakes 1974-2023.csv"
     header=['NET', 'DATE', 'O.T. (UTC)', 'LAT', 'LONG', 'DEP', \
@@ -37,14 +65,16 @@ if __name__ == "__main__":
                 "Author", "Upload Date (mm/yyyy)"]
     obj=SRCMOD_Scraper(output_path, url, header)
     obj.find_quakes_web()
-
+    
+    # usgs not working
+    '''
     url="https://earthquake.usgs.gov/fdsnws/event/1/query"
     start_date=datetime(1800, 1, 1)
     end_date=datetime(2023, 6, 12)
     obj=usgs_scraper(url, start_date, end_date)
     earthquake_data =obj.download_data()
     earthquake_data.to_csv("scraper/USGS/earthquake_data.csv", index=False)
-
+    '''
     input_path = "scraper/Utah/detections.txt"
     output_path = "scraper/Utah/Mineral Mountains, Utah 2016-19.csv"
     header = ["Year", "Origin Time (UTC)", "Latitude", "Longitude",
