@@ -14,8 +14,8 @@ class Scraper:
         self.start_time=datetime.MINYEAR
         self.end_time=datetime.MAXYEAR
         self.header=[]
-        self.separator=''
-    def find_quakes_txt(self):
+        self.separator=None
+    def find_quakes_txt(self, num_skips=0):
         with open(self.input_path, "r") as input_file:
             with open(self.output_path, "w") as out_file:
 
@@ -23,9 +23,13 @@ class Scraper:
                 csv_writer = writer(out_file, lineterminator="\n")
                 csv_writer.writerow(self.header)
 
+                for i in range(num_skips): next(input_file, None)
                 # write each row from the txt file to the csv
                 for line in input_file:
-                    words = line.split(self.separator)
+                    if self.separator == None:
+                        words = line.split()
+                    else:
+                        words = line.split(self.separator)
                     csv_writer.writerow(words)
 
     def find_quakes_web(self):
