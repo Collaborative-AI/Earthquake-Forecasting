@@ -23,6 +23,18 @@ class Utah_Scraper(Scraper):
         self.output_path=output_path
         self.header=header
         self.separator=' '
+    def find_quakes_txt(self):
+        with open(input_path, "r") as input_file:
+            with open(output_path, "w") as out_file:
+
+                # label the header of the csv with the appropriate labels
+                csv_writer = writer(out_file, lineterminator="\n")
+                csv_writer.writerow(self.header)
+
+                # write each row from the txt file to the csv
+                for line in input_file:
+                    words = line.split()
+                    csv_writer.writerow(words)
 
 # main method that calls the web scraper function
 if __name__ == "__main__":
