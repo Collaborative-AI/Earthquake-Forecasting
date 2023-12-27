@@ -1,3 +1,2 @@
 - currently we've put everything into main.py
-- there are potential problems with mod_canada.py, SoCal_File_modularize.py, and Utah_modularize.py since they are producing different output with the original scrapers
 - Not able to run usgs_scraper.py and SoCal_Web_modularize.py due to network problems
