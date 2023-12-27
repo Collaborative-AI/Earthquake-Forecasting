@@ -21,7 +21,8 @@ class Scraper:
 
                 # label the header of the csv with the appropriate labels
                 csv_writer = writer(out_file, lineterminator="\n")
-                csv_writer.writerow(self.header)
+                if self.header!='':
+                    csv_writer.writerow(self.header)
 
                 for i in range(num_skips): next(input_file, None)
                 # write each row from the txt file to the csv
