@@ -50,7 +50,7 @@ if __name__ == "__main__":
                       "Magnitude", "M", "Latitude", "Longitude", "Depth",
                       "Q", "EVID", "NPH", "NGRM"]
     obj=Socal_File_Scraper(input_path, output_path, header)
-    obj.find_quakes_txt()
+    obj.find_quakes_txt(3)
 
     # socal web not working
     '''

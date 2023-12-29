@@ -24,8 +24,8 @@ class Utah_Scraper(Scraper):
         self.header=header
         self.separator=' '
     def find_quakes_txt(self):
-        with open(input_path, "r") as input_file:
-            with open(output_path, "w") as out_file:
+        with open(self.input_path, "r") as input_file:
+            with open(self.output_path, "w") as out_file:
 
                 # label the header of the csv with the appropriate labels
                 csv_writer = writer(out_file, lineterminator="\n")
