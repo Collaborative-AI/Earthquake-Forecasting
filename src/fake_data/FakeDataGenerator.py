@@ -5,6 +5,13 @@ import math
 import pandas as pd
 
 # produces a set number of fake earthquake events
+"""
+Input:  num_events  -> integer specifying number of fake earthquake events to create
+        output_path -> string filepath for output CSV file
+Output: CSV file containing num_events fake earthquakes
+
+Runs in O(nlogn) time and O(n) extra space
+"""
 def create_fake_data(num_events: int, output_path: str):
     
     with open(output_path, "w") as out_file:
@@ -13,6 +20,10 @@ def create_fake_data(num_events: int, output_path: str):
         csv_writer = writer(out_file, lineterminator="\n")
         header = ["DateTime", "Magnitude", "Latitude", "Longitude", "Depth"]
         csv_writer.writerow(header)
+        
+        # store all the rows in the CSV
+        # we'll write all of these at the end
+        rows = []
 
         # generate a total of "num_events"
         for k in range(num_events):
@@ -87,12 +98,20 @@ def create_fake_data(num_events: int, output_path: str):
                 STEP 4:
                 Write down the data into the CSV!
                 """
-                data = [timestamp, magnitude, latitude, longitude, depth]
-                csv_writer.writerow(data)
+                row = [timestamp, magnitude, latitude, longitude, depth]
+                rows.append(row)
             
             # If something went wrong, print out the error message.
             except Exception as e:
                 print(str(e))
+                
+        """
+        STEP 5:
+        Write all the rows down.
+        We'll sort all the rows by datetime ascending.
+        """
+        rows.sort(key=lambda x:x[0])
+        csv_writer.writerows(rows)
 
 # main method that calls the fake data generation function
 if __name__ == "__main__":
