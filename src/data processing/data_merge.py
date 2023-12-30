@@ -4,8 +4,8 @@ import random
 #This code is for when you are checking for duplicate earthquakes
 
 # 1. Load the USGS files and concatenate them
-usgs_2000_2023 = pd.read_csv("/Users/younghoojun/Downloads/USGS2000-2023.csv")
-usgs_1950_1999 = pd.read_csv("/Users/younghoojun/Downloads/USGS1950-1999.csv")
+usgs_2000_2023 = pd.read_csv("USGS2000-2023.csv")
+usgs_1950_1999 = pd.read_csv("USGS1950-1999.csv")
 
 usgs = pd.concat([usgs_1950_1999, usgs_2000_2023], ignore_index=True)
 

@@ -1,2 +1,0 @@
-- currently we've put everything into main.py
-- Not able to run usgs_scraper.py and SoCal_Web_modularize.py due to network problems
