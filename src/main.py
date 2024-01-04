@@ -28,14 +28,10 @@ if __name__ == "__main__":
                       "E-W horizontal error", "N-S horizontal error",
                       "Vertical error"], None)
     corinth_1.find_quakes_txt()
-    # GHEA not working
-    '''
-    ghea=GHEA("scraper/GHEA/GHEA-data.txt", "scraper/GHEA/GHEA Data 1000-1903.csv", ["En", "Source", "Year", "Mo", "Da", "Ho", "Mi", "Se",
-                          "Area", "Lat", "Lon", "LatUnc", "LonUnc", "EpDet", "Dep",
-                          "Io", "Msource", "M", "MUnc", "MType", "MDet", "MDPSource",
-                          "MDPn", "MDPIx", "MDPsc", "Remarks", "GEHid"],"\t")
+
+    ghea=GHEA("scraper/GHEA/GHEA-data.txt", "scraper/GHEA/GHEA Data 1000-1903.csv", ["En", "Source", "Year", "Mo", "Da", "Ho", "Mi", "Se", "Area", "Lat", "Lon", "LatUnc", "LonUnc", "EpDet", "Dep", "Io", "Msource", "M", "MUnc", "MType", "MDet", "MDPSource", "MDPn", "MDPIx", "MDPsc", "Remarks", "GEHid"],"\t")
     ghea.find_quakes_txt()
-    '''
+
     input_path = "scraper/New_Madrid/New Madrid Earthquakes 1974-2023.txt"
     output_path = "scraper/New_Madrid/New Madrid Earthquakes 1974-2023.csv"
     header=['NET', 'DATE', 'O.T. (UTC)', 'LAT', 'LONG', 'DEP', \

@@ -10,7 +10,7 @@ usgs_1950_1999 = pd.read_csv("USGS1950-1999.csv")
 usgs = pd.concat([usgs_1950_1999, usgs_2000_2023], ignore_index=True)
 
 # 2. Load the SAGE file
-sage = pd.read_csv("/Users/younghoojun/Downloads/SAGE_1973_2023.txt", delimiter='|', skiprows=4)
+sage = pd.read_csv("SAGE_1973_2023.txt", delimiter='|', skiprows=4)
 
 # 3. Use a two-pointer approach
 i, j = 0, 0
@@ -43,4 +43,4 @@ while i < len(usgs) and j < len(sage):
 
 # 4. Convert the result list to DataFrame and export it
 result_df = pd.DataFrame(result, columns=['DateTime', 'Magnitude', 'Longitude', 'Latitude', 'Depth'])
-result_df.to_csv("/Users/younghoojun/Downloads/Final_Merged.csv", index=False)
+result_df.to_csv("Final_Merged.csv", index=False)
