@@ -4,7 +4,7 @@ from csv import writer
 # converts a txt file (separated by whitespace) to a csv file
 def find_quakes(input_path: str, output_path: str):
     
-    with open(input_path, "r") as input_file:
+    with open(input_path, "r", encoding='gb18030', errors='ignore') as input_file:
         with open(output_path, "w") as out_file:
 
             # label the header of the csv with the appropriate labels
