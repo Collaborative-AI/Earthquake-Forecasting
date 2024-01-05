@@ -4,13 +4,16 @@ import random
 import math
 import pandas as pd
 
-# produces a set number of fake earthquake events
 """
-Input:  num_events  -> integer specifying number of fake earthquake events to create
-        output_path -> string filepath for output CSV file
-Output: CSV file containing num_events fake earthquakes
+create_fake_data function:
+Produces a set number of fake earthquake events
 
-Runs in O(nlogn) time and O(n) extra space
+Input:  num_events      -> integer specifying number of fake earthquake events to create
+        output_path     -> string filepath for output CSV file
+
+Output: Fake Earthquakes (0-2023 AD).csv    -> CSV file containing num_events fake earthquakes
+
+Runs in O(nlogn) time and O(n) extra space, where n=num_events
 """
 def create_fake_data(num_events: int, output_path: str):
     
