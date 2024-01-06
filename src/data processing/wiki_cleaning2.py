@@ -21,7 +21,7 @@ def convert_to_standard_datetime(input_date):
             return "Invalid Date"
 
     # Format the date object in a standard datetime format
-    standard_format = date_object.strftime('%Y-%m-%d %H:%M:%S')
+    standard_format = date_object.strftime('%Y-%m-%d %H:%M:%S.%f+00:00')
     
 
     return standard_format
