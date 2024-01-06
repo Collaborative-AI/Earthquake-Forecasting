@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # load the csv file to a pd dataframe
-main = pd.read_csv('WikiHistoricalEarthquakes.csv')
+main = pd.read_csv('WikipediaEarthquakes1.csv')
 
 # manual search of depth of each earthquake (from Wikipedia as well)
 # the mean of the bounds of the interval was used for ranges (e.g. 4.5 km for 4-5 km)
@@ -203,9 +203,9 @@ for i in indices:
 '''
 
 # add depth column to the dataframe
-main['Depth (km)'] = depth_data 
+main['Depth'] = depth_data 
 
-print(main)
+# print(main)
 
 # export csv file
-# main.to_csv('WikiHistoricalEarthquake2.csv', index=False)
+main.to_csv('WikipediaEarthquakes2.csv', index=False)
