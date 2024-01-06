@@ -19,4 +19,4 @@ Cleaning Pipeline:
 3. Manually clean the output file, `WikipediaEarthquakes2.csv.`
     1. Convert the intervals to the midpoint, i.e. 7-8 became 7.5.
     2. Remove the unnecessary strings.
-4. Run `wiki_cleaning2.py`. Check for rows with “Invalid Date”. Manually, convert the dates since the script doesn’t cover all corner cases. Note: We manually converted some of the dates at the top. The output file will be named `WikipediaEarthquakes3.csv`.
+4. Run `wiki_cleaning2.py`. Check for rows with “Invalid Date”. Manually, convert the dates since the script doesn’t cover all corner cases. Note: We manually converted some of the dates at the top. For dates with no month or day, the default is 01-01 or January 1st. The output file will be named `WikipediaEarthquakes3.csv`.
