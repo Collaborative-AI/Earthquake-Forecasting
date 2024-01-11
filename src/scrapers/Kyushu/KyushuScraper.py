@@ -42,6 +42,6 @@ def find_quakes(input_path: str, output_path: str):
 
 # main method that calls the web scraper function
 if __name__ == "__main__":
-    input_path = "src/scrapers/Kyushu/Kyushu-Raw.csv"
+    input_path = "src/scrapers/Kyushu/Kyushu-RAW.csv"
     output_path = "src/scrapers/Kyushu/Kyushu-20040401-20130331.csv"
     find_quakes(input_path, output_path)
