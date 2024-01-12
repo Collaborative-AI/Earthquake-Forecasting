@@ -1,6 +1,13 @@
+# import helper functions for data cleaning
+import sys
+sys.path.append("src/scraper")
+from helper import replace_with_timestamp, remove_unknown_magnitudes, remove_unknown_coordinates
+
+# run on python 3.11.2
 import csv
 import xmltodict
-
+import pandas as pd
+import numpy as np
 
 def find_quakes(input_path: str, output_path: str):
     
@@ -44,8 +51,30 @@ def find_quakes(input_path: str, output_path: str):
         csv_writer.writerow(header)
         csv_writer.writerows(rows)
 
+
+def clean_argentina(filepath: str):
+
+    # read the csv and read all the columns
+    df = pd.read_csv(filepath)
+    
+    # reformat times, and remove unknown magnitudes + coordinates
+    df = replace_with_timestamp(df)
+    df = remove_unknown_magnitudes(df)
+    df = remove_unknown_coordinates(df)
+
+    # drop duplicates from the dataframe
+    df = df.drop_duplicates()
+
+    # store the result in a CSV
+    df.to_csv(filepath, index=False)
+
+
 # main method that calls the web scraper function
 if __name__ == "__main__":
     input_path = "src/scraper/Argentina/raw/clean-catalog.xml"
-    output_path = "src/scraper/Argentina/clean/Argentina Andean Earthquakes (2016-2017).csv"
+    
+    output_filename = "Argentina Andean Earthquakes (2016-2017)"
+    output_path = f"src/scraper/Argentina/clean/{output_filename}.csv"
+    
     find_quakes(input_path, output_path)
+    clean_argentina(output_path)
