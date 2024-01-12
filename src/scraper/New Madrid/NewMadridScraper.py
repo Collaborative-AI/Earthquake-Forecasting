@@ -36,10 +36,10 @@ def find_quakes(input_path: str, output_path: str):
                 millisecond = int(float(row[2][-5:]) * 1000)
                 
                 # extract other earthquake information
-                magnitude = row[9]
-                latitude = row[6]
-                longitude = row[7]
-                depth = row[8]
+                magnitude = row[6]
+                latitude = row[3]
+                longitude = row[4]
+                depth = row[5]
                 
                 # afterwards, write this information to the next row
                 output_row = [year, month, day, hour, minute, second, millisecond,
