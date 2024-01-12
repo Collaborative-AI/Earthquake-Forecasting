@@ -141,3 +141,5 @@ src/scraper/NCEDC/clean/NCEDC (1984-2023).csv
 src/scraper/New Madrid/raw/New Madrid Earthquakes 1974-2023.txt
 src/scraper/New Madrid/clean/New Madrid (1974-2023).csv
 
+src/scraper/NOAA/raw/NCEI-WDS-Earthquakes.tsv
+src/scraper/NOAA/clean/NOAA NCEI-WDS (0-2023).csv
