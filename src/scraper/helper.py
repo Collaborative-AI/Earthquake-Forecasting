@@ -2,11 +2,13 @@ import pandas as pd
 import numpy as np
 
 """
-INPUT:  filepath to a CSV (string)
+INPUT:  filepath: string filepath to the input CSV file
+        sort:     boolean notifying if the data needs to be sorted
+        
 OUTPUT: modified CSV that formats timestamps, removes unknown
         magnitudes and coordinates, and drops duplicates
 """
-def clean_data(filepath: str):
+def clean_data(filepath: str, sort=True):
 
     # read the csv and read all the columns
     df = pd.read_csv(filepath)
@@ -18,6 +20,10 @@ def clean_data(filepath: str):
 
     # drop duplicates from the dataframe
     df = df.drop_duplicates()
+    
+    # sort the data if it was originally unsorted
+    if sort == True:
+        df = sort_by_timestamp(df)
 
     # store the result in a CSV
     df.to_csv(filepath, index=False)
@@ -161,6 +167,14 @@ def remove_unknown_coordinates(input_df):
     """
     output_df = pd.DataFrame(output_df, columns=['Timestamp', 'Magnitude', 'Latitude', 'Longitude', 'Depth'])
     return output_df
+
+"""
+INPUT:  Pandas DataFrame (with unsorted rows)
+OUTPUT: Pandas DataFrame (with rows sorted by timestamp)
+"""
+def sort_by_timestamp(input_df):
+    sorted_df = input_df.sort_values(by='Timestamp', ascending=True)
+    return sorted_df
 
 """
 THIS FUNCTION IS DEPRECATED AS OF 1/12, DUE TO RECENT TIMESTAMP EDITS.

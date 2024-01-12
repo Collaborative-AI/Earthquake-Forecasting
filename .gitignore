@@ -134,3 +134,5 @@ src/scraper/East Africa/clean/East Africa Rift System (1994-2022).csv
 src/scraper/East Africa/raw/SouthEARS_EarthquakeCatalog.csv
 src/scraper/GHEA/clean/GHEA (1000-1903).csv
 src/scraper/GHEA/raw/GHEA-data.txt
+src/scraper/Intensity/clean/U.S. Earthquake Intensity Database (1638-1985).csv
+src/scraper/Intensity/raw/eqint_tsqp.csv
