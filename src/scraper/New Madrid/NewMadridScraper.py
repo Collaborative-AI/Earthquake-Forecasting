@@ -1,3 +1,8 @@
+# import helper functions for data cleaning
+import sys
+sys.path.append("src/scraper")
+from helper import clean_data
+
 # run on python 3.11.2
 from csv import writer
 
@@ -9,41 +14,45 @@ def find_quakes(input_path: str, output_path: str):
             # label the header of the csv with the appropriate labels
             # label abbreviations: http://folkworm.ceri.memphis.edu/catalogs/html/cat_nm_help.html
             csv_writer = writer(out_file, lineterminator="\n")
-            header = ["Year", "Month", "Day", "Hour", "Minute", "Second",
-                      'LAT', 'LONG', 'DEP', 'MAG', 'NPH', 'GAP', 'DMIN',
-                      'RMS', 'SEO', 'SEH', 'SEZ', 'Q', 'COMMENTS']
-            numCols = 16
+            header = ["Year", "Month", "Day", "Hour", "Minute", "Second", "Millisecond",
+                      "Magnitude", "Latitude", "Longitude", "Depth"]
             csv_writer.writerow(header)
 
             # write each row from the txt file to the csv
             for line in input_file:
-                words = line.split()
-
-                # the last column -- COMMENTS -- can consist of multiple words
-                # if so, join the comments together with spaces and put them into one cell
-                if len(words) > numCols:
-                    words = words[:numCols-1] + [" ".join(words[numCols-1:])]
+                row = line.split()
 
                 # find the year, month, day, hour, minute, and second
                 # extract the date and time information from the rows
-                year, month, day = words[1].split("/")
+                year, month, day = row[1].split("/")
                 year, month, day = int(year), int(month), int(day)
 
                 # extract the hour, minute, and second
-                time = words[2][:8]
+                time = row[2][:8]
                 hour, minute, second = time.split(":")
                 hour, minute, second = int(hour), int(minute), int(second)
+                
+                # extract the milliseconds
+                millisecond = int(float(row[2][-5:]) * 1000)
+                
+                # extract other earthquake information
+                magnitude = row[9]
+                latitude = row[6]
+                longitude = row[7]
+                depth = row[8]
+                
+                # afterwards, write this information to the next row
+                output_row = [year, month, day, hour, minute, second, millisecond,
+                                  magnitude, latitude, longitude, depth]
+                csv_writer.writerow(output_row)
 
-                # update the row with the new date and time columns
-                datetime = [year, month, day, hour, minute, second]
-                
-                # afterwards, write these words into the next row
-                words = datetime + words[3:]
-                csv_writer.writerow(words)
-                
 
 # main method that calls the web scraper function
 if __name__ == "__main__":
-    input_path = "src/scraper/New Madrid/New Madrid Earthquakes 1974-2023.txt"
-    output_path = "src/scraper/New Madrid/New Madrid Earthquakes 1974-2023.csv"
+    input_path = "src/scraper/New Madrid/raw/New Madrid Earthquakes 1974-2023.txt"
+    
+    output_filename = "New Madrid (1974-2023)"
+    output_path = f"src/scraper/New Madrid/clean/{output_filename}.csv"
+    
     find_quakes(input_path, output_path)
+    clean_data(output_path)

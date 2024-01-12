@@ -124,17 +124,20 @@ tmp/
 res/
 
 .idea/
-src/scraper/Canada/clean/Canada Earthquakes (1985-2023).csv
 src/scraper/Canada/raw/Canada-19850109-20230621.txt
+src/scraper/Canada/clean/Canada Earthquakes (1985-2023).csv
 src/scraper/Central Asia/raw/EMCA Central Asia Earthquake Catalogue.csv
 src/scraper/Central Asia/clean/EMCA Central Asia (10-2009).csv
 src/scraper/Corinth/raw/Marathias_seq.txt
 src/scraper/Corinth/clean/Corinth Gulf (2020-2021).csv
-src/scraper/East Africa/clean/East Africa Rift System (1994-2022).csv
 src/scraper/East Africa/raw/SouthEARS_EarthquakeCatalog.csv
-src/scraper/GHEA/clean/GHEA (1000-1903).csv
+src/scraper/East Africa/clean/East Africa Rift System (1994-2022).csv
 src/scraper/GHEA/raw/GHEA-data.txt
-src/scraper/Intensity/clean/U.S. Earthquake Intensity Database (1638-1985).csv
+src/scraper/GHEA/clean/GHEA (1000-1903).csv
 src/scraper/Intensity/raw/eqint_tsqp.csv
+src/scraper/Intensity/clean/U.S. Earthquake Intensity Database (1638-1985).csv
 src/scraper/NCEDC/raw
 src/scraper/NCEDC/clean/NCEDC (1984-2023).csv
+src/scraper/New Madrid/raw/New Madrid Earthquakes 1974-2023.txt
+src/scraper/New Madrid/clean/New Madrid (1974-2023).csv
+

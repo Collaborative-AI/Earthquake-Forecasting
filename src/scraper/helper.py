@@ -8,7 +8,7 @@ INPUT:  filepath: string filepath to the input CSV file
 OUTPUT: modified CSV that formats timestamps, removes unknown
         magnitudes and coordinates, and drops duplicates
 """
-def clean_data(filepath: str, sort=True):
+def clean_data(filepath: str, timestamp=True, sort=True):
 
     # read the csv and read all the columns
     df = pd.read_csv(filepath)
