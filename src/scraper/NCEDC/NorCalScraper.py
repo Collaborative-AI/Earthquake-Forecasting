@@ -1,5 +1,11 @@
+# import helper functions for data cleaning
+import sys
+sys.path.append("src/scraper")
+from helper import clean_data
+
 # run on python 3.11.2
 from csv import writer
+import pandas as pd
 
 # converts a txt file (separated by whitespace) to a csv file
 def find_quakes(input_paths, output_path: str):
@@ -8,7 +14,7 @@ def find_quakes(input_paths, output_path: str):
 
         # label the header of the csv with the appropriate labels
         csv_writer = writer(out_file, lineterminator="\n")
-        header = ["Year", "Month", "Day", "Hour", "Minute", "Second",
+        header = ["Year", "Month", "Day", "Hour", "Minute", "Second", "Millisecond",
                       "Magnitude", "Latitude", "Longitude", "Depth"]
         csv_writer.writerow(header)
     
@@ -21,30 +27,30 @@ def find_quakes(input_paths, output_path: str):
 
                 # write each row from the txt file to the csv
                 for line in input_file:
-                    words = line.split(",")
-
-                    # extract the date and time information from the rows
-                    date, time = words[0].split(" ")
-
-                    # extract the year, month, and day
-                    year, month, day = date.split("/")
-                    year, month, day = int(year), int(month), int(day)
-
-                    # extract the hour, minute, and second
-                    time = time[:8]
-                    hour, minute, second = time.split(":")
-                    hour, minute, second = int(hour), int(minute), int(second)
+                    row = line.split(",")
+                    
+                    # convert the datetime into a pd.Timestamp object
+                    ts = pd.Timestamp(row[0])
+                    
+                    # extract the attributes from the pd.Timestamp object
+                    year = ts.year
+                    month = ts.month
+                    day = ts.day
+                    hour = ts.hour
+                    minute = ts.minute
+                    second = ts.second
+                    millisecond = ts.microsecond // 1000
 
                     # find the remaining columns
-                    magnitude = words[4]
-                    latitude = words[1]
-                    longitude = words[2]
-                    depth = words[3]
+                    magnitude = row[4]
+                    latitude = row[1]
+                    longitude = row[2]
+                    depth = row[3]
 
                     # reformat the line
-                    data = [year, month, day, hour, minute, second,
-                             magnitude, latitude, longitude, depth]
-                    csv_writer.writerow(data)
+                    output_row = [year, month, day, hour, minute, second, millisecond,
+                                  magnitude, latitude, longitude, depth]
+                    csv_writer.writerow(output_row)
 
 # main method that calls the web scraper function
 if __name__ == "__main__":
@@ -59,5 +65,9 @@ if __name__ == "__main__":
         input_paths.append(file_name)
 
     # set the output path where the combined csv file will be stored
-    output_path = "src/scraper/NCEDC/NCEDC (1984-2023).csv"
+    output_filename = "NCEDC (1984-2023)"
+    output_path = f"src/scraper/NCEDC/clean/{output_filename}.csv"
+    
+    # find the earthquakes then clean the data
     find_quakes(input_paths, output_path)
+    clean_data(output_path)

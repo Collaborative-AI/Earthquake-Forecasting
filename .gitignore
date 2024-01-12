@@ -136,3 +136,5 @@ src/scraper/GHEA/clean/GHEA (1000-1903).csv
 src/scraper/GHEA/raw/GHEA-data.txt
 src/scraper/Intensity/clean/U.S. Earthquake Intensity Database (1638-1985).csv
 src/scraper/Intensity/raw/eqint_tsqp.csv
+src/scraper/NCEDC/raw
+src/scraper/NCEDC/clean/NCEDC (1984-2023).csv
