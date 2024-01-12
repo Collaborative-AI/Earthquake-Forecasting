@@ -126,3 +126,5 @@ res/
 .idea/
 src/scraper/Canada/clean/Canada Earthquakes (1985-2023).csv
 src/scraper/Canada/raw/Canada-19850109-20230621.txt
+src/scraper/Central Asia/raw/EMCA Central Asia Earthquake Catalogue.csv
+src/scraper/Central Asia/clean/EMCA Central Asia (10-2009).txt.csv

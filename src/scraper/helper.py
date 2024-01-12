@@ -163,6 +163,8 @@ def remove_unknown_coordinates(input_df):
     return output_df
 
 """
+THIS FUNCTION IS DEPRECATED AS OF 1/12, DUE TO RECENT TIMESTAMP EDITS.
+
 INPUT:  Row with Schema ["Timestamp", "Magnitude", "Latitude", "Longitude", "Depth"]
 OUTPUT: Rounded Timestamp (to 10 seconds), and Magnitude, Latitude and Longitude
         to 1 decimal place
