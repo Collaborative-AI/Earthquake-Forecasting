@@ -130,3 +130,5 @@ src/scraper/Central Asia/raw/EMCA Central Asia Earthquake Catalogue.csv
 src/scraper/Central Asia/clean/EMCA Central Asia (10-2009).csv
 src/scraper/Corinth/raw/Marathias_seq.txt
 src/scraper/Corinth/clean/Corinth Gulf (2020-2021).csv
+src/scraper/East Africa/clean/East Africa Rift System (1994-2022).csv
+src/scraper/East Africa/raw/SouthEARS_EarthquakeCatalog.csv
