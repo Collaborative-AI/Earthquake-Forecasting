@@ -124,3 +124,5 @@ tmp/
 res/
 
 .idea/
+src/scraper/Canada/clean/Canada Earthquakes (1985-2023).csv
+src/scraper/Canada/raw/Canada-19850109-20230621.txt

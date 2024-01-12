@@ -2,6 +2,28 @@ import pandas as pd
 import numpy as np
 
 """
+INPUT:  filepath to a CSV (string)
+OUTPUT: modified CSV that formats timestamps, removes unknown
+        magnitudes and coordinates, and drops duplicates
+"""
+def clean_data(filepath: str):
+
+    # read the csv and read all the columns
+    df = pd.read_csv(filepath)
+    
+    # reformat times, and remove unknown magnitudes + coordinates
+    df = replace_with_timestamp(df)
+    df = remove_unknown_magnitudes(df)
+    df = remove_unknown_coordinates(df)
+
+    # drop duplicates from the dataframe
+    df = df.drop_duplicates()
+
+    # store the result in a CSV
+    df.to_csv(filepath, index=False)
+
+
+"""
 INPUT:  Pandas DataFrame object (without Timestamp variables)
 OUTPUT: Pandas DataFrame object with pd.Timestamp object
 """
