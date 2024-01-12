@@ -65,7 +65,7 @@ def find_quakes(input_path: str, output_path: str):
 if __name__ == "__main__":
     input_path = "src/scraper/Central Asia/raw/EMCA Central Asia Earthquake Catalogue.csv"
     
-    output_filename = "EMCA Central Asia (10-2009).txt"
+    output_filename = "EMCA Central Asia (10-2009)"
     output_path = f"src/scraper/Central Asia/clean/{output_filename}.csv"
     
     find_quakes(input_path, output_path)

@@ -76,7 +76,7 @@ def replace_with_timestamp(input_df, tz="UTC"):
             # pd.Timestamp doesn't have a millisecond attribute, so we'll use nanoseconds
             frame_time = pd.Timestamp(year=year, month=month, day=day,
                                       hour=hour, minute=minute, second=second,
-                                      nanosecond=millisecond*1000, tz=tz)
+                                      microsecond=millisecond*1000, tz=tz)
             
             # ensure that the resulting timestamp is in UTC
             frame_time = frame_time.tz_convert(tz="UTC")
