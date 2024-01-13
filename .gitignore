@@ -124,6 +124,8 @@ tmp/
 res/
 
 .idea/
+src/scraper/Argentina/raw/clean-catalog.xml
+src/scraper/Argentina/clean/Argentina Andean Earthquakes (2016-2017).csv
 src/scraper/Canada/raw/Canada-19850109-20230621.txt
 src/scraper/Canada/clean/Canada Earthquakes (1985-2023).csv
 src/scraper/Central Asia/raw/EMCA Central Asia Earthquake Catalogue.csv
@@ -146,3 +148,5 @@ src/scraper/Pacific Northwest/raw/pacific-northwest-tremors-2009-2023.csv
 src/scraper/Pacific Northwest/clean/PNW Tremors (2009-2023).csv
 src/scraper/SoCal/raw/SearchResults.txt
 src/scraper/SoCal/clean/SCEDC (1932-2023).csv
+src/scraper/Texas/raw/texnet_events.csv
+src/scraper/Texas/clean/Texas (2016-2023).csv
