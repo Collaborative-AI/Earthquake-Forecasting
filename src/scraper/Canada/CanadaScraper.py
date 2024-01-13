@@ -51,7 +51,7 @@ def find_quakes(input_path: str, output_path: str):
 if __name__ == "__main__":
     input_path = "src/scraper/Canada/raw/Canada-19850109-20230621.txt"
     
-    output_filename = "Canada Earthquakes (1985-2023)"
+    output_filename = "Canada (1985-2023)"
     output_path = f"src/scraper/Canada/clean/{output_filename}.csv"
     
     find_quakes(input_path, output_path)

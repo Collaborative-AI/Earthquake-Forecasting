@@ -127,7 +127,7 @@ res/
 src/scraper/Argentina/raw/clean-catalog.xml
 src/scraper/Argentina/clean/Argentina Andean Earthquakes (2016-2017).csv
 src/scraper/Canada/raw/Canada-19850109-20230621.txt
-src/scraper/Canada/clean/Canada Earthquakes (1985-2023).csv
+src/scraper/Canada/clean/Canada (1985-2023).csv
 src/scraper/Central Asia/raw/EMCA Central Asia Earthquake Catalogue.csv
 src/scraper/Central Asia/clean/EMCA Central Asia (10-2009).csv
 src/scraper/Corinth/raw/Marathias_seq.txt
