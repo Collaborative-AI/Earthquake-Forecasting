@@ -144,3 +144,5 @@ src/scraper/NOAA/raw/NCEI-WDS-Earthquakes.tsv
 src/scraper/NOAA/clean/NOAA NCEI-WDS (0-2023).csv
 src/scraper/Pacific Northwest/raw/pacific-northwest-tremors-2009-2023.csv
 src/scraper/Pacific Northwest/clean/PNW Tremors (2009-2023).csv
+src/scraper/SoCal/raw/SearchResults.txt
+src/scraper/SoCal/clean/SCEDC (1932-2023).csv

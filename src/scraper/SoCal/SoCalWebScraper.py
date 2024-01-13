@@ -1,3 +1,16 @@
+"""
+NOTICE:
+
+As of 01/12/2024, this web scraper isn't effective due to the SCEDC website
+implementing rate requests. Currently, data is extracted by downloading
+files from the website, then formatting the results into a CSV.
+
+For more information about this process, use SoCalFileScraper.py, and
+the raw downloaded data in the raw/ folder.
+
+"""
+
+
 # run on python 3.11.2
 from bs4 import BeautifulSoup
 import requests

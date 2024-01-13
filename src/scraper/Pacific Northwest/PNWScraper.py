@@ -37,7 +37,7 @@ def find_quakes(input_path: str, output_path: str):
                     hour = ts.hour
                     minute = ts.minute
                     second = ts.second
-                    millisecond = ts.microsecond * 1000
+                    millisecond = ts.microsecond // 1000
 
                     # convert the energy into moment magnitude (Mw)
                     # formula found at: https://www.usgs.gov/programs/earthquake-hazards/earthquake-magnitude-energy-release-and-shaking-intensity
