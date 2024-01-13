@@ -150,3 +150,5 @@ src/scraper/SoCal/raw/SearchResults.txt
 src/scraper/SoCal/clean/SCEDC (1932-2023).csv
 src/scraper/Texas/raw/texnet_events.csv
 src/scraper/Texas/clean/Texas (2016-2023).csv
+src/scraper/Turkey/raw/turkey_earthquakes(1915-2021).csv
+src/scraper/Turkey/clean/Turkey (1915-2021).csv
