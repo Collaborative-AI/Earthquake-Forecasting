@@ -152,3 +152,5 @@ src/scraper/Texas/raw/texnet_events.csv
 src/scraper/Texas/clean/Texas (2016-2023).csv
 src/scraper/Turkey/raw/turkey_earthquakes(1915-2021).csv
 src/scraper/Turkey/clean/Turkey (1915-2021).csv
+src/scraper/Utah/raw/detections.txt
+src/scraper/Utah/clean/Utah (2016-2019).csv
