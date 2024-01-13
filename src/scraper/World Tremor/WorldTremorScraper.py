@@ -34,12 +34,19 @@ def find_quakes(raw_folder: str, output_path: str):
                 line_number = 1
                 for line in input_file:
                     row = line.split(",")
-
+                    
+                    # the Japan datasets are set to JST (UTC+9), while
+                    # the other datasets are set to UTC.
+                    tz = "UTC"
+                    if "Kyushu" in input_filename or "Nankai" in input_filename:
+                        tz = "Japan"
+                    
                     try:
                         
                         # convert the date and time into a pd.Timestamp
                         datetime = f"{row[0]} {row[1]}"
-                        ts = pd.Timestamp(datetime)
+                        ts = pd.Timestamp(datetime, tz=tz)
+                        ts = ts.tz_convert(tz="UTC")
                         
                         # extract time information from the timestamp
                         year = ts.year

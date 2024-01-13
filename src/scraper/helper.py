@@ -8,13 +8,13 @@ INPUT:  filepath: string filepath to the input CSV file
 OUTPUT: modified CSV that formats timestamps, removes unknown
         magnitudes and coordinates, and drops duplicates
 """
-def clean_data(filepath: str, timestamp=True, sort=True):
+def clean_data(filepath: str, sort=True, tz="UTC"):
 
     # read the csv and read all the columns
     df = pd.read_csv(filepath)
     
     # reformat times, and remove unknown magnitudes + coordinates
-    df = replace_with_timestamp(df)
+    df = replace_with_timestamp(df, tz=tz)
     df = remove_unknown_magnitudes(df)
     df = remove_unknown_coordinates(df)
 
