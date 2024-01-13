@@ -1,7 +1,5 @@
 import pandas as pd
 
-#This code is for when you are checking for duplicate earthquakes
-
 # 1. Load the non-Japan files from the World Tremor Database
 # Japan datasets are originally in JST=UTC+9, so they are converted separately
 csv_files = ["src/merge/world_tremor/input/Southern-Chile.20050101-20070228.csv",
