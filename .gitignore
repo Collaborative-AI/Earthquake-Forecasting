@@ -156,3 +156,5 @@ src/scraper/Utah/raw/detections.txt
 src/scraper/Utah/clean/Utah (2016-2019).csv
 src/scraper/World Tremor/raw
 src/scraper/World Tremor/clean/World Tremor Database (2005-2014).csv
+src/scraper/South Asia/raw/11069_2016_2665_MOESM2_ESM.csv
+src/scraper/South Asia/clean/South Asia (1900-2014).csv

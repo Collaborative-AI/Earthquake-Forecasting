@@ -47,7 +47,7 @@ while i < len(usgs_sage) and j < len(various_combined):
             j += 1
             continue
         
-    if us_time < vc_time:
+    elif us_time < vc_time:
         result.append([us_time,
                        usgs_sage.iloc[i]['Magnitude'],
                        usgs_sage.iloc[i]['Latitude'],
