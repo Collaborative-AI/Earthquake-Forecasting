@@ -148,6 +148,8 @@ src/scraper/Pacific Northwest/raw/pacific-northwest-tremors-2009-2023.csv
 src/scraper/Pacific Northwest/clean/PNW Tremors (2009-2023).csv
 src/scraper/SoCal/raw/SearchResults.txt
 src/scraper/SoCal/clean/SCEDC (1932-2023).csv
+src/scraper/South Asia/raw/11069_2016_2665_MOESM2_ESM.csv
+src/scraper/South Asia/clean/South Asia (1900-2014).csv
 src/scraper/Texas/raw/texnet_events.csv
 src/scraper/Texas/clean/Texas (2016-2023).csv
 src/scraper/Turkey/raw/turkey_earthquakes(1915-2021).csv
@@ -156,5 +158,3 @@ src/scraper/Utah/raw/detections.txt
 src/scraper/Utah/clean/Utah (2016-2019).csv
 src/scraper/World Tremor/raw
 src/scraper/World Tremor/clean/World Tremor Database (2005-2014).csv
-src/scraper/South Asia/raw/11069_2016_2665_MOESM2_ESM.csv
-src/scraper/South Asia/clean/South Asia (1900-2014).csv
