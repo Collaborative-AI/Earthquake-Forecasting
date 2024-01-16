@@ -10,7 +10,6 @@ from pathlib import Path
 from tabula.io import read_pdf
 
 
-
 # Add the parent directory to sys.path
 parent_dir = str(Path(__file__).resolve().parent.parent.parent)
 sys.path.append(parent_dir)
