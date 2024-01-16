@@ -7,6 +7,9 @@ from datetime import datetime, timedelta
 import tabula
 import sys
 from pathlib import Path
+from tabula.io import read_pdf
+
+
 
 # Add the parent directory to sys.path
 parent_dir = str(Path(__file__).resolve().parent.parent.parent)
@@ -39,9 +42,9 @@ class Syria_Scraper(Scraper):
         page_number3 = 36
 
         # Use read_pdf() to extract the table from the PDF
-        tables_part1 = tabula.read_pdf(self.input_path, pages=page_number1)
-        tables_part2 = tabula.read_pdf(self.input_path, pages=page_number2)
-        tables_part3 = tabula.read_pdf(self.input_path, pages=page_number3)
+        tables_part1 = tabula.io.read_pdf(pdf_file_path, pages=page_number1)
+        tables_part2 = tabula.io.read_pdf(pdf_file_path, pages=page_number2)
+        tables_part3 = tabula.io.read_pdf(pdf_file_path, pages=page_number3)
 
         # Assuming the table you want is the first one in the list (tables[0])
         # You can access the table data as a DataFrame
@@ -70,6 +73,6 @@ class Syria_Scraper(Scraper):
 
 if __name__ == '__main__':
     input_path='The historical earthquakes of Syria.pdf'
-    output_path='SyriaHistoricalEarthquakes.csv'
+    output_path='SyriaHistoricalEarthquakes1.csv'
     obj=Syria_Scraper(input_path, output_path)
     obj.read_pdf()
