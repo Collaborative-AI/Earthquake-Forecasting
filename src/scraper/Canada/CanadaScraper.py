@@ -24,6 +24,10 @@ def find_quakes(input_path: str, output_path: str):
             for line in input_file:
                 row = line.split("|")
                 
+                # if the magtype isn't "mw", ignore the result
+                if row[5].lower() != "mw":
+                    continue
+                
                 # extract the date and time as a pd.Timestamp object
                 ts = pd.Timestamp(row[1])
                 
@@ -49,9 +53,9 @@ def find_quakes(input_path: str, output_path: str):
 
 # main method that calls the web scraper function
 if __name__ == "__main__":
-    input_path = "src/scraper/Canada/raw/Canada-19850109-20230621.txt"
+    input_path = "src/scraper/Canada/raw/Canada-19850109-20240117.txt"
     
-    output_filename = "Canada (1985-2023)"
+    output_filename = "Canada (1985-2024)"
     output_path = f"src/scraper/Canada/clean/{output_filename}.csv"
     
     find_quakes(input_path, output_path)
