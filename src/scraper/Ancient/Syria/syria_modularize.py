@@ -41,9 +41,9 @@ class Syria_Scraper(Scraper):
         page_number3 = 36
 
         # Use read_pdf() to extract the table from the PDF
-        tables_part1 = tabula.io.read_pdf(pdf_file_path, pages=page_number1)
-        tables_part2 = tabula.io.read_pdf(pdf_file_path, pages=page_number2)
-        tables_part3 = tabula.io.read_pdf(pdf_file_path, pages=page_number3)
+        tables_part1 = tabula.io.read_pdf(self.input_path, pages=page_number1)
+        tables_part2 = tabula.io.read_pdf(self.input_path, pages=page_number2)
+        tables_part3 = tabula.io.read_pdf(self.input_path, pages=page_number3)
 
         # Assuming the table you want is the first one in the list (tables[0])
         # You can access the table data as a DataFrame
