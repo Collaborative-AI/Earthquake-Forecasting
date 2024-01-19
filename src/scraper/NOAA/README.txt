@@ -22,3 +22,16 @@ one that meets at least one of the following criteria:"
 - Modified Mercalli Intensity (MMI) X or greater
 - Generated a tsunami
 
+Magnitude Measurements:
+
+There are several different scales for measuring earthquake magnitudes.
+The primary magnitude is chosen from the available magnitude scales in this order:
+- Mw Magnitude
+- Ms Magnitude
+- Mb Magnitude
+- Ml Magnitude
+- Mfa Magnitude
+- Unknown Magnitude
+
+Not all the measurements may be Mw magnitude, so there is a degree of uncertainty
+for the magnitudes featured in this dataset.

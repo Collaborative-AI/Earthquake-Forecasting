@@ -32,10 +32,10 @@ Includes the following earthquakes:
 - Utah (Mineral Mountains)
 """
 
-csv_files = ["Canada/clean/Canada (1985-2023).csv",
-                 "NCEDC/clean/NCEDC (1984-2023).csv",
-                 "New Madrid/clean/New Madrid (1974-2023).csv",
-                 "Pacific Northwest/clean/PNW Tremors (2009-2023).csv",
-                 "SoCal/clean/SCEDC (1932-2023).csv",
-                 "Texas/clean/Texas (2016-2023).csv",
-                 "Utah/clean/Utah (2016-2019).csv"]
+csv_files = ["Canada/clean/Canada (1985-2024).csv",
+             "NCEDC/clean/NCEDC (1984-2023).csv",
+             "New Madrid/clean/New Madrid (1974-2023).csv",
+             "Pacific Northwest/clean/PNW Tremors (2009-2023).csv",
+             "SoCal/clean/SCEDC (1932-2023).csv",
+             "Texas/clean/Texas (2016-2023).csv",
+             "Utah/clean/Utah (2016-2019).csv"]

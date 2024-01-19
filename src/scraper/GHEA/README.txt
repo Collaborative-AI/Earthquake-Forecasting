@@ -4,6 +4,10 @@ Summary:
 Converts a TXT file from the GHEA (Global Historical Earthquake Archive) into a CSV file.
 The data can be found at: http://evrrss.eri.u-tokyo.ac.jp/db/ghec/index.html
 
+Finding the TXT file:
+- Locate the bullet point "the Global Historical Earthquake Catalogue - GHEC v1.0"
+- Click "download GHEC v1.0 as text (ASCII) file"
+
 Header Information (sourced from website):
 # CODE	DESCRPTION	NOTES
 # En	Event number	unique ID of the catalogue, in chronological order

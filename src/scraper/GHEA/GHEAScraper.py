@@ -17,10 +17,16 @@ def find_quakes(input_path: str, output_path: str):
             header = ["Year", "Month", "Day", "Hour", "Minute", "Second", "Millisecond",
                       "Magnitude", "Latitude", "Longitude", "Depth"]
             csv_writer.writerow(header)
+            for i in range(79): next(input_file, None)
 
             # write each row from the txt file to the csv
             for line in input_file:
                 row = line.split("\t")
+                
+                # check if the data has the magType "w". if not, skip
+                # "w" = moment magnitude (for this dataset)
+                if row[19].lower() != "w":
+                    continue
                 
                 # find the time data
                 year = row[2]
