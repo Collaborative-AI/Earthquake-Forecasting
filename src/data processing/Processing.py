@@ -10,7 +10,7 @@ from dateutil import parser
 class Processing:
     def __init__(self):
         self.source=[]
-    def merge_simple(self):
+    def data_merge_simple(self):
         final_df = pd.read_csv("Final_Merged.csv")
 
         # 2. Load each of the three new USGS files
