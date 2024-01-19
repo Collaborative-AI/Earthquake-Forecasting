@@ -40,7 +40,8 @@ def find_quakes(input_path: str, output_path: str):
                     millisecond = ts.microsecond // 1000
 
                     # find the other rows with data
-                    magnitude = row[4]
+                    # specifically record moment magnitude
+                    magnitude = row[5]
                     latitude = row[6]
                     longitude = row[8]
                     
