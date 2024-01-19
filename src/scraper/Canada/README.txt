@@ -5,15 +5,16 @@ Converts a TXT file from the Canadian Earthquake Database into a CSV file.
 The data can be found at: https://earthquakescanada.nrcan.gc.ca/stndon/NEDB-BNDS/bulletin-en.php
 
 The following parameters were used for downloading the data:
-Start Time (UTC): 1900-01-01 00:00:00
-End Time (UTC):   2024-01-17 23:59:59
-Magnitude from:   4
-Magnitude to:     10
-Depth from (km):  -5
-Depth to (km):    1000
-Types:            None selected
-Felt Events:      No
-Format:           TXT
+Start Time (UTC):      1900-01-01 00:00:00
+End Time (UTC):        2024-01-19 23:59:59
+Magnitude from:        -5
+Magnitude to:          10
+Depth from (km):       -5
+Depth to (km):         1000
+Types:                 No options were selected
+Only Show Felt Events: No
+Format:                Text (TXT)
+Limit:                 Left blank
 
 Filter by Radius Area:
 Latitude:             63.13
@@ -22,5 +23,6 @@ Minimum Radius (km):  0
 Maximum Radius (km):  5000
 
 The following lines can be modified:
-Line 52:        Modify the file path of the input .txt file
-Line 55:        Modify the file path of the output .csv file
+Line 56:        Modify the file path of the input .txt file
+Line 59:        Modify the name of the output .csv file
+Line 60:        Modify the file path of the output .csv file
