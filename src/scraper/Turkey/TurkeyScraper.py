@@ -40,9 +40,8 @@ def find_quakes(input_path: str, output_path: str):
                     millisecond = ts.microsecond // 1000
 
                     # find the other rows with data
-                    # NOTE: Magnitude is the maximum of various scales
-                    # (e.g., MD, ML, Mw, Ms, Mb)
-                    magnitude = row[7]
+                    # NOTE: choose Mw for data consistency
+                    magnitude = row[10]
                     latitude = row[4]
                     longitude = row[5]
                     depth = row[6]
