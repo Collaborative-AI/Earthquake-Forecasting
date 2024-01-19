@@ -5,6 +5,7 @@ from helper import clean_data
 
 # run on python 3.11.2
 from csv import writer
+import pandas as pd
 
 # converts a txt file (separated by whitespace) to a csv file
 def find_quakes(input_path: str, output_path: str):
@@ -24,27 +25,26 @@ def find_quakes(input_path: str, output_path: str):
                 row = line.split(",")
 
                 try:
+                    
+                    # check if Mw (moment magnitude) is defined
+                    magnitude = row[1]
+                    if magnitude == "NaN":
+                        continue
+                    
                     # put each time unit (excluding ms) in separate columns
                     # IRIS format splits date and time using T
-                    datetime = row[6]
-                    date, time = datetime.split("T")
-
-                    # remove milliseconds from the time
-                    time = time[:8]
-
-                    # find the remaining values
-                    year, month, day = date.split("-")
-                    hour, minute, second = time.split(":")
-
-                    # convert them into integers
-                    year, month, day = int(year), int(month), int(day)
-                    hour, minute, second = int(hour), int(minute), int(second)
+                    ts = pd.Timestamp(row[6])
                     
-                    # add millisecond data for consistency with other datasets
-                    millisecond = 0
+                    # extract the attributes from the pd.Timestamp object
+                    year = ts.year
+                    month = ts.month
+                    day = ts.day
+                    hour = ts.hour
+                    minute = ts.minute
+                    second = ts.second
+                    millisecond = ts.microsecond // 1000
 
                     # find the other rows with data
-                    magnitude = row[3]
                     latitude = row[7]
                     longitude = row[8]
                     depth = row[9]
