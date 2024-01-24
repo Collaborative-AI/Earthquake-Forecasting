@@ -6,6 +6,7 @@ from helper import clean_data
 # run on python 3.11.2
 from csv import writer
 import pandas as pd
+import numpy as np
 
 # converts a txt file (separated by whitespace) to a csv file
 def find_quakes(input_path: str, output_path: str):
@@ -18,17 +19,16 @@ def find_quakes(input_path: str, output_path: str):
             header = ["Year", "Month", "Day", "Hour", "Minute", "Second", "Millisecond",
                       "Magnitude", "Latitude", "Longitude", "Depth"]
             csv_writer.writerow(header)
-            for i in range(3): next(input_file, None)
+            next(input_file, None)
 
             # write each row from the txt file to the csv
             for line in input_file:
-                row = line.split()
+                row = line.split(",")
 
                 try:
                     
-                    # convert the date and time into a pd.Timestamp
-                    datetime = f"{row[0]} {row[1]}"
-                    ts = pd.Timestamp(datetime)
+                    # extract the data as a pd.Timestamp object
+                    ts = pd.Timestamp(row[3])
                     
                     # extract time information from the timestamp
                     year = ts.year
@@ -38,14 +38,21 @@ def find_quakes(input_path: str, output_path: str):
                     minute = ts.minute
                     second = ts.second
                     millisecond = ts.microsecond // 1000
+
+                    # convert the energy into moment magnitude (Mw)
+                    # formula found at: https://www.usgs.gov/programs/earthquake-hazards/earthquake-magnitude-energy-release-and-shaking-intensity
+                    # conversion: logE = 5.24 + 1.44(Mw)
+                    energy = float(row[4])
+
+                    # don't evaluate for energy = 0 to avoid a divide by zero error
+                    if energy == 0: continue
+                    magnitude = (np.emath.logn(10, energy)-5.24)/1.44
+
+                    # find the other rows with data
+                    latitude = row[0]
+                    longitude = row[1]
+                    depth = row[2]
                     
-                    # find the geographic information
-                    magnitude = row[4]
-                    latitude = row[6]
-                    longitude = row[7]
-                    depth = row[8]
-                    
-                    # write the information into the output csv
                     output_row = [year, month, day, hour, minute, second, millisecond,
                                   magnitude, latitude, longitude, depth]
                     csv_writer.writerow(output_row)
@@ -56,10 +63,10 @@ def find_quakes(input_path: str, output_path: str):
 
 # main method that calls the web scraper function
 if __name__ == "__main__":
-    input_path = "src/scraper/SoCal/raw/SearchResults.txt"
+    input_path = "src/scraper/Pacific Northwest/raw/pacific-northwest-tremors-2009-2023.csv"
     
-    output_filename = "SCEDC (1932-2023)"
-    output_path = f"src/scraper/SoCal/clean/{output_filename}.csv"
+    output_filename = "PNW Tremors (2009-2023)"
+    output_path = f"src/scraper/Pacific Northwest/clean/{output_filename}.csv"
     
     find_quakes(input_path, output_path)
     clean_data(output_path)

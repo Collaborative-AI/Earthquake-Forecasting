@@ -1,6 +1,11 @@
+# import helper functions for data cleaning
+import sys
+sys.path.append("src/scraper")
+from helper import clean_data
+
+# run on python 3.11.2
 import csv
 import xmltodict
-
 
 def find_quakes(input_path: str, output_path: str):
     
@@ -14,27 +19,43 @@ def find_quakes(input_path: str, output_path: str):
 
     # find key data points for all earthquakes
     n = len(data_list)
-    header = ["Time ID", "Magnitude", "Station Count", "Author", "Publication Time"]
+    header = ["Year", "Month", "Day", "Hour", "Minute", "Second", "Millisecond",
+                      "Magnitude", "Latitude", "Longitude", "Depth"]
 
     # collect each event's data in rows
     rows = []
     for row in data_list:
-        time = row["origin"][0]["time"]["value"]
-        magnitude = row["stationMagnitude"][0]["mag"]["value"]
-        stationCount = row["magnitude"]["stationCount"]
-        author = row["magnitude"]["creationInfo"]["author"]
-        creationTime = row["magnitude"]["creationInfo"]["creationTime"]
+        datetime = row["origin"][0]["time"]["value"]
+        mag = row["stationMagnitude"][0]["mag"]["value"]
+        lat = row["origin"][0]["latitude"]["value"]
+        lon = row["origin"][0]["longitude"]["value"]
+        dep = row["origin"][0]["depth"]["value"]
 
-        rows.append([time, magnitude, stationCount, author, creationTime])
+        # split the time into different its numerical values
+        date, time = datetime.split("T")
+        time = time[:8]
+        year, month, day = date.split("-")
+        hour, minute, second = time.split(":")
+        
+        # millisecond data is added manually for dataset consistency
+        ms = 0
+
+        # add the results to the CSV
+        rows.append([year, month, day, hour, minute, second, ms, mag, lat, lon, dep])
 
     # write the data into the csv file
     with open(output_path, "w") as f:
-        csv_writer = csv.writer(f)
+        csv_writer = csv.writer(f, lineterminator="\n")
         csv_writer.writerow(header)
         csv_writer.writerows(rows)
 
+
 # main method that calls the web scraper function
 if __name__ == "__main__":
-    input_path = "Argentina/clean-catalog.xml"
-    output_path = "Argentina/Argentina Andean Earthquakes (2016-2017).csv"
+    input_path = "src/scraper/Argentina/raw/clean-catalog.xml"
+    
+    output_filename = "Argentina Andean Earthquakes (2016-2017)"
+    output_path = f"src/scraper/Argentina/clean/{output_filename}.csv"
+    
     find_quakes(input_path, output_path)
+    clean_data(output_path)

@@ -18,34 +18,33 @@ def find_quakes(input_path: str, output_path: str):
             header = ["Year", "Month", "Day", "Hour", "Minute", "Second", "Millisecond",
                       "Magnitude", "Latitude", "Longitude", "Depth"]
             csv_writer.writerow(header)
-            for i in range(3): next(input_file, None)
+            next(input_file, None)
 
             # write each row from the txt file to the csv
             for line in input_file:
-                row = line.split()
+                row = line.split(",")
 
                 try:
                     
-                    # convert the date and time into a pd.Timestamp
-                    datetime = f"{row[0]} {row[1]}"
-                    ts = pd.Timestamp(datetime)
+                    # find the time information from the csv
+                    year = row[0]
+                    month = row[1]
+                    day = row[2]
+                    hour = row[3]
+                    minute = row[4]
+                    second = row[5]
                     
-                    # extract time information from the timestamp
-                    year = ts.year
-                    month = ts.month
-                    day = ts.day
-                    hour = ts.hour
-                    minute = ts.minute
-                    second = ts.second
-                    millisecond = ts.microsecond // 1000
-                    
-                    # find the geographic information
-                    magnitude = row[4]
+                    # although milliseconds aren't present in this csv, 
+                    # set the variable to 0 for consistency with other datasets
+                    millisecond = 0
+
+                    # find the other rows with data
+                    magnitude = row[9]
                     latitude = row[6]
                     longitude = row[7]
                     depth = row[8]
-                    
-                    # write the information into the output csv
+
+                    # reformat the line
                     output_row = [year, month, day, hour, minute, second, millisecond,
                                   magnitude, latitude, longitude, depth]
                     csv_writer.writerow(output_row)
@@ -56,10 +55,10 @@ def find_quakes(input_path: str, output_path: str):
 
 # main method that calls the web scraper function
 if __name__ == "__main__":
-    input_path = "src/scraper/SoCal/raw/SearchResults.txt"
+    input_path = "src/scraper/South Asia/raw/11069_2016_2665_MOESM2_ESM.csv"
     
-    output_filename = "SCEDC (1932-2023)"
-    output_path = f"src/scraper/SoCal/clean/{output_filename}.csv"
+    output_filename = "South Asia (1900-2014)"
+    output_path = f"src/scraper/South Asia/clean/{output_filename}.csv"
     
     find_quakes(input_path, output_path)
     clean_data(output_path)
