@@ -47,8 +47,8 @@ class argintina(Scraper):
 
 # main method that calls the web scraper function
 if __name__ == "__main__":
-    input_path = "Argentina/clean-catalog.xml"
-    output_path = "Argentina/Argentina Andean Earthquakes (2016-2017).csv"
+    input_path = "Argentina/raw/clean-catalog.xml"
+    output_path = "Argentina/clean/Argentina Andean Earthquakes (2016-2017).csv"
     header = ["Time ID", "Magnitude", "Station Count", "Author", "Publication Time"]
     argintina=argintina(input_path, output_path,header)
     argintina.find_quakes()

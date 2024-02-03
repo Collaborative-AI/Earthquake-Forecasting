@@ -36,6 +36,6 @@ class GHEA(Scraper):
                         words = line.split(self.separator)
                     csv_writer.writerow(words)
                     
-ghea=GHEA("GHEA/GHEA-data.txt", "GHEA/GHEA Data 1000-1903.csv", ["En", "Source", "Year", "Mo", "Da", "Ho", "Mi", "Se", "Area", "Lat", "Lon", "LatUnc", "LonUnc", "EpDet", "Dep", "Io", "Msource", "M", "MUnc", "MType", "MDet", "MDPSource", "MDPn", "MDPIx", "MDPsc", "Remarks", "GEHid"],"\t")
+ghea=GHEA("GHEA/raw/GHEA-data.txt", "GGHEA/clean/GHEA (1000-1903).csv", ["En", "Source", "Year", "Mo", "Da", "Ho", "Mi", "Se", "Area", "Lat", "Lon", "LatUnc", "LonUnc", "EpDet", "Dep", "Io", "Msource", "M", "MUnc", "MType", "MDet", "MDPSource", "MDPn", "MDPIx", "MDPsc", "Remarks", "GEHid"],"\t")
 if __name__ == "__main__":
     ghea.find_quakes_txt()

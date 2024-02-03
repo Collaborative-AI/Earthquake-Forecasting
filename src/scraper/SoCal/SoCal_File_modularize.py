@@ -22,8 +22,8 @@ class Socal_File_Scraper(Scraper):
         self.header=header
         self.separator=None
 if __name__ == "__main__":
-    input_path = "SoCal/SearchResults.txt"
-    output_path = "SoCal/Southern California Earthquakes (1932-2023).csv"
+    input_path = "SoCal/raw/SearchResults.txt"
+    output_path = "SoCal/clean/SCEDC (1932-2023).csv"
     header=["Year/Month/Day", "Hour:Minute:Second", "ET", "GT",
                       "Magnitude", "M", "Latitude", "Longitude", "Depth",
                       "Q", "EVID", "NPH", "NGRM"]
