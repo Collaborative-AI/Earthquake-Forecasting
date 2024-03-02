@@ -16,7 +16,7 @@ parent_dir = str(Path(__file__).resolve().parent.parent)
 sys.path.append(parent_dir)
 
 
-from Superclass import Scraper
+from scraper import Scraper
 
 class usgs_scraper(Scraper):
     def __init__(self, url, start_date, end_date):
