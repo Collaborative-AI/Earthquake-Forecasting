@@ -14,7 +14,7 @@ parent_dir = str(Path(__file__).resolve().parent.parent)
 sys.path.append(parent_dir)
 
 # Now you can import your module
-from scraper import Scraper
+from Superclass import Scraper
 
 # converts a txt file (separated by whitespace) to a csv file
 class Utah_Scraper(Scraper):

@@ -10,28 +10,28 @@ import sys
 from pathlib import Path
 
 # Add the parent directory to sys.path
-parent_dir = str(Path(__file__).resolve().parent.parent.parent.parent)
-sys.path.insert(0, parent_dir)
+parent_dir = str(Path(__file__).resolve().parent.parent.parent)
+sys.path.append(parent_dir)
 
 # Now you can import your module
-from scraper.scraper import Scraper
+from Superclass import Scraper
 
-class Wiki_Scraper(Scraper):
+class wiki_Scraper(Scraper):
     def __init__(self, url, output_path):
         self.url=url
         self.output_path=output_path
-    def find_quakes(self):
+    def find_earthquake(self):
         html_text = requests.get(self.url).text
         #print(html_text)
         soup = BeautifulSoup(html_text, 'lxml')
 
         date = []
-        place = []
+        #place = []
         lat = []
         lon = []
-        fatalities = []
+        #fatalities = []
         magnitude = []
-        comments = []
+        #comments = []
 
         tables = soup.find_all('table') #each table is an element in the set tables
         for table in tables:
@@ -43,22 +43,21 @@ class Wiki_Scraper(Scraper):
                     string = None
                 
                 if (i%9 == 0): date.append(string)
-                if (i%9 == 2): place.append(string)
+                #if (i%9 == 2): place.append(string)
                 if (i%9 == 3): lat.append(string)
                 if (i%9 == 4): lon.append(string)
-                if (i%9 == 5): fatalities.append(string)
+                #if (i%9 == 5): fatalities.append(string)
                 if (i%9 == 6): magnitude.append(string)
-                if (i%9 == 7): comments.append(string)
+                #if (i%9 == 7): comments.append(string)
 
         file_name = self.output_path #title of the .csv file
 
         with open(file_name, "w", encoding="utf-8") as f:
             f.write = csv.writer(f)
-            f.write.writerow(['No.', 'Date', 'Place', 'Latitude', 'Longitude', 'Fatalities', 'Magnitude', 'Comments']) #headers of the .csv file
-
+            f.write.writerow(['DateTime', 'Magnitude', 'Latitude', 'Longitude']) #headers of the .csv file
             for i in range(len(lon)):
-                f.write.writerow([i+1, date[i], place[i], lat[i], lon[i], fatalities[i], magnitude[i], comments[i]])
+                f.write.writerow([date[i], magnitude[i], lat[i], lon[i], ])
 
 if __name__ == '__main__':
-    obj=Wiki_Scraper('https://en.wikipedia.org/wiki/List_of_historical_earthquakes','WikiHistoricalEarthquakes.csv')
-    obj.find_quakes()
+    obj=wiki_Scraper('https://en.wikipedia.org/wiki/List_of_historical_earthquakes','WikipediaEarthquakes1.csv')
+    obj.find_earthquake()

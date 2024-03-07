@@ -8,12 +8,12 @@ def find_earthquake():
     soup = BeautifulSoup(html_text, 'lxml')
 
     date = []
-    place = []
+    # place = []
     lat = []
     lon = []
-    fatalities = []
+    # fatalities = []
     magnitude = []
-    comments = []
+    # comments = []
 
     tables = soup.find_all('table') #each table is an element in the set tables
     for table in tables:
@@ -25,21 +25,21 @@ def find_earthquake():
                 string = None
             
             if (i%9 == 0): date.append(string)
-            if (i%9 == 2): place.append(string)
+            # if (i%9 == 2): place.append(string)
             if (i%9 == 3): lat.append(string)
             if (i%9 == 4): lon.append(string)
-            if (i%9 == 5): fatalities.append(string)
+            # if (i%9 == 5): fatalities.append(string)
             if (i%9 == 6): magnitude.append(string)
-            if (i%9 == 7): comments.append(string)
+            # if (i%9 == 7): comments.append(string)
 
-    file_name = 'WikiHistoricalEarthquakes.csv' #title of the .csv file
+    file_name = 'WikipediaEarthquakes1.csv' #title of the .csv file
 
     with open(file_name, "w", encoding="utf-8") as f:
         f.write = csv.writer(f)
-        f.write.writerow(['No.', 'Date', 'Place', 'Latitude', 'Longitude', 'Fatalities', 'Magnitude', 'Comments']) #headers of the .csv file
+        f.write.writerow(['DateTime', 'Magnitude', 'Latitude', 'Longitude']) #headers of the .csv file
 
         for i in range(len(lon)):
-            f.write.writerow([i+1, date[i], place[i], lat[i], lon[i], fatalities[i], magnitude[i], comments[i]])
+            f.write.writerow([date[i], magnitude[i], lat[i], lon[i], ])
 
 if __name__ == '__main__':
     find_earthquake()

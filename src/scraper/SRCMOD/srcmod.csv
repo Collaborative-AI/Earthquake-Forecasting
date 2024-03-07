@@ -1,0 +1,18 @@
+Earthquake ID,Region,Date (dd/mm/yyyy),Filnn-Engdahl Region, ,Magnitude,Latitude (°N),Longitude (°E),Depth (km),Author,Upload Date (mm/yyyy)
+GET
+http://equake-rc.info/SRCMOD/searchmodels/allevents/
+3.1.4
+OperationalError
+"(2002, ""Can't connect to local server through socket '/home/eqsource/apps/equakesite/var/mysql.sock' (111)"")"
+"/home/eqsource/apps/equakesite/env/lib64/python3.6/site-packages/MySQLdb/connections.py, line 185, in __init__"
+/home/eqsource/apps/equakesite/env/bin/uwsgi
+3.6.8
+"['/home/eqsource/apps/equakesite/myequake/',
+ '.',
+ '',
+ '/usr/lib64/python36.zip',
+ '/usr/lib64/python3.6',
+ '/usr/lib64/python3.6/lib-dynload',
+ '/home/eqsource/apps/equakesite/env/lib64/python3.6/site-packages',
+ '/home/eqsource/apps/equakesite/env/lib/python3.6/site-packages']"
+"Thu, 04 Jan 2024 09:15:12 +0000"
