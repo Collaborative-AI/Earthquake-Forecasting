@@ -4,6 +4,7 @@ from csv import writer
 import sys
 
 if __name__ == "__main__":
+    '''
     input_path = "scraper/Argentina/raw/clean-catalog.xml"
     output_path = "scraper/Argentina/clean/Argentina Andean Earthquakes (2016-2017).csv"
     header = ["Time ID", "Magnitude", "Station Count", "Author", "Publication Time"]
@@ -45,9 +46,8 @@ if __name__ == "__main__":
     
     SouthAsia=SouthAsia_Scraper(input_path, output_path)
     SouthAsia.find_quakes()
-
+    '''
     input_path = "scraper/East_Africa/raw/SouthEARS_EarthquakeCatalog.csv"
-    
     output_filename = "East Africa Rift System (1994-2022)"
     output_path = f"scraper/East_Africa/clean/{output_filename}.csv"
     
@@ -67,7 +67,7 @@ if __name__ == "__main__":
     output_filename = "Texas (2016-2023)"
     output_path = f"scraper/Texas/clean/{output_filename}.csv"
     
-    texas=Texas(input_path, output_path)
+    texas=TexasScraper(input_path, output_path)
     texas.find_quakes()
     
     input_path = "scraper/Turkey/raw/turkey_earthquakes(1915-2021).csv"
@@ -79,8 +79,8 @@ if __name__ == "__main__":
     turkey.find_quakes()
 
     output_filename = "World Tremor Database (2005-2014)"
-    output_path = f"scraper/World Tremor/clean/{output_filename}.csv"
+    output_path = f"scraper/World_Tremor/clean/{output_filename}.csv"
     
-    raw_folder = "scraper/World Tremor/raw"
+    raw_folder = "scraper/World_Tremor/raw"
     worldtremor=WorldTremor(raw_folder, output_path)
     worldtremor.find_quakes()
