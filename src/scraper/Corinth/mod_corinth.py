@@ -7,7 +7,7 @@ parent_dir = str(Path(__file__).resolve().parent.parent)
 sys.path.append(parent_dir)
 
 # import module
-from Superclass import Scraper
+from scraper.Scraper import Scraper
 
 #Corinth
 class corinth(Scraper):

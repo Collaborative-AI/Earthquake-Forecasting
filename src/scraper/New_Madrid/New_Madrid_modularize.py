@@ -13,7 +13,7 @@ parent_dir = str(Path(__file__).resolve().parent.parent)
 sys.path.append(parent_dir)
 
 # Now you can import your module
-from Superclass import Scraper
+from scraper.Scraper import Scraper
 
 class New_Madrid_Scraper(Scraper):
     def __init__(self, input_path, output_path, header):

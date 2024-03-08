@@ -3,9 +3,17 @@ from .Ancient import *
 from .Argentina import *
 from .Canada import *
 from .Corinth import *
+from .East_Africa import *
 from .GHEA import *
+from .NOAA import *
 from .New_Madrid import *
+from .Pacific_Northwest import *
 from .SoCal import *
 from .SRCMOD import *
 from .USGS import *
 from .Utah import *
+from .South_Asia import *
+from .Texas import *
+from .Turkey import *
+from .World_Tremor import *
+from .Intensity import *
