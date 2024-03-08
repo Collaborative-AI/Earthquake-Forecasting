@@ -4,7 +4,6 @@ from csv import writer
 import sys
 
 if __name__ == "__main__":
-    '''
     input_path = "scraper/Argentina/raw/clean-catalog.xml"
     output_path = "scraper/Argentina/clean/Argentina Andean Earthquakes (2016-2017).csv"
     header = ["Time ID", "Magnitude", "Station Count", "Author", "Publication Time"]
@@ -46,7 +45,7 @@ if __name__ == "__main__":
     
     SouthAsia=SouthAsia_Scraper(input_path, output_path)
     SouthAsia.find_quakes()
-    '''
+
     input_path = "scraper/East_Africa/raw/SouthEARS_EarthquakeCatalog.csv"
     output_filename = "East Africa Rift System (1994-2022)"
     output_path = f"scraper/East_Africa/clean/{output_filename}.csv"
