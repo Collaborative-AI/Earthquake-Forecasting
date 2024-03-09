@@ -22,6 +22,6 @@ def find_quakes(input_path: str, output_path: str):
 
 # main method that calls the web scraper function
 if __name__ == "__main__":
-    input_path = "GHEA/GHEA-data.txt"
-    output_path = "GHEA/GHEA Data 1000-1903.csv"
+    input_path = "GHEA/raw/GHEA-data.txt"
+    output_path = "GHEA/clean/GHEA Data 1000-1903.csv"
     find_quakes(input_path, output_path)

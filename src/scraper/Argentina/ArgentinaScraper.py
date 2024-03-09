@@ -14,18 +14,18 @@ def find_quakes(input_path: str, output_path: str):
 
     # find key data points for all earthquakes
     n = len(data_list)
-    header = ["Time ID", "Magnitude", "Station Count", "Author", "Publication Time"]
+    header = ["Time ID", "Magnitude", "Latitude", "Longitude", "Depth"]
 
     # collect each event's data in rows
     rows = []
     for row in data_list:
         time = row["origin"][0]["time"]["value"]
-        magnitude = row["stationMagnitude"][0]["mag"]["value"]
-        stationCount = row["magnitude"]["stationCount"]
-        author = row["magnitude"]["creationInfo"]["author"]
-        creationTime = row["magnitude"]["creationInfo"]["creationTime"]
+        mag = row["stationMagnitude"][0]["mag"]["value"]
+        lat = row["origin"][0]["latitude"]["value"]
+        lon = row["origin"][0]["longitude"]["value"]
+        dep = row["origin"][0]["depth"]["value"]
 
-        rows.append([time, magnitude, stationCount, author, creationTime])
+        rows.append([time, mag, lat, lon, dep])
 
     # write the data into the csv file
     with open(output_path, "w") as f:
@@ -35,6 +35,6 @@ def find_quakes(input_path: str, output_path: str):
 
 # main method that calls the web scraper function
 if __name__ == "__main__":
-    input_path = "Argentina/clean-catalog.xml"
-    output_path = "Argentina/Argentina Andean Earthquakes (2016-2017).csv"
+    input_path = "Argentina/raw/clean-catalog.xml"
+    output_path = "Argentina/clean/Argentina Andean Earthquakes (2016-2017).csv"
     find_quakes(input_path, output_path)

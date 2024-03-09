@@ -129,7 +129,7 @@ src/scraper/Ancient/Syria/The historical earthquakes of Syria.pdf
 src/scraper/Ancient/Wikipedia/WikiHistoricalEarthquakes.csv
 src/scraper/Argentina/raw/clean-catalog.xml
 src/scraper/Argentina/clean/Argentina Andean Earthquakes (2016-2017).csv
-src/scraper/Canada/raw/Canada-19850109-20240117.txt
+src/scraper/Canada/raw/Canada-19850109-20240119.txt
 src/scraper/Canada/clean/Canada (1985-2024).csv
 src/scraper/Central Asia/raw/EMCA Central Asia Earthquake Catalogue.csv
 src/scraper/Central Asia/clean/EMCA Central Asia (10-2009).csv

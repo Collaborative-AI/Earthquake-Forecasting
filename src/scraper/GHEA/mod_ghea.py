@@ -19,7 +19,7 @@ class GHEA(Scraper):
         self.separator = separator
 
     def find_quakes_txt(self, num_skips=0):
-        with open(self.input_path, "r", encoding='gb18030', errors='ignore') as input_file:
+        with open(self.input_path, "r") as input_file:
             with open(self.output_path, "w") as out_file:
 
                 # label the header of the csv with the appropriate labels
