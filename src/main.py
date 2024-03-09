@@ -11,7 +11,7 @@ if __name__ == "__main__":
     # Argentina Scraper
     input_path = RELATIVE_PATH + "scraper/Argentina/raw/clean-catalog.xml"
     output_path = RELATIVE_PATH + "scraper/Argentina/clean/Argentina Andean Earthquakes (2016-2017).csv"
-    header = ["Time ID", "Magnitude", "Station Count", "Author", "Publication Time"]
+    header = ["Time ID", "Magnitude", "Latitude", "Longitude", "Depth"]
     argintina=argintina(input_path, output_path,header)
     argintina.find_quakes()
     
@@ -37,8 +37,19 @@ if __name__ == "__main__":
     input_path = RELATIVE_PATH + "scraper/NOAA/raw/NCEI-WDS-Earthquakes.tsv"
     output_filename = "NOAA NCEI-WDS (0-2023)"
     output_path = RELATIVE_PATH + f"scraper/NOAA/clean/{output_filename}.csv"
-    noaa=NOAA_Scraper(input_path, output_path)
-    noaa.find_quakes()
+    header = ["Search Parameters", "Year", "Mo", "Dy", "Hr", "Mn", "Sec",
+              "Tsu", "Vol", "Location Name", "Latitude", "Longitude", "Focal Depth (km)",
+              "Mag", "MMI Int", "Deaths", "Death Description", "Missing", "Missing Description",
+              "Injuries", "Injuries Description", "Damage ($Mil)", "Damage Description",
+              "Houses Destroyed", "Houses Destroyed Description", "Houses Damaged",
+              "Houses Damaged Description", "Total Deaths", "Total Death Description",
+              "Total Missing", "Total Missing Description", "Total Injuries",
+              "Total Injuries Description", "Total Damage ($Mil)", "Total Damage Description",
+              "Total Houses Destroyed", "Total Houses Destroyed Description", "Total Houses Damaged",
+              "Total Houses Damaged Description"]
+    separator = "\t"
+    noaa=NOAA_Scraper(input_path, output_path, header, separator)
+    noaa.find_quakes_txt(2)
     
     # SoCal Scraper
     input_path = RELATIVE_PATH + "scraper/SoCal/raw/SearchResults.txt"
