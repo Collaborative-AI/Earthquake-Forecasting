@@ -9,8 +9,8 @@ if __name__ == "__main__":
     input_path = "src/scraper/Argentina/raw/clean-catalog.xml"
     output_path = "src/scraper/Argentina/clean/Argentina Andean Earthquakes (2016-2017).csv"
     header = ["Time ID", "Magnitude", "Latitude", "Longitude", "Depth"]
-    argintina=argintina(input_path, output_path,header)
-    argintina.find_quakes()
+    argentina=argentina(input_path, output_path, header)
+    argentina.find_quakes()
     
     # Canada Scraper
     input_path = "src/scraper/Canada/raw/Canada-19850109-20240119.txt"

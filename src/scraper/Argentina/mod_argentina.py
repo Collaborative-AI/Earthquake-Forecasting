@@ -12,7 +12,7 @@ from scraper.Scraper import Scraper
 
 
 
-class argintina(Scraper):
+class argentina(Scraper):
     def __init__(self, input_path, output_path,header):
         self.input_path=input_path
         self.output_path=output_path
@@ -40,7 +40,7 @@ class argintina(Scraper):
 
         # write the data into the csv file
         with open(self.output_path, "w") as f:
-            csv_writer = csv.writer(f)
+            csv_writer = csv.writer(f, lineterminator="\n")
             csv_writer.writerow(self.header)
             csv_writer.writerows(rows)
 
@@ -49,7 +49,7 @@ if __name__ == "__main__":
     input_path = "Argentina/clean-catalog.xml"
     output_path = "Argentina/Argentina Andean Earthquakes (2016-2017).csv"
     header = ["Time ID", "Magnitude", "Station Count", "Author", "Publication Time"]
-    argintina=argintina(input_path, output_path,header)
+    argintina=argentina(input_path, output_path,header)
     argintina.find_quakes()
 
     

@@ -39,6 +39,7 @@ class WorldTremor(Scraper):
                 # write each row from the txt file to the csv
                 with open(input_path, "r") as input_file:
                     for line in input_file:
+                        line = line[:-2]
                         row = line.split(",")
                         csv_writer.writerow(row)
             

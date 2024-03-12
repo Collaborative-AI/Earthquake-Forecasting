@@ -1,6 +1,7 @@
 from csv import writer
 import pandas as pd
 import numpy as np
+import traceback
 
 class DataProcessor:
     
@@ -16,8 +17,7 @@ class DataProcessor:
     """
     def __init__(self, datetime=[], year=None, month=None, day=None,
                  hour=None, minute=None, second=None, millisecond=None, global_tz="UTC", local_tz=None,
-                 mag=None, mag_type=None, mag_letter=None, lat=None, long=None, depth=None, energy=None,
-                 input_path=""):
+                 mag=None, mag_type=None, mag_letter=None, lat=None, long=None, depth=None, energy=None,):
         
         """
         Date and Time
@@ -78,7 +78,7 @@ class DataProcessor:
         self.energy = energy
       
     
-    def process_quakes(self, input_path: str, output_path: str):
+    def process_quakes(self, filename: str, input_path: str, output_path: str):
         with open(input_path, "r") as input_file:
             with open(output_path, "w") as out_file:
 
@@ -92,6 +92,7 @@ class DataProcessor:
                 # write each row from the txt file to the csv
                 for line in input_file:
                     row = line.split(",")
+                    print(len(row))
 
                     try:
                         
@@ -109,7 +110,7 @@ class DataProcessor:
                         Sometimes, the magnitude value isn't a float. In that case,
                         skip this row entry.
                         """
-                        if row[self.mag] == "NaN":
+                        if self.mag != None and row[self.mag] == "NaN":
                             continue
                         
                         """
@@ -128,7 +129,7 @@ class DataProcessor:
                             
                             # Find the time zone based on context
                             tz = self.global_tz
-                            if self.local_tz:
+                            if self.local_tz != None:
                                 tz = -1 * int(row[self.local_tz])
                             
                             # Create a pandas Timestamp using the datetime string
@@ -177,7 +178,7 @@ class DataProcessor:
                         
                         # Extract the magnitude values
                         magnitude = 0
-                        if self.energy:
+                        if self.energy != None:
                             energy = float(row[self.energy])
                             magnitude = (np.emath.logn(10, energy)-5.24)/1.44
                         else:
@@ -196,7 +197,9 @@ class DataProcessor:
                         csv_writer.writerow(output_row)
 					
                     except Exception as e:
-                        print(str(e))
+                        traceback_info = traceback.format_exc()
+                        print(f"Error for file {filename}: {str(e)}")
+                        print(traceback_info)
     
     """
     Helper function for process_quakes

@@ -12,11 +12,11 @@ def find_quakes(input_path: str, output_path: str):
 
             # write each row from the txt file to the csv
             for line in input_file:
-                words = line.split("|")
+                words = line[:-2].split("|")
                 csv_writer.writerow(words)
 
 # main method that calls the web scraper function
 if __name__ == "__main__":
-    input_path = "Canada/raw/Canada-19850109-20240119.txt"
-    output_path = "Canada/clean/Canada-19850109-20230621.csv"
+    input_path = "src/scraper/Canada/raw/Canada-19850109-20240119.txt"
+    output_path = "src/scraper/Canada/clean/Canada (1985-2024).csv"
     find_quakes(input_path, output_path)

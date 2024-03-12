@@ -29,6 +29,7 @@ class Scraper:
                 for i in range(num_skips): next(input_file, None)
                 # write each row from the txt file to the csv
                 for line in input_file:
+                    line = line.replace("\n", "")
                     if self.separator == None:
                         words = line.split()
                     else:

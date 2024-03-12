@@ -29,12 +29,12 @@ def find_quakes(input_path: str, output_path: str):
 
     # write the data into the csv file
     with open(output_path, "w") as f:
-        csv_writer = csv.writer(f)
+        csv_writer = csv.writer(f, lineterminator="\n")
         csv_writer.writerow(header)
         csv_writer.writerows(rows)
 
 # main method that calls the web scraper function
 if __name__ == "__main__":
-    input_path = "Argentina/raw/clean-catalog.xml"
-    output_path = "Argentina/clean/Argentina Andean Earthquakes (2016-2017).csv"
+    input_path = "src/scraper/Argentina/raw/clean-catalog.xml"
+    output_path = "src/scraper/Argentina/clean/Argentina Andean Earthquakes (2016-2017).csv"
     find_quakes(input_path, output_path)

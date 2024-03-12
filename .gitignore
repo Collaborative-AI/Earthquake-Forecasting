@@ -124,6 +124,7 @@ tmp/
 res/
 
 .idea/
+src/data_processing/processed
 src/scraper/Ancient/Syria/SyriaHistoricalEarthquakes.csv
 src/scraper/Ancient/Syria/The historical earthquakes of Syria.pdf
 src/scraper/Ancient/Wikipedia/WikiHistoricalEarthquakes.csv
