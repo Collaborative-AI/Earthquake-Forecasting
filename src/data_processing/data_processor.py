@@ -207,7 +207,7 @@ class DataProcessor:
 					
                     except Exception as e:
                         # traceback_info = traceback.format_exc()
-                        print(f"At Line {line_number}, Error for file {filename}: {str(e)}")
+                        print(f"Error at line {line_number} for {filename}: {str(e)}")
                         # print(traceback_info)
     
     """

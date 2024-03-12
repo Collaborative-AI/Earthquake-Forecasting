@@ -33,18 +33,18 @@ All three lists should have the same length, with each index corresponding to an
 """
 processors = [argentina, canada, east_africa, ghea, intensity, japan, noaa,
               pacific_northwest, socal, south_asia, texas, turkey, world_tremor]
-processors = [ghea]
+processors = [pacific_northwest]
 
 # First, find all the file names for the input and output files.
 filenames = [
             #  "Argentina Andean Earthquakes (2016-2017).csv",
             #  "Canada (1985-2024).csv",
             #  "East Africa Rift System (1994-2022).csv",
-             "GHEA (1000-1903).csv",
+            #  "GHEA (1000-1903).csv",
             #  "U.S. Earthquake Intensity Database (1638-1985).csv",
             #  "Japan Database (2005-2014).csv",
             #  "NOAA NCEI-WDS (0-2023).csv",
-            #  "PNW Tremors (2009-2023).csv",
+             "PNW Tremors (2009-2023).csv",
             #  "SCEDC (1932-2023).csv",
             #  "South Asia (1900-2014).csv",
             #  "Texas (2016-2023).csv",
@@ -57,11 +57,11 @@ source_paths = [
                 # "src/scraper/Argentina/clean/",
                 # "src/scraper/Canada/clean/",
                 # "src/scraper/East_Africa/clean/",
-                "src/scraper/GHEA/clean/",
+                # "src/scraper/GHEA/clean/",
                 # "src/scraper/Intensity/clean/",
                 # "src/scraper/World_Tremor/clean/",
                 # "src/scraper/NOAA/clean/",
-                # "src/scraper/Pacific_Northwest/clean/",
+                "src/scraper/Pacific_Northwest/clean/",
                 # "src/scraper/SoCal/clean/",
                 # "src/scraper/South_Asia/clean/",
                 # "src/scraper/Texas/clean/",
