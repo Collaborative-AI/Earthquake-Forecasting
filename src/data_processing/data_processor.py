@@ -90,9 +90,10 @@ class DataProcessor:
                 next(input_file, None)
 
                 # write each row from the txt file to the csv
+                line_number = 1
                 for line in input_file:
                     row = line.split(",")
-                    print(len(row))
+                    line_number += 1
 
                     try:
                         
@@ -110,7 +111,7 @@ class DataProcessor:
                         Sometimes, the magnitude value isn't a float. In that case,
                         skip this row entry.
                         """
-                        if self.mag != None and row[self.mag] == "NaN":
+                        if self.mag != None and (row[self.mag] == "NaN" or row[self.mag] == ""):
                             continue
                         
                         """
@@ -125,15 +126,17 @@ class DataProcessor:
                         year = month = day = hour = minute = second = millisecond = 0
                         
                         # Option 1: The datetime string is provided
-                        if self.datetime != None:
+                        if len(self.datetime) > 0:
                             
                             # Find the time zone based on context
                             tz = self.global_tz
-                            if self.local_tz != None:
+                            if self.local_tz != None and row[self.local_tz].isnumeric():
                                 tz = -1 * int(row[self.local_tz])
                             
                             # Create a pandas Timestamp using the datetime string
-                            datetime = self.create_datetime_string([row[index] for index in self.datetime])
+                            entries = [row[index] for index in self.datetime]
+                            
+                            datetime = self.create_datetime_string(entries)
                             ts = pd.Timestamp(datetime, tz=tz)
                             ts = ts.tz_convert(tz="UTC")
                             
@@ -162,7 +165,7 @@ class DataProcessor:
                             # this edge case.
                             if "." in row[self.second]:
                                 second, millisecond = row[self.second].split(".")
-                            
+                        
                         """
                         Location
                         
@@ -179,8 +182,14 @@ class DataProcessor:
                         # Extract the magnitude values
                         magnitude = 0
                         if self.energy != None:
+                            
+                            # Only perform the energy conversion if we don't divide by 0
                             energy = float(row[self.energy])
-                            magnitude = (np.emath.logn(10, energy)-5.24)/1.44
+                            if energy == 0:
+                                continue
+                            else:
+                                magnitude = (np.emath.logn(10, energy)-5.24)/1.44
+                            
                         else:
                             magnitude = float(row[self.mag])
                         
@@ -197,9 +206,9 @@ class DataProcessor:
                         csv_writer.writerow(output_row)
 					
                     except Exception as e:
-                        traceback_info = traceback.format_exc()
-                        print(f"Error for file {filename}: {str(e)}")
-                        print(traceback_info)
+                        # traceback_info = traceback.format_exc()
+                        print(f"At Line {line_number}, Error for file {filename}: {str(e)}")
+                        # print(traceback_info)
     
     """
     Helper function for process_quakes
@@ -208,9 +217,21 @@ class DataProcessor:
     OUTPUT: formatted string representing datetime information
     """
     def create_datetime_string(self, entries):
+        
+        # Case 1: We create a datetime string from multiple columns.
         if len(entries) == 6:
+            
+            # If some time values are missing, enter their default values
+            default = [1, 1, 1, 0, 0, 0]
+            for i in range(len(entries)):
+                if entries[i] == "":
+                    entries[i] = default[i]
+            
+            # Then, extract the time values to create a datetime string
             year, month, day, hour, minute, second = entries
             return f"{year}-{month}-{day}T{hour}:{minute}:{second}Z"
+        
+        # Case 2: We create a datetime string from a "date" and "time" column.
         else:
             return " ".join(entries)
     

@@ -34,6 +34,10 @@ class Scraper:
                         words = line.split()
                     else:
                         words = line.split(self.separator)
+                    
+                    # Get rid of all instances of commas to prevent later bugs
+                    for i in range(len(words)):
+                        words[i] = words[i].replace(",", "")
                     csv_writer.writerow(words)
 
     def find_quakes_web(self):
