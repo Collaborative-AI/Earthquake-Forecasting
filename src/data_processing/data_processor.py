@@ -14,8 +14,10 @@ class DataProcessor:
     - datetime: List[int] ---> Some datasets have a separate strings for YYYY/MM/DD and HH:MM:SS
     - tz: str             ---> Non-UTC datasets should specify the timezone.
     """
-    def __init__(self, datetime, year, month, day, hour, minute, second, millisecond, tz,
-                 mag, magType, lat, long, depth, energy):
+    def __init__(self, datetime=[], year=None, month=None, day=None,
+                 hour=None, minute=None, second=None, millisecond=None, global_tz="UTC", local_tz=None,
+                 mag=None, mag_type=None, mag_letter=None, lat=None, long=None, depth=None, energy=None,
+                 input_path=""):
         
         """
         Date and Time
@@ -41,10 +43,20 @@ class DataProcessor:
         self.second = second
         self.millisecond = millisecond
         
-        # Not all datasets are in UTC. If a specified tz is provided, it will be used.
-        # For example, the World Tremor Dataset features some times in JST (UTC+9)
-        self.tz = tz
+        """
+        Time Zones
         
+        Not all datasets are in UTC. If a specified tz is provided, it will be used.
+        Datasets either have a
+            1. "global" timezone where all row entries are in the same timezone
+            2. "local" timezone where each row entry has a different timezone
+            
+        If you initialize global_tz, you shouldn't initialize local_tz
+        or vice versa. If both are initialized, however, local_tz overrides
+        global_tz when cleaning datasets in process_quakes()
+        """
+        self.global_tz = global_tz
+        self.local_tz = local_tz
         
         """
         Location
@@ -58,12 +70,14 @@ class DataProcessor:
         """
         
         self.mag = mag
-        self.magType = magType
+        self.mag_type = mag_type
+        self.mag_letter = mag_letter
         self.lat = lat
         self.long = long
         self.depth = depth
         self.energy = energy
       
+    
     def process_quakes(self, input_path: str, output_path: str):
         with open(input_path, "r") as input_file:
             with open(output_path, "w") as out_file:
@@ -82,13 +96,20 @@ class DataProcessor:
                     try:
                         
                         """
-                        Prior to running the code, check if self.magType is non-null.
+                        Prior to running the code, check if self.mag_type is non-null.
                         If so, then check if the current row features a magnitude value
-                        in Mw, or moment magnitude.
+                        in moment magnitude.
                         
-                        Any magType that isn't Mw will be skipped for data consistency.
+                        Any mag_type that isn't Mw will be skipped for data consistency.
                         """
-                        if self.magType != None and row[self.magType].lower() != "mw":
+                        if self.mag_type != None and row[self.mag_type].lower() != self.mag_letter:
+                            continue
+                        
+                        """
+                        Sometimes, the magnitude value isn't a float. In that case,
+                        skip this row entry.
+                        """
+                        if row[self.mag] == "NaN":
                             continue
                         
                         """
@@ -105,9 +126,15 @@ class DataProcessor:
                         # Option 1: The datetime string is provided
                         if self.datetime != None:
                             
+                            # Find the time zone based on context
+                            tz = self.global_tz
+                            if self.local_tz:
+                                tz = -1 * int(row[self.local_tz])
+                            
                             # Create a pandas Timestamp using the datetime string
-                            ts = pd.Timestamp(datetime, tz=self.tz)
-                            datetime = " ".join([row[index] for index in self.datetime])
+                            datetime = self.create_datetime_string([row[index] for index in self.datetime])
+                            ts = pd.Timestamp(datetime, tz=tz)
+                            ts = ts.tz_convert(tz="UTC")
                             
                             # Extract the time values from the given Timestamp
                             year = ts.year
@@ -124,9 +151,16 @@ class DataProcessor:
                             month = row[self.month] if self.month else 1
                             day = row[self.day] if self.day else 1
                             hour = row[self.hour] if self.hour else 0
-                            minute = row[self.minute] if self.second else 0
+                            minute = row[self.minute] if self.minute else 0
                             second = row[self.second] if self.second else 0
                             millisecond = row[self.millisecond] if self.millisecond else 0
+                            
+                            # Edge Case:
+                            # Some datasets (e.g., Intensity) include both seconds and milliseconds
+                            # into the "Second" column. In this case, update the values to reflect
+                            # this edge case.
+                            if "." in row[self.second]:
+                                second, millisecond = row[self.second].split(".")
                             
                         """
                         Location
@@ -147,20 +181,36 @@ class DataProcessor:
                             energy = float(row[self.energy])
                             magnitude = (np.emath.logn(10, energy)-5.24)/1.44
                         else:
-                            magnitude = row[self.mag]
+                            magnitude = float(row[self.mag])
                         
                         # Extract the other values as stated
+                        # NOTE: Latitude and longitude are required values,
+                        #       but Depth values are optional to include
                         latitude = row[self.lat]
                         longitude = row[self.long]
-                        depth = row[self.depth]
+                        depth = row[self.depth] if self.depth else None
 
-                        # reformat the line
+                        # Reformat the line
                         output_row = [year, month, day, hour, minute, second, millisecond,
                                     magnitude, latitude, longitude, depth]
                         csv_writer.writerow(output_row)
 					
                     except Exception as e:
                         print(str(e))
+    
+    """
+    Helper function for process_quakes
+    
+    INPUT:  entries: List of strings contain time information
+    OUTPUT: formatted string representing datetime information
+    """
+    def create_datetime_string(self, entries):
+        if len(entries) == 6:
+            year, month, day, hour, minute, second = entries
+            return f"{year}-{month}-{day}T{hour}:{minute}:{second}Z"
+        else:
+            return " ".join(entries)
+    
     
     """
     INPUT:  filepath: string filepath to the input CSV file
