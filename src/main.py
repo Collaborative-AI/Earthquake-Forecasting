@@ -48,7 +48,7 @@ if __name__ == "__main__":
     # Turkey Scraper
     input_path = "src/scraper/Turkey/raw/turkey_earthquakes(1915-2021).csv"
     output_path = "src/scraper/Turkey/clean/Turkey (1915-2021).csv"
-    separator = ","
+    separator = ";"
     obj = Scraper(input_path=input_path, output_path=output_path, separator=separator)
     obj.find_quakes_txt(num_skips=0)
     
