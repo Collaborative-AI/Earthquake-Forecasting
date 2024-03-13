@@ -1,6 +1,7 @@
 # import helper functions for data merging
 import sys
 sys.path.append("src/merge")
+import os
 
 # run on python 3.11.2
 from helper import merge_group
@@ -21,21 +22,18 @@ resulting CSV is guaranteed to be:
 """
 
 """
-Merge North America Batch
-Includes the following earthquakes:
-- Canada
-- NCEDC
-- New Madrid
-- Pacific Northwest (PNW)
-- Southern California (SoCal)
-- Texas
-- Utah (Mineral Mountains)
+STEP 1:
+Find all the filepaths to all datasets unrelated to USGS and SAGE.
+Modify the SCRAPER_PATH if your working directory isn't the root.
 """
 
-csv_files = ["Canada/clean/Canada (1985-2023).csv",
-                 "NCEDC/clean/NCEDC (1984-2023).csv",
-                 "New Madrid/clean/New Madrid (1974-2023).csv",
-                 "Pacific Northwest/clean/PNW Tremors (2009-2023).csv",
-                 "SoCal/clean/SCEDC (1932-2023).csv",
-                 "Texas/clean/Texas (2016-2023).csv",
-                 "Utah/clean/Utah (2016-2019).csv"]
+SCRAPER_PATH = "src/data_processing/processed/"
+csv_files = [f for f in os.listdir(SCRAPER_PATH)]
+csv_files = [SCRAPER_PATH + csv_file for csv_file in csv_files]
+
+"""
+STEP 2:
+Define the output path and run the merge function.
+"""
+output_path = "src/merge/Various-Catalogs.csv"
+merge_group(csv_files, output_path)
