@@ -12,11 +12,12 @@ from scraper.Scraper import Scraper
 
 
 
-class argentina(Scraper):
-    def __init__(self, input_path, output_path,header):
-        self.input_path=input_path
-        self.output_path=output_path
-        self.header=header
+class Argentina(Scraper):
+    def __init__(self, input_path="", output_path="", header=[]):
+        self.input_path = input_path
+        self.output_path = output_path
+        self.header = header
+        
     def find_quakes(self):
         with open(self.input_path, "r") as file:
             file_data = file.read()
@@ -49,8 +50,8 @@ if __name__ == "__main__":
     input_path = "Argentina/clean-catalog.xml"
     output_path = "Argentina/Argentina Andean Earthquakes (2016-2017).csv"
     header = ["Time ID", "Magnitude", "Station Count", "Author", "Publication Time"]
-    argintina=argentina(input_path, output_path,header)
-    argintina.find_quakes()
+    argentina = Argentina(input_path, output_path,header)
+    argentina.find_quakes()
 
     
     

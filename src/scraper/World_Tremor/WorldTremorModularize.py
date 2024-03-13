@@ -13,7 +13,7 @@ sys.path.append(parent_dir)
 from scraper.Scraper import Scraper
 
 class WorldTremor(Scraper):
-    def __init__(self, raw_folder, output_path):
+    def __init__(self, raw_folder="", output_path=""):
         self.raw_folder = raw_folder
         self.output_path = output_path
         

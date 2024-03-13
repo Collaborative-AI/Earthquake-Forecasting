@@ -3,27 +3,30 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 import io
-from datetime import datetime, timedelta
+import datetime
 import tabula
 
 class Scraper:
-    def __init__(self):
-        self.input_path=''
-        self.output_path=''
-        self.url=''
-        self.start_time=datetime.MINYEAR
-        self.end_time=datetime.MAXYEAR
-        self.header=[]
-        self.separator=None
+    def __init__(self, input_path='', output_path='', url='', start_time=datetime.MINYEAR,
+                 end_time=datetime.MAXYEAR, header=[], separator=None):
+        self.input_path = input_path
+        self.output_path = output_path
+        self.url = url
+        self.start_time = start_time
+        self.end_time = end_time
+        self.header = header
+        self.separator = separator
+    
     def find_quakes(self):
         pass
+    
     def find_quakes_txt(self, num_skips=0):
         with open(self.input_path, "r") as input_file:
             with open(self.output_path, "w") as out_file:
 
                 # label the header of the csv with the appropriate labels
                 csv_writer = writer(out_file, lineterminator="\n")
-                if self.header!='':
+                if self.header!=[]:
                     csv_writer.writerow(self.header)
 
                 for i in range(num_skips): next(input_file, None)
