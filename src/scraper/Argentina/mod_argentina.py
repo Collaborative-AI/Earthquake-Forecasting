@@ -5,7 +5,7 @@ from pathlib import Path
 
 # Add the parent directory to sys.path
 parent_dir = str(Path(__file__).resolve().parent.parent)
-sys.path.append(parent_dir)
+sys.path.insert(0, parent_dir)
 
 # Now you can import your module
 from scraper.Scraper import Scraper

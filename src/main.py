@@ -29,7 +29,7 @@ if __name__ == "__main__":
     input_path = "src/scraper/GHEA/raw/GHEA-data.txt"
     output_path = "src/scraper/GHEA/clean/GHEA (1000-1903).csv"
     separator = "\t"
-    ghea = Scraper(input_path=input_path, output_path=output_path, separator=separator)
+    ghea = GHEA(input_path=input_path, output_path=output_path, separator=separator)
     ghea.find_quakes_txt(num_skips=78)
     
     # NOAA Scraper

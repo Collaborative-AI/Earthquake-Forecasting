@@ -9,7 +9,7 @@ import pandas as pd
 
 from pathlib import Path
 parent_dir = str(Path(__file__).resolve().parent.parent)
-sys.path.append(parent_dir)
+sys.path.insert(0, parent_dir)
 from scraper.Scraper import Scraper
 
 class WorldTremor(Scraper):
