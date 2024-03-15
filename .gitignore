@@ -124,12 +124,13 @@ tmp/
 res/
 
 .idea/
+src/data_processing/processed
 src/scraper/Ancient/Syria/SyriaHistoricalEarthquakes.csv
 src/scraper/Ancient/Syria/The historical earthquakes of Syria.pdf
 src/scraper/Ancient/Wikipedia/WikiHistoricalEarthquakes.csv
 src/scraper/Argentina/raw/clean-catalog.xml
 src/scraper/Argentina/clean/Argentina Andean Earthquakes (2016-2017).csv
-src/scraper/Canada/raw/Canada-19850109-20240117.txt
+src/scraper/Canada/raw/Canada-19850109-20240119.txt
 src/scraper/Canada/clean/Canada (1985-2024).csv
 src/scraper/Central Asia/raw/EMCA Central Asia Earthquake Catalogue.csv
 src/scraper/Central Asia/clean/EMCA Central Asia (10-2009).csv
@@ -159,5 +160,6 @@ src/scraper/Turkey/raw/turkey_earthquakes(1915-2021).csv
 src/scraper/Turkey/clean/Turkey (1915-2021).csv
 src/scraper/Utah/raw/detections.txt
 src/scraper/Utah/clean/Utah (2016-2019).csv
-src/scraper/World_Tremor/raw
-src/scraper/World_Tremor/clean/World Tremor Database (2005-2014).csv
+src/scraper/World_Tremor/global
+src/scraper/World_Tremor/japan
+src/scraper/World_Tremor/clean
