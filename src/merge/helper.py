@@ -7,6 +7,9 @@ OUTPUT: Rounded Timestamp (to 10 seconds), and Magnitude, Latitude and Longitude
         to 1 decimal place
 """
 def round_row(input_row):
+    CONFIG_TIME = 10
+    CONFIG_EPSILON = 10
+    
     timestamp = input_row["Timestamp"]
 
     # round the seconds to the nearest tens
@@ -15,12 +18,12 @@ def round_row(input_row):
     ts = pd.Timestamp(input_row["Timestamp"])
     base = pd.Timestamp(year=1, month=1, day=1, hour=0, minute=0, second=0)
     timedelta = ts - base
-    rtime = int(timedelta.total_seconds() / 10)
+    rtime = int(timedelta.total_seconds() / CONFIG_TIME)
 
     # round the magnitude, latitude, and longitude to the nearest tenths place
-    rmag = int(10*input_row["Magnitude"])/10
-    rlat = int(10*input_row["Latitude"])/10
-    rlon = int(10*input_row["Longitude"])/10
+    rmag = int(10*input_row["Magnitude"])/CONFIG_EPSILON
+    rlat = int(10*input_row["Latitude"])/CONFIG_EPSILON
+    rlon = int(10*input_row["Longitude"])/CONFIG_EPSILON
 
     # return the rounded time, mag, lat, and long values to filter out duplicates
     return (rtime, rmag, rlat, rlon)
