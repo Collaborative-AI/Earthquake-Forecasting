@@ -16,7 +16,7 @@ def round_row(input_row):
     # here, we can do some arithmetic magic by instead dividing the total seconds by 10
     # all earthquakes happening within a 10-second window will share the same rtime value
     ts = pd.Timestamp(input_row["Timestamp"])
-    base = pd.Timestamp(year=1, month=1, day=1, hour=0, minute=0, second=0)
+    base = pd.Timestamp(year=1, month=1, day=1, hour=0, minute=0, second=0, tz="UTC")
     timedelta = ts - base
     rtime = int(timedelta.total_seconds() / CONFIG_TIME)
 
