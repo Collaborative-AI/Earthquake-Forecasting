@@ -21,8 +21,8 @@ class Scraper:
         pass
     
     def find_quakes_txt(self, num_skips=0):
-        with open(self.input_path, "r") as input_file:
-            with open(self.output_path, "w") as out_file:
+        with open(self.input_path, "r", encoding='utf-8') as input_file:
+            with open(self.output_path, "w", encoding='utf-8') as out_file:
 
                 # label the header of the csv with the appropriate labels
                 csv_writer = writer(out_file, lineterminator="\n")
