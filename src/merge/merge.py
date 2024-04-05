@@ -27,9 +27,9 @@ Find all the filepaths to all datasets unrelated to USGS and SAGE.
 Modify the SCRAPER_PATH if your working directory isn't the root.
 """
 
-SCRAPER_PATH = "src/data_processing/processed/"
+SCRAPER_PATH = "src/data_processing/processed"
 csv_files = [f for f in os.listdir(SCRAPER_PATH)]
-csv_files = [SCRAPER_PATH + csv_file for csv_file in csv_files]
+csv_files = [os.path.join(SCRAPER_PATH, csv_file) for csv_file in csv_files]
 
 """
 STEP 2:
