@@ -79,8 +79,8 @@ class DataProcessor:
       
     
     def process_quakes(self, filename: str, input_path: str, output_path: str):
-        with open(input_path, "r") as input_file:
-            with open(output_path, "w") as out_file:
+        with open(input_path, "r", encoding='utf-8') as input_file:
+            with open(output_path, "w", encoding='utf-8') as out_file:
 
                 # label the header of the csv with the appropriate labels
                 csv_writer = writer(out_file, lineterminator="\n")
