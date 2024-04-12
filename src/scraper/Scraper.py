@@ -5,6 +5,7 @@ import pandas as pd
 import io
 import datetime
 import tabula
+from tqdm import tqdm, trange
 
 class Scraper:
     def __init__(self, input_path='', output_path='', url='', start_time=datetime.MINYEAR,
@@ -29,7 +30,7 @@ class Scraper:
                 if self.header!=[]:
                     csv_writer.writerow(self.header)
 
-                for i in range(num_skips): next(input_file, None)
+                for i in tqdm(range(num_skips)): next(input_file, None)
                 # write each row from the txt file to the csv
                 for line in input_file:
                     line = line.replace("\n", "")
@@ -61,7 +62,7 @@ class Scraper:
             rows = quakes.split("\n")
 
             # only add rows with earthquake data by checking its length with the header
-            for row in rows:
+            for row in tqdm(rows):
                 data = row.split()
                 if len(data) == len(self.header):
                     csv_writer.writerow(data)
