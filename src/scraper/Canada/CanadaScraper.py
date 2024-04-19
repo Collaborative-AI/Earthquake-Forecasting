@@ -17,6 +17,6 @@ def find_quakes(input_path: str, output_path: str):
 
 # main method that calls the web scraper function
 if __name__ == "__main__":
-    input_path = "src/scraper/Canada/raw/Canada-19850109-20240119.txt"
+    input_path = "src/scraper/Canada/raw/Canada-19850101-20240412.txt"
     output_path = "src/scraper/Canada/clean/Canada (1985-2024).csv"
     find_quakes(input_path, output_path)

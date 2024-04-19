@@ -1,5 +1,6 @@
 # run on python 3.11.2
 import pandas as pd
+from tqdm import tqdm
 
 """
 INPUT:  Row with Schema ["Timestamp", "Magnitude", "Latitude", "Longitude", "Depth"]
@@ -53,7 +54,7 @@ def merge_group(csv_files: list, output_path):
     result = []
 
     for frame in frames:
-        for i in range(1, len(frame)):
+        for i in tqdm(range(1, len(frame))):
 
             # access the current row
             row = frame.iloc[i]

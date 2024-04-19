@@ -6,14 +6,14 @@ The data can be found at: https://earthquakescanada.nrcan.gc.ca/stndon/NEDB-BNDS
 
 The following parameters were used for downloading the data:
 Start Time (UTC): 1900-01-01 00:00:00
-End Time (UTC):   2023-06-23 23:59:59
-Magnitude from:   4
+End Time (UTC):   2024-04-12 23:59:59
+Magnitude from:   0
 Magnitude to:     10
 Depth from (km):  -5
 Depth to (km):    1000
 Types:            None selected
 Felt Events:      No
-Format:           TXT
+Format:           Text
 
 Filter by Radius Area:
 Latitude:             63.13

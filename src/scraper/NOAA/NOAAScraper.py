@@ -23,8 +23,8 @@ def find_quakes(input_path: str, output_path: str):
 
 # main method that calls the web scraper function
 if __name__ == "__main__":
-    input_path = "src/scraper/NOAA/raw/NCEI-WDS-Earthquakes.tsv"
+    input_path = "src/scraper/NOAA/raw/NOAA-20240412.tsv"
     
-    output_filename = "NOAA NCEI-WDS (0-2023)"
+    output_filename = "NOAA NCEI-WDS (0-2024)"
     output_path = f"src/scraper/NOAA/clean/{output_filename}.csv"
     find_quakes(input_path, output_path)

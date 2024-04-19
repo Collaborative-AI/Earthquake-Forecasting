@@ -1,0 +1,72 @@
+       SOUTHERN CALIFORNIA EARTHQUAKE DATA CENTER CATALOG FORMAT 
+       -----------------------------------------------------------------
+				 (04/11/00)  
+
+The SCEDC catalog consists of hypocentral information for the following
+time periods. 
+
+			April 1, 1981 - January 31, 1983 
+			July 13, 1983 - present
+
+These time periods represent the time periods for which "digital" waveform
+and phase arrival data are available from the SCEDC, and for which events
+have been completely processed by the Southern California Seismic Network.
+
+The SCEDC catalog is complete for local events greater than or equal to 
+M1.8 since 1981. The time gap in 1983 represents data where the
+Southern California Seismographic Network has not completely processed the 
+events, and made hypocenters, magnitudes and phase data available to the
+Data Center.  
+
+   SCEDC format catalog data (described below) are stored in
+yearly ascii *.catalog files.
+==============================================================================
+		      	SCEDC CATALOG FORMAT specification
+==============================================================================
+
+	col len format name	comment
+	--- --- ------ ----	-------
+	 1  10   a10   date	yr/mn/day	
+	12  10   a10   time	hr:mn:sec   (UTC time, either 7 or 8 hours
+					     ahead of local time)	
+	23   1    a1   eventype	type of event
+					local (L)
+					regional (R)
+					teleseism (T)
+					quarry blast (Q)
+					dubious location (D)
+	25   3   f3.1  magnitude
+	29   1    a1   magtype	type of magnitude
+					'e'	energy magnitude
+					'w'	moment magnitude
+					'b'	body-wave magnitude
+					's'	surface-wave magnitude
+					'l'	local (WOOD-ANDERSON) magnitude
+					'c'	coda amplitude 
+					'h'	helicorder magnitude
+					'd'	coda duration magnitude
+					
+        32   7   f7.3  lat      deg.min  
+        39   8   f8.3  lon	deg.min 
+	48   5   f5.1  depth
+	54   2    a2   quality  eventquality
+					'A' +- 1 km horizontal distance
+					    +- 2 km depth
+					'B' +- 2 km horizontal distance	
+					    +- 5 km depth
+					'C' +- 5 km horizontal distance
+					    no depth restriction
+					'D' >+- 5 km horizontal distance 
+					***** BUYER BEWARE *****
+					Event qualities are highly suspect prior
+					to 1990.  Many of these event qualities
+					are based on incomplete information.
+					Also, they are really only applicable
+					to LOCAL events
+	56   7    a7   eventid  eventid for particular earthquake 
+	63   4	  i4   nph	number of picked phases
+	67   4    i4   ngrams   number of gram cards
+                                           (i.e. # of station traces)
+        71   4    i4   nterr    number of TERRAscope files
+        74   3    i3   nport    number of Portable instrument files       
+					

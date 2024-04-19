@@ -14,7 +14,7 @@ Start Date:          1932/01/01, 00:00:00
 End Date:            2023/07/25, 00:00:00
 Min Magnitude:       1.0
 Max Magnitude:       9.9
-Min Depth (km):      0.0
+Min Depth (km):      -5.0
 Max Depth (km):      1000
 Southern Lat:        30.0
 Northern Lat:        39.0

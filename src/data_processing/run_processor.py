@@ -1,4 +1,5 @@
 from data_processor import DataProcessor
+from tqdm import tqdm
 
 """
 Initialization
@@ -81,13 +82,12 @@ Running the Processor
 Now that we have the DataProcessor objects and the input/output filepaths, we can run
 the data processing part of the project.
 """
-for i in range(len(input_paths)):
+for i in tqdm(range(len(input_paths))):
     processor = processors[i]
     filename = filenames[i]
     input_path = input_paths[i]
     output_path = output_paths[i]
     
-    print(filename)
     processor.process_quakes(filename, input_path, output_path)
     processor.clean_data(output_path)
 
