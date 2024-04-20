@@ -1,12 +1,8 @@
-# import helper functions for data cleaning
-import sys
-sys.path.append("src/scraper")
-from helper import clean_data
-import os
-
 # run on python 3.11.2
 from csv import writer
-import pandas as pd
+import os
+import sys
+sys.path.append("src/scraper")
 
 # converts a txt file (separated by whitespace) to a csv file
 def find_quakes(raw_folder: str, output_path: str):

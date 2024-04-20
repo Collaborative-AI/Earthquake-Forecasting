@@ -132,34 +132,24 @@ src/scraper/Argentina/raw/clean-catalog.xml
 src/scraper/Argentina/clean/Argentina Andean Earthquakes (2016-2017).csv
 src/scraper/Canada/raw/Canada-19850109-20240119.txt
 src/scraper/Canada/clean/Canada (1985-2024).csv
-src/scraper/Central Asia/raw/EMCA Central Asia Earthquake Catalogue.csv
-src/scraper/Central Asia/clean/EMCA Central Asia (10-2009).csv
-src/scraper/Corinth/raw/Marathias_seq.txt
-src/scraper/Corinth/clean/Corinth Gulf (2020-2021).csv
 src/scraper/East_Africa/raw/SouthEARS_EarthquakeCatalog.csv
 src/scraper/East_Africa/clean/East Africa Rift System (1994-2022).csv
 src/scraper/GHEA/raw/GHEA-data.txt
 src/scraper/GHEA/clean/GHEA (1000-1903).csv
 src/scraper/Intensity/raw/eqint_tsqp.csv
 src/scraper/Intensity/clean/U.S. Earthquake Intensity Database (1638-1985).csv
-src/scraper/NCEDC/raw
-src/scraper/NCEDC/clean/NCEDC (1984-2023).csv
-src/scraper/New Madrid/raw/New Madrid Earthquakes 1974-2023.txt
-src/scraper/New Madrid/clean/New Madrid (1974-2023).csv
 src/scraper/NOAA/raw/NCEI-WDS-Earthquakes.tsv
-src/scraper/NOAA/clean/NOAA NCEI-WDS (0-2023).csv
+src/scraper/NOAA/clean/NOAA NCEI-WDS (0-2024).csv
 src/scraper/Pacific_Northwest/raw/pacific-northwest-tremors-2009-2023.csv
 src/scraper/Pacific_Northwest/clean/PNW Tremors (2009-2023).csv
-src/scraper/SoCal/raw/SearchResults.txt
-src/scraper/SoCal/clean/SCEDC (1932-2023).csv
+src/scraper/SoCal/raw/
+src/scraper/SoCal/clean/SCEDC (1932-2024).csv
 src/scraper/South_Asia/raw/11069_2016_2665_MOESM2_ESM.csv
 src/scraper/South_Asia/clean/South Asia (1900-2014).csv
 src/scraper/Texas/raw/texnet_events.csv
 src/scraper/Texas/clean/Texas (2016-2023).csv
 src/scraper/Turkey/raw/turkey_earthquakes(1915-2021).csv
 src/scraper/Turkey/clean/Turkey (1915-2021).csv
-src/scraper/Utah/raw/detections.txt
-src/scraper/Utah/clean/Utah (2016-2019).csv
 src/scraper/World_Tremor/global
 src/scraper/World_Tremor/japan
 src/scraper/World_Tremor/clean

@@ -9,7 +9,6 @@ sys.path.append(parent_dir)
 
 # Now you can import your module
 from scraper.Scraper import Scraper
-from tqdm import tqdm
 
 
 
@@ -31,7 +30,7 @@ class Argentina(Scraper):
 
         # collect each event's data in rows
         rows = []
-        for row in tqdm(data_list):
+        for row in data_list:
             time = row["origin"][0]["time"]["value"]
             mag = row["stationMagnitude"][0]["mag"]["value"]
             lat = row["origin"][0]["latitude"]["value"]
