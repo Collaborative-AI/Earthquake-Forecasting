@@ -61,7 +61,7 @@ class Socal_File_Scraper(Scraper):
         
 if __name__ == "__main__":
     input_path = "SoCal/raw/SCEC_DC"
-    output_path = "SoCal/Southern California Earthquakes (1932-2024).csv"
+    output_path = "SoCal/SCEDC (1932-2024).csv"
     header = ["Year/Month/Day", "Hour:Minute:Second", "ET", "GT", "Magnitude",
               "M", "Latitude", "Longitude", "Depth", "Q", "EVID", "NPH", "NGRM"]
     obj=Socal_File_Scraper(input_path, output_path, header)

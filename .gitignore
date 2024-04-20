@@ -140,8 +140,7 @@ src/scraper/Intensity/raw/eqint_tsqp.csv
 src/scraper/Intensity/clean/U.S. Earthquake Intensity Database (1638-1985).csv
 src/scraper/NOAA/raw/NCEI-WDS-Earthquakes.tsv
 src/scraper/NOAA/clean/NOAA NCEI-WDS (0-2024).csv
-src/scraper/Pacific_Northwest/raw/pacific-northwest-tremors-2009-2023.csv
-src/scraper/Pacific_Northwest/clean/PNW Tremors (2009-2023).csv
+src/scraper/Pacific_Northwest/clean/PNW Tremors (2009-2024).csv
 src/scraper/SoCal/raw/
 src/scraper/SoCal/clean/SCEDC (1932-2024).csv
 src/scraper/South_Asia/raw/11069_2016_2665_MOESM2_ESM.csv
