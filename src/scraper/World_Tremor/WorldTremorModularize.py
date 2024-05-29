@@ -11,7 +11,6 @@ from pathlib import Path
 parent_dir = str(Path(__file__).resolve().parent.parent)
 sys.path.append(parent_dir)
 from scraper.Scraper import Scraper
-from tqdm import tqdm
 
 class WorldTremor(Scraper):
     def __init__(self, raw_folder="", output_path=""):
@@ -39,7 +38,7 @@ class WorldTremor(Scraper):
                 
                 # write each row from the txt file to the csv
                 with open(input_path, "r") as input_file:
-                    for line in tqdm(input_file):
+                    for line in input_file:
                         line = line[:-2]
                         row = line.split(",")
                         csv_writer.writerow(row)

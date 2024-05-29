@@ -1,4 +1,5 @@
 from data_processor import DataProcessor
+from tqdm import tqdm
 
 """
 Initialization
@@ -42,9 +43,9 @@ filenames = [
              "GHEA (1000-1903).csv",
              "U.S. Earthquake Intensity Database (1638-1985).csv",
              "Japan Database (2005-2014).csv",
-             "NOAA NCEI-WDS (0-2023).csv",
-             "PNW Tremors (2009-2023).csv",
-             "SCEDC (1932-2023).csv",
+             "NOAA NCEI-WDS (0-2024).csv",
+             "PNW Tremors (2009-2024).csv",
+             "SCEDC (1932-2024).csv",
              "South Asia (1900-2014).csv",
              "Texas (2016-2023).csv",
              "Turkey (1915-2021).csv",
@@ -81,13 +82,12 @@ Running the Processor
 Now that we have the DataProcessor objects and the input/output filepaths, we can run
 the data processing part of the project.
 """
-for i in range(len(input_paths)):
+for i in tqdm(range(len(input_paths))):
     processor = processors[i]
     filename = filenames[i]
     input_path = input_paths[i]
     output_path = output_paths[i]
     
-    print(filename)
     processor.process_quakes(filename, input_path, output_path)
     processor.clean_data(output_path)
 
