@@ -24,16 +24,17 @@ Running data processing ensures that all SmartQuake earthquake CSVs have these 5
 - **Depth 📏**
   - Represented in kilometers (km)
   - For example, `depth=2.6` means the earthquake occurred 2.6 km below sea level.
+  - **Warning:** This is an "optional" column, meaning that NOT all rows have a depth value. In other words, it's possible for `depth=None`, especially for older earthquake records (i.e., pre-20th century).
 
-Furthermore, all datasets store earthquakes in **chronological order**, and feature **no duplicates**.
+Furthermore, all datasets store earthquakes in **chronological order**, and feature **no duplicates** within each individual CSV.
 
 ## **File Organization 📜**
 
-The `data_processing/` folder has two key files and one key folder that is required to run the data processing code.
+The `data_processing/` folder has two key files and one key folder that are required to run the data processing code.
 
 - [data_processor.py](data_processor.py):
   - Contains the `DataProcessor` class that handles standardizes data processing for all datasets with just one function.
-- [run_processor.py](data_processor.py):
+- [run_processor.py](run_processor.py):
   - Runs the `DataProcessor` functions for all scraped datasets.
 - **processed/**: 
   - Folder that contains the processed output datasets (CSVs)
