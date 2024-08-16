@@ -7,6 +7,7 @@ SmartQuake is a research project to predict earthquake on a global scale with th
 ## Scraping the dataset
 - From the Google Drive, download the raw datasets. The datasets should be placed respectively under `src/scraper/.../raw` folder.
 - After installing the dependencies by `pip install requirements.txt`, run `python src/main.py`
+- The scraped datasets will be placed under the path `src/scraper/.../clean`
 
 # Data Processing
 
