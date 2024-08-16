@@ -2,6 +2,12 @@
 
 SmartQuake is a research project to predict earthquake on a global scale with the latest machine learning technologies. It incorporates data from 14 datasets from worldwide, creating a dataset that can also be used for future research in earthquake prediction. 
 
+# Dataset Scraping
+
+## Scraping the dataset
+- From the Google Drive, download the raw datasets. The datasets should be placed respectively under `src/scraper/.../raw` folder.
+- After installing the dependencies by `pip install requirements.txt`, run `python src/main.py`
+
 # Data Processing
 
 ## Earthquake Dataset Merger
