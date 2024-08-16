@@ -14,7 +14,7 @@ RELATIVE_PATH = "src/merge/final/"
 usgs_sage = pd.read_csv(RELATIVE_PATH + "USGS_SAGE_MERGED.csv")
 
 # 2. Load all the remaining earthquakes in the dataset
-various_combined = pd.read_csv(RELATIVE_PATH + "Various-Combined.csv")
+various_combined = pd.read_csv(RELATIVE_PATH + "Various-Catalogs.csv")
 
 # 2. Use a two-pointer approach
 i, j = 0, 0
