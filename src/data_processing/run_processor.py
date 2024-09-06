@@ -88,6 +88,11 @@ for i in tqdm(range(len(input_paths))):
     input_path = input_paths[i]
     output_path = output_paths[i]
     
-    processor.process_quakes(filename, input_path, output_path)
-    processor.clean_data(output_path)
-
+    try:
+        # Try to process the file and clean the data
+        processor.process_quakes(filename, input_path, output_path)
+        processor.clean_data(output_path)
+    except Exception as e:
+        # If there's an error, print the error and continue with the next file
+        print(f"Error processing file: {filename}. Error: {e}")
+        continue  # Move on to the next file
