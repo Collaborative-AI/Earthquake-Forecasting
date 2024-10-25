@@ -21,7 +21,7 @@ i, j = 0, 0
 result = []
 
 while i < len(usgs_sage) and j < len(various_combined):
-    us_time = pd.Timestamp(usgs_sage.iloc[i]['DateTime']).tz_localize(None)
+    us_time = pd.Timestamp(usgs_sage.iloc[i]['DateTime'])
     vc_time = pd.Timestamp(various_combined.iloc[j]['Timestamp'])
 
     if abs((us_time - vc_time).total_seconds()) <= 10:
