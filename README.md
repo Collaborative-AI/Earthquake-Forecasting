@@ -2,20 +2,25 @@
 
 SmartQuake is a research project aimed at predicting earthquakes on a global scale using the latest machine learning technologies. It compiles data from 14 global datasets, creating a robust dataset that can be leveraged for future earthquake prediction research.
 
+![Alt Text](smartquake_pipeline.png)
+**SmartQuake Data Pipeline**
+
+1. Visit the data_scraping/ folder
+2. Visit the data_processing/ folder
+3. Visit the data_merging/ folder
+
 ---
 
 ## Table of Contents
 
-1. [Dataset Scraping](#dataset-scraping)
+1. [Data Scraping](#dataset-scraping)
 2. [Data Processing](#data-processing)
 3. [Merging](#merging)
 4. [Dataset Checkpoints](#dataset-checkpoints)
 
 ---
 
-![Alt Text](src\smartquake_pipeline.png)
-
-# Dataset Scraping
+# Data Scraping
 
 ### Overview
 
@@ -23,7 +28,7 @@ This step involves scraping earthquake data from various sources, including text
 
 ### Installation
 
-1. From Google Drive, download the raw datasets and place them under the `src/scraper/.../raw` folder.
+1. From Google Drive, download the raw datasets and place them under the `dataset/data_scraping/.../raw` folder.
 2. Install the required dependencies:
 
    ```bash
@@ -33,10 +38,10 @@ This step involves scraping earthquake data from various sources, including text
 3. Run the scraping script:
 
    ```bash
-   python src/main.py
+   python dataset/main.py
    ```
 
-   The scraped datasets will be saved under `src/scraper/.../clean`.
+   The scraped datasets will be saved under `dataset/data_scraping/.../clean`.
 
 ### Usage
 
@@ -88,7 +93,7 @@ All datasets are sorted chronologically and contain no duplicates.
 
 ### Running Data Processing
 
-1. Ensure that all `clean` datasets exist in the `src/scraper/.../clean` folder.
+1. Ensure that all `clean` datasets exist in the `dataset/data_scraping/.../clean` folder.
 2. Verify that the `processed/` folder exists in `data_processing/`.
 3. Run `run_processor.py`:
 
@@ -100,7 +105,7 @@ All datasets are sorted chronologically and contain no duplicates.
 
 ---
 
-# Merging
+# Data Merging
 
 The merging process combines all processed datasets into a single file for machine learning model input. This step preserves the same columns and ensures chronological order without duplicates.
 
@@ -116,8 +121,7 @@ The merging process combines all processed datasets into a single file for machi
 1. **Compile Processed Datasets**: Ensure all processed datasets are in `data_processing/processed/` (excluding USGS/SAGE datasets).
 2. **First Merge**: Run `merge.py` to create `Various-Catalogs.csv`.
 3. **USGS Data Processing**:
-   - Download USGS and SAGE datasets from Google Drive and place them in `merge/usgs_pre_1950`.
-   - Run `preprocess.py` and `merge.py` to create `USGS_SAGE_Merged.csv`.
+   - Visit the Google Drive and directly download [`USGS_SAGE_Merged.csv`](https://drive.google.com/file/d/1vZxxrXIYR7K7YWcuJUe4HGYJH8vDCTpX/view?usp=drive_link). Store the file in `merge/final/` for the next step.
 4. **Final Merge**: Run `usgs_sage_various_merge.py` to merge all datasets into `Completed-Merge.csv`.
 
 ---

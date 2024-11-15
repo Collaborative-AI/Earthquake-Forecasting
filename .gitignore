@@ -124,42 +124,42 @@ tmp/
 res/
 
 .idea/
-src/data_processing/processed
-src/scraper/Ancient/Syria/SyriaHistoricalEarthquakes.csv
-src/scraper/Ancient/Syria/The historical earthquakes of Syria.pdf
-src/scraper/Ancient/Wikipedia/WikiHistoricalEarthquakes.csv
-src/scraper/Argentina/raw/clean-catalog.xml
-src/scraper/Argentina/clean/Argentina Andean Earthquakes (2016-2017).csv
-src/scraper/Canada/raw/Canada-19850101-20240412.txt
-src/scraper/Canada/clean/Canada (1985-2024).csv
-src/scraper/East_Africa/raw/SouthEARS_EarthquakeCatalog.csv
-src/scraper/East_Africa/raw/East Africa Rift System (1994-2022).csv
-src/scraper/East_Africa/clean/East Africa Rift System (1994-2022).csv
-src/scraper/GHEA/raw/GHEA-data.txt
-src/scraper/GHEA/clean/GHEA (1000-1903).csv
-src/scraper/Intensity/raw/eqint_tsqp.csv
-src/scraper/Intensity/raw/U.S. Earthquake Intensity Database (1638-1985).csv
-src/scraper/Intensity/clean/U.S. Earthquake Intensity Database (1638-1985).csv
-src/scraper/NOAA/raw/NOAA-20240412.tsv
-src/scraper/Pacific_Northwest/raw/PNW Tremors (2009-2024).csv
-src/scraper/NOAA/raw/NCEI-WDS-Earthquakes.tsv
-src/scraper/NOAA/clean/NOAA NCEI-WDS (0-2024).csv
-src/scraper/Pacific_Northwest/clean/PNW Tremors (2009-2024).csv
-src/scraper/SoCal/raw/
-src/scraper/SoCal/clean/SCEDC (1932-2024).csv
-src/scraper/South_Asia/raw/11069_2016_2665_MOESM2_ESM.csv
-src/scraper/South_Asia/raw/South Asia (1900-2014).csv
-src/scraper/South_Asia/clean/South Asia (1900-2014).csv
-src/scraper/Texas/raw/texnet_events.csv
-src/scraper/Texas/raw/Texas (2016-2023).csv
-src/scraper/Texas/clean/Texas (2016-2023).csv
-src/scraper/Turkey/raw/turkey_earthquakes(1915-2021).csv
-src/scraper/Turkey/clean/Turkey (1915-2021).csv
-src/scraper/World_Tremor/global
-src/scraper/World_Tremor/japan
-src/scraper/World_Tremor/clean
-src/merge/Various-Catalogs.csv
-src/merge/usgs_pre_1950/raw
-src/merge/final/Completed-Merge.csv
-src/merge/final/USGS_SAGE_Merged.csv
-src/merge/final/Various-Catalogs.csv
+dataset/data_processing/processed
+dataset/data_scraping/Ancient/Syria/SyriaHistoricalEarthquakes.csv
+dataset/data_scraping/Ancient/Syria/The historical earthquakes of Syria.pdf
+dataset/data_scraping/Ancient/Wikipedia/WikiHistoricalEarthquakes.csv
+dataset/data_scraping/Argentina/raw/clean-catalog.xml
+dataset/data_scraping/Argentina/clean/Argentina Andean Earthquakes (2016-2017).csv
+dataset/data_scraping/Canada/raw/Canada-19850101-20240412.txt
+dataset/data_scraping/Canada/clean/Canada (1985-2024).csv
+dataset/data_scraping/East_Africa/raw/SouthEARS_EarthquakeCatalog.csv
+dataset/data_scraping/East_Africa/raw/East Africa Rift System (1994-2022).csv
+dataset/data_scraping/East_Africa/clean/East Africa Rift System (1994-2022).csv
+dataset/data_scraping/GHEA/raw/GHEA-data.txt
+dataset/data_scraping/GHEA/clean/GHEA (1000-1903).csv
+dataset/data_scraping/Intensity/raw/eqint_tsqp.csv
+dataset/data_scraping/Intensity/raw/U.S. Earthquake Intensity Database (1638-1985).csv
+dataset/data_scraping/Intensity/clean/U.S. Earthquake Intensity Database (1638-1985).csv
+dataset/data_scraping/NOAA/raw/NOAA-20240412.tsv
+dataset/data_scraping/Pacific_Northwest/raw/PNW Tremors (2009-2024).csv
+dataset/data_scraping/NOAA/raw/NCEI-WDS-Earthquakes.tsv
+dataset/data_scraping/NOAA/clean/NOAA NCEI-WDS (0-2024).csv
+dataset/data_scraping/Pacific_Northwest/clean/PNW Tremors (2009-2024).csv
+dataset/data_scraping/SoCal/raw/
+dataset/data_scraping/SoCal/clean/SCEDC (1932-2024).csv
+dataset/data_scraping/South_Asia/raw/11069_2016_2665_MOESM2_ESM.csv
+dataset/data_scraping/South_Asia/raw/South Asia (1900-2014).csv
+dataset/data_scraping/South_Asia/clean/South Asia (1900-2014).csv
+dataset/data_scraping/Texas/raw/texnet_events.csv
+dataset/data_scraping/Texas/raw/Texas (2016-2023).csv
+dataset/data_scraping/Texas/clean/Texas (2016-2023).csv
+dataset/data_scraping/Turkey/raw/turkey_earthquakes(1915-2021).csv
+dataset/data_scraping/Turkey/clean/Turkey (1915-2021).csv
+dataset/data_scraping/World_Tremor/global
+dataset/data_scraping/World_Tremor/japan
+dataset/data_scraping/World_Tremor/clean
+dataset/data_merging/Various-Catalogs.csv
+dataset/data_merging/usgs_pre_1950/raw
+dataset/data_merging/final/Completed-Merge.csv
+dataset/data_merging/final/USGS_SAGE_Merged.csv
+dataset/data_merging/final/Various-Catalogs.csv
