@@ -13,9 +13,9 @@ SmartQuake is a research project aimed at predicting earthquakes on a global sca
 
 ## Table of Contents
 
-1. [Data Scraping](#dataset-scraping)
-2. [Data Processing](#data-processing)
-3. [Merging](#merging)
+1. [Data Scraping](#Data-Scraping)
+2. [Data Processing](#Data-Processing)
+3. [Data Merging](#Data-Merging)
 4. [Dataset Checkpoints](#dataset-checkpoints)
 
 ---
@@ -119,9 +119,9 @@ The merging process combines all processed datasets into a single file for machi
 ### Running Merge
 
 1. **Compile Processed Datasets**: Ensure all processed datasets are in `data_processing/processed/` (excluding USGS/SAGE datasets).
-2. **First Merge**: Run `merge.py` to create `Various-Catalogs.csv`.
+2. **First Merge**: Run `merge.py` to create `Various-Catalogs.csv` and move it to the folder `data_merging/final`.
 3. **USGS Data Processing**:
-   - Visit the Google Drive and directly download [`USGS_SAGE_Merged.csv`](https://drive.google.com/file/d/1vZxxrXIYR7K7YWcuJUe4HGYJH8vDCTpX/view?usp=drive_link). Store the file in `merge/final/` for the next step.
+   - Visit the Google Drive and directly download [`USGS_SAGE_Merged.csv`](https://drive.google.com/file/d/1vZxxrXIYR7K7YWcuJUe4HGYJH8vDCTpX/view?usp=drive_link). Store the file in `data_merging/final/` for the next step.
 4. **Final Merge**: Run `usgs_sage_various_merge.py` to merge all datasets into `Completed-Merge.csv`.
 
 ---
