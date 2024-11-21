@@ -11,12 +11,21 @@ SmartQuake is a research project aimed at predicting earthquakes on a global sca
 
 ---
 
+## Dataset Checkpoints
+
+Access the dataset at various stages of acquisition:
+
+- [data_scraping](https://drive.google.com/drive/folders/1okZ_2QW58CqQwPA8JIDIwmaBbcOtLIMp?usp=sharing)
+- [data_processing](https://drive.google.com/drive/folders/1CnXaP9KgUxgQrrreYt3s1MSbCJKHmCQy?usp=sharing)
+- [data_merging](https://drive.google.com/drive/folders/1GUvjtBC2jBqHQGbAVy4rqSAd9fXe3sxT?usp=sharing)
+
+---
+
 ## Table of Contents
 
-1. [Data Scraping](#Data-Scraping)
-2. [Data Processing](#Data-Processing)
-3. [Data Merging](#Data-Merging)
-4. [Dataset Checkpoints](#dataset-checkpoints)
+1. [Data Scraping](#data-scraping)
+2. [Data Processing](#data-processing)
+3. [Data Merging](#data-merging)
 
 ---
 
@@ -123,13 +132,3 @@ The merging process combines all processed datasets into a single file for machi
 3. **USGS Data Processing**:
    - Visit the Google Drive and directly download [`USGS_SAGE_Merged.csv`](https://drive.google.com/file/d/1vZxxrXIYR7K7YWcuJUe4HGYJH8vDCTpX/view?usp=drive_link). Store the file in `data_merging/final/` for the next step.
 4. **Final Merge**: Run `usgs_sage_various_merge.py` to merge all datasets into `Completed-Merge.csv`.
-
----
-
-# Dataset Checkpoints
-
-Access the dataset at various stages of acquisition:
-
-- [Scraper](https://drive.google.com/drive/folders/1okZ_2QW58CqQwPA8JIDIwmaBbcOtLIMp?usp=sharing)
-- [Preprocessed](https://drive.google.com/drive/folders/1CnXaP9KgUxgQrrreYt3s1MSbCJKHmCQy?usp=sharing)
-- [Merged (finalized) dataset](https://drive.google.com/drive/folders/1GUvjtBC2jBqHQGbAVy4rqSAd9fXe3sxT?usp=sharing)
