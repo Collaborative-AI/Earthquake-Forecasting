@@ -26,6 +26,7 @@ Access the dataset at various stages of acquisition:
 1. [Data Scraping](#data-scraping)
 2. [Data Processing](#data-processing)
 3. [Data Merging](#data-merging)
+4. [Data Source](#data-source)
 
 ---
 
@@ -132,3 +133,25 @@ The merging process combines all processed datasets into a single file for machi
 3. **USGS Data Processing**:
    - Visit the Google Drive and directly download [`USGS_SAGE_Merged.csv`](https://drive.google.com/file/d/1vZxxrXIYR7K7YWcuJUe4HGYJH8vDCTpX/view?usp=drive_link). Store the file in `data_merging/final/` for the next step.
 4. **Final Merge**: Run `usgs_sage_various_merge.py` to merge all datasets into `Completed-Merge.csv`.
+
+---
+
+# Data Source
+
+| Dataset       | Status      | Link                                                                         | Additional Comments                                |
+|---------------|-------------|------------------------------------------------------------------------------|---------------------------------------------------|
+| Argentina     | good        | [Link](https://doi.org/10.31905/YTIR1IED)                                    |                                                   |
+| Canada        | good        | [Link](https://earthquakescanada.nrcan.gc.ca/stndon/NEDB-BNDS/bulletin-en.php) |                                                   |
+| Japan         | good        | [Link](http://www-solid.eps.s.u-tokyo.ac.jp/~idehara/wtd0/Welcome.html)       |                                                   |
+| GHEA          | good        | [Link](http://evrrss.eri.u-tokyo.ac.jp/db/ghec/index.html)                   |                                                   |
+| NOAA          | good        | [Link](https://www.ngdc.noaa.gov/hazel/view/hazards/earthquake/search)       |                                                   |
+| SoCal         | good        | [Link](https://service.scedc.caltech.edu/ftp/catalogs/SCEC_DC/)              |                                                   |
+| Turkey        | good        | [Link](https://www.kaggle.com/datasets/atasaygin/turkey-earthquakes-19152021) |                                                   |
+| World Tremor  | good        | [Link](http://www-solid.eps.s.u-tokyo.ac.jp/~idehara/wtd0/Welcome.html)      |                                                   |
+| East Africa   | good        | [Link](https://www.isc.ac.uk/dataset_repository/view_submission.php?dsid=47) |                                                   |
+| Intensity     | good        | [Link](https://ngdc.noaa.gov/hazard/eq-intensity.shtml)                      |                                                   |
+| PNW Tremor    | good        | [Link](https://www.pnsn.org/tremor/)                                         |                                                   |
+| South Asia    | good        | [Link](https://link.springer.com/article/10.1007/s11069-016-2665-6#Sec11)    |                                                   |
+| Texas         | good        | [Link](https://catalog.texnet.beg.utexas.edu/)                               |                                                   |
+| USGS          | good        | [Link](https://earthquake.usgs.gov/fdsnws/event/1/)                          | Takes a lot of time to run the scraper            |
+| SAGE          | Deprecated  | [Link](http://service.iris.edu/fdsnws/event/1/)                              | Advised to use USGS according to the official webpage |
