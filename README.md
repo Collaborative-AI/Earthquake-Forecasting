@@ -154,4 +154,4 @@ The merging process combines all processed datasets into a single file for machi
 | South Asia    | good        | [Link](https://link.springer.com/article/10.1007/s11069-016-2665-6#Sec11)    | Downloaded Manually |
 | Texas         | good        | [Link](https://catalog.texnet.beg.utexas.edu/)                               | Downloaded Manually |
 | USGS          | good        | [Link](https://earthquake.usgs.gov/fdsnws/event/1/)                          | Downloaded through python scraper, takes a lot of time to finish            |
-| SAGE          | deprecated  | [Link](http://service.iris.edu/fdsnws/event/1/)                              | Advised to use USGS according to the official webpage |
+| SAGE          | deprecated  | [Link](http://service.iris.edu/fdsnws/event/docs/1/builder/)                              | Advised to use USGS according to the official webpage |
