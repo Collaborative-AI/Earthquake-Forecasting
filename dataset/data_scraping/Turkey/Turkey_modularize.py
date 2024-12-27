@@ -5,7 +5,7 @@ sys.path.append("dataset/data_scraping")
 from csv import writer
 import pandas as pd
 from pathlib import Path
-parent_dir = str(Path(__file__).resolve().parent.parent)
+parent_dir = str(Path(__file__).resolve().parent.parent.parent)
 sys.path.append(parent_dir)
 from data_scraping.Scraper import Scraper
 
