@@ -9,6 +9,7 @@ import sys
 from pathlib import Path
 import random
 import time
+import os
 
 
 # Add the parent directory to sys.path
@@ -30,6 +31,11 @@ class usgs_scraper(Scraper):
 
         # Create empty dataframe to store data
         data = pd.DataFrame()  
+        output_file = "earthquake_data.csv"
+        file_exists = os.path.isfile(output_file)
+        if file_exists:
+            os.remove(output_file)
+        write_header = True
         #limit time frame to scraper
         while self.start_date < self.end_date:
             # each request consists of 30days of data 
@@ -47,11 +53,18 @@ class usgs_scraper(Scraper):
             response.raise_for_status() 
 
             csv_data = pd.read_csv(io.StringIO(response.text))
-            data = pd.concat([data, csv_data])
+            csv_data.to_csv(
+                output_file, 
+                index=False, 
+                mode='a', 
+                header=write_header
+            )
+            write_header = False
+            # data = pd.concat([data, csv_data])
             
             self.start_date = next_date
-            # Sleep for a random interval between 3 to 5 minutes
-            time_to_sleep = random.randint(180, 300)  # Random time between 180 and 300 seconds
+            # Sleep for a random interval between 1 to 2 minutes
+            time_to_sleep = random.randint(30, 75)  # Random time between 120 and 180 seconds
             print(f"Sleeping for {time_to_sleep} seconds")
             time.sleep(time_to_sleep)
         return data
@@ -62,5 +75,4 @@ if __name__ == "__main__":
     end_date=datetime(2023, 6, 12)
     obj=usgs_scraper(url, start_date, end_date)
     earthquake_data =obj.download_data()
-    earthquake_data.to_csv("/mnt/data/earthquake_data.csv", index=False)
-
+    # earthquake_data.to_csv("earthquake_data.csv", index=False)
